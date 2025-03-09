@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:medicare/core/routing/routes.dart';
+import 'package:medicare/features/welcome/ui/welcome_screen.dart';
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.welcomeScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => const WelcomeScreen(),
         );
-      case '/signup':
-        return MaterialPageRoute(
-          builder: (_) => const SignupScreen(),
-        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
