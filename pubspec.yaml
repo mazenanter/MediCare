@@ -46,7 +46,8 @@ dependencies:
   # Notification
   flutter_local_notifications: ^18.0.1
   # internationalized/localized messages, date and number formatting and parsing, bi-directional text, and other
-  intl: ^0.20.2
+  intl: ^0.19.0
+  easy_localization: ^3.0.7+1
   timezone: ^0.10.0
   # For discovering the state of the network (WiFi & mobile/cellular)
   connectivity_plus: ^6.1.3
@@ -87,6 +88,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/translations/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
