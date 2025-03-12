@@ -1,7 +1,9 @@
 {
-    "Welcome": "أهلا بيك",
-    "ChangeLanguage": "غير اللغة",
+    "ChangeLanguage": "غيّر اللغة",
     "Cancel": "إلغاء",
-    "SureToChangeLanguage": "متأكد إنك عايز تغير اللغة؟",
-    "Ok": "تأكيد"
+    "SureToChangeLanguage": "متأكد إنك عايز تغيّر اللغة؟",
+    "Ok": "تمام",
+    "WelcomeTo": "أهلاً بيك في",
+    "MediCare": "دوائي",
+    "YourPersonalAssistantForMmanagingYourMmedicationSchedule": "مساعدك الشخصي لتنظيم\nمواعيد أدويتك."
 }

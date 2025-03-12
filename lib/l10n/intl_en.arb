@@ -1,7 +1,9 @@
 {
-    "Welcome": "Welcome",
     "ChangeLanguage": "Change Language",
     "Cancel": "Cancel",
     "SureToChangeLanguage": "Are you sure you want to change the language?",
-    "Ok": "Ok"
+    "Ok": "Ok",
+    "WelcomeTo": "Welcome to",
+    "MediCare": "MediCare",
+    "YourPersonalAssistantForMmanagingYourMmedicationSchedule": "Your personal assistant for managing\nyour medication schedule."
 }

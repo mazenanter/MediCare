@@ -55,11 +55,6 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Welcome`
-  String get Welcome {
-    return Intl.message('Welcome', name: 'Welcome', desc: '', args: []);
-  }
-
   /// `Change Language`
   String get ChangeLanguage {
     return Intl.message(
@@ -88,6 +83,26 @@ class S {
   /// `Ok`
   String get Ok {
     return Intl.message('Ok', name: 'Ok', desc: '', args: []);
+  }
+
+  /// `Welcome to`
+  String get WelcomeTo {
+    return Intl.message('Welcome to', name: 'WelcomeTo', desc: '', args: []);
+  }
+
+  /// `MediCare`
+  String get MediCare {
+    return Intl.message('MediCare', name: 'MediCare', desc: '', args: []);
+  }
+
+  /// `Your personal assistant for managing\nyour medication schedule.`
+  String get YourPersonalAssistantForMmanagingYourMmedicationSchedule {
+    return Intl.message(
+      'Your personal assistant for managing\nyour medication schedule.',
+      name: 'YourPersonalAssistantForMmanagingYourMmedicationSchedule',
+      desc: '',
+      args: [],
+    );
   }
 }
 

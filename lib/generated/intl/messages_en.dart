@@ -24,10 +24,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Are you sure you want to change the language?",
     ),
-    "Welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+    "WelcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to"),
+    "YourPersonalAssistantForMmanagingYourMmedicationSchedule":
+        MessageLookupByLibrary.simpleMessage(
+          "Your personal assistant for managing\nyour medication schedule.",
+        ),
   };
 }
