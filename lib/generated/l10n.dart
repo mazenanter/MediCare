@@ -104,6 +104,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Login`
+  String get Login {
+    return Intl.message('Login', name: 'Login', desc: '', args: []);
+  }
+
+  /// `Register`
+  String get Register {
+    return Intl.message('Register', name: 'Register', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
