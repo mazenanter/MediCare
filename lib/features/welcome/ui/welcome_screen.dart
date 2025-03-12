@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/core/helpers/spacing.dart';
+import 'package:medicare/features/welcome/ui/widgets/auth_buttons.dart';
 import 'package:medicare/features/welcome/ui/widgets/localiztions_buttons.dart';
 import 'package:medicare/features/welcome/ui/widgets/medicare_logo_and_texts.dart';
 
@@ -16,6 +17,9 @@ class WelcomeScreen extends StatelessWidget {
             LocalizationToogleButtons(),
             verticalSpace(50),
             MediCareLogoAndTexts(),
+            verticalSpace(58),
+            AuthButtons(),
+            verticalSpace(58),
           ],
         ),
       ),
