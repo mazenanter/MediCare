@@ -24,8 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("غيّر اللغة"),
+    "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
+    "Register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "متأكد إنك عايز تغيّر اللغة؟",
     ),
