@@ -1,3 +1,7 @@
 {
-    "Welcome": "Welcome"
+    "Welcome": "Welcome",
+    "ChangeLanguage": "Change Language",
+    "Cancel": "Cancel",
+    "SureToChangeLanguage": "Are you sure you want to change the language?",
+    "Ok": "Ok"
 }

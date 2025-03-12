@@ -59,6 +59,36 @@ class S {
   String get Welcome {
     return Intl.message('Welcome', name: 'Welcome', desc: '', args: []);
   }
+
+  /// `Change Language`
+  String get ChangeLanguage {
+    return Intl.message(
+      'Change Language',
+      name: 'ChangeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get Cancel {
+    return Intl.message('Cancel', name: 'Cancel', desc: '', args: []);
+  }
+
+  /// `Are you sure you want to change the language?`
+  String get SureToChangeLanguage {
+    return Intl.message(
+      'Are you sure you want to change the language?',
+      name: 'SureToChangeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get Ok {
+    return Intl.message('Ok', name: 'Ok', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

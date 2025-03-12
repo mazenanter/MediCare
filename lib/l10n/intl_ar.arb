@@ -1,3 +1,7 @@
 {
-    "Welcome": "مرحبا"
+    "Welcome": "أهلا بيك",
+    "ChangeLanguage": "غير اللغة",
+    "Cancel": "إلغاء",
+    "SureToChangeLanguage": "متأكد إنك عايز تغير اللغة؟",
+    "Ok": "تأكيد"
 }
