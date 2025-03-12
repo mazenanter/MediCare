@@ -27,12 +27,14 @@ class MediCare extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              locale:locale,
+              locale: locale,
               debugShowCheckedModeBanner: false,
               title: 'MediCare-دوائي',
               theme: ThemeData(
                 primarySwatch: Colors.blue,
                 scaffoldBackgroundColor: Colors.white,
+                fontFamily:
+                    context.read<LocaleCubit>().isArabic ? 'Cairo' : 'Poppins',
               ),
               onGenerateRoute: appRouter.onGenerateRoute,
               initialRoute: Routes.welcomeScreen,
