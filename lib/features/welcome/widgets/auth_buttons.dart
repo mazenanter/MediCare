@@ -6,7 +6,7 @@ import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/core/theming/colors_manager.dart';
 import 'package:medicare/core/widgets/app_text_button.dart';
 
-import '../../../../generated/l10n.dart';
+import '../../../generated/l10n.dart';
 
 class AuthButtons extends StatelessWidget {
   const AuthButtons({super.key});

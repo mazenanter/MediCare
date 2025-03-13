@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
 
-import '../../../../core/localization/locale_cubit.dart';
-import '../../../../core/theming/colors_manager.dart';
-import '../../../../core/theming/text_styles_manager.dart';
-import '../../../../generated/l10n.dart';
+import '../../../core/localization/locale_cubit.dart';
+import '../../../core/theming/colors_manager.dart';
+import '../../../core/theming/text_styles_manager.dart';
+import '../../../generated/l10n.dart';
 
 class ChangeLanguageDialog extends StatelessWidget {
   const ChangeLanguageDialog({
