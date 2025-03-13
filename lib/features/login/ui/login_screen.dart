@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/core/widgets/app_text_button.dart';
+import 'package:medicare/features/login/ui/widgets/divider_and_or_text.dart';
 import 'package:medicare/features/login/ui/widgets/email_and_password.dart';
 
 import '../../../core/helpers/spacing.dart';
@@ -28,6 +30,21 @@ class LoginScreen extends StatelessWidget {
                   ),
                   verticalSpace(32),
                   EmailAndPassword(),
+                  verticalSpace(24),
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStylesManager.font14BlueSemiBold,
+                    ),
+                  ),
+                  verticalSpace(33),
+                  AppTextButton(
+                    onPressed: () {},
+                    text: 'Login',
+                  ),
+                  verticalSpace(33),
+                  DividerAndOrText(),
                 ],
               ),
             ),
