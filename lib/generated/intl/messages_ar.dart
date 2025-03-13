@@ -22,14 +22,46 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
+      "على الأقل حرف صغير واحد",
+    ),
+    "AtLeast1Number": MessageLookupByLibrary.simpleMessage(
+      "على الأقل رقم واحد",
+    ),
+    "AtLeast1SpecialCharacter": MessageLookupByLibrary.simpleMessage(
+      "على الأقل رمز خاص واحد",
+    ),
+    "AtLeast1UppercaseLetter": MessageLookupByLibrary.simpleMessage(
+      "على الأقل حرف كبير واحد",
+    ),
+    "AtLeast8Characters": MessageLookupByLibrary.simpleMessage(
+      "على الأقل 8 حروف",
+    ),
     "Cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("غيّر اللغة"),
+    "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "كمل باستخدام جوجل",
+    ),
+    "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
+      "لسه معندكش حساب؟",
+    ),
+    "EnterYourEmail": MessageLookupByLibrary.simpleMessage(
+      "اكتب الإيميل بتاعك",
+    ),
+    "EnterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "اكتب كلمة السر بتاعتك",
+    ),
+    "ForgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
     "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
+    "Or": MessageLookupByLibrary.simpleMessage("أو"),
     "Register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "متأكد إنك عايز تغيّر اللغة؟",
+    ),
+    "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
+      "أهلاً بيك! مبسوطين\nإننا نشوفك تاني!",
     ),
     "WelcomeTo": MessageLookupByLibrary.simpleMessage("أهلاً بيك في"),
     "YourPersonalAssistantForMmanagingYourMmedicationSchedule":

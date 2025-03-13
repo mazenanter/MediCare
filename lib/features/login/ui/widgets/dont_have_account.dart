@@ -5,6 +5,7 @@ import 'package:medicare/core/theming/text_styles_manager.dart';
 
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors_manager.dart';
+import '../../../../generated/l10n.dart';
 
 class DontHaveAccount extends StatelessWidget {
   const DontHaveAccount({super.key});
@@ -15,12 +16,12 @@ class DontHaveAccount extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-              text: 'Don\'t have an account yet?',
+              text: S.of(context).DontHaveAnAccountYet,
               style: TextStylesManager.font15Meduim.copyWith(
                 color: Colors.black,
               )),
           TextSpan(
-            text: 'Sign Up',
+            text: S.of(context).Register,
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 context.pushReplacementNamed(Routes.registerScreen);

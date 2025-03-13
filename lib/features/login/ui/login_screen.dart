@@ -9,6 +9,7 @@ import 'package:medicare/features/login/ui/widgets/google_button.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/text_styles_manager.dart';
 import '../../../core/widgets/back_arrow_button.dart';
+import '../../../generated/l10n.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Welcome back! Glad\nto see you, Again!',
+                      S.of(context).WelcomeBackGladToSeeYouAgain,
                       style: TextStylesManager.font30MainColorBold,
                     ),
                     verticalSpace(32),
@@ -36,14 +37,14 @@ class LoginScreen extends StatelessWidget {
                     Align(
                       alignment: AlignmentDirectional.centerEnd,
                       child: Text(
-                        'Forgot Password?',
+                        S.of(context).ForgotPassword,
                         style: TextStylesManager.font14BlueSemiBold,
                       ),
                     ),
                     verticalSpace(33),
                     AppTextButton(
                       onPressed: () {},
-                      text: 'Login',
+                      text: S.of(context).Login,
                     ),
                     verticalSpace(33),
                     DividerAndOrText(),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/colors_manager.dart';
+import '../../../../generated/l10n.dart';
 
 class DividerAndOrText extends StatelessWidget {
   const DividerAndOrText({super.key});
@@ -17,7 +18,7 @@ class DividerAndOrText extends StatelessWidget {
           width: 112.w,
           color: ColorsManager.cB8B8B8,
         ),
-        Text('Or'),
+        Text(S.of(context).Or),
         Container(
           height: 1,
           width: 112.w,

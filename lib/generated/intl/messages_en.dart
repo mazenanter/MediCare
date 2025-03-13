@@ -22,14 +22,42 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
+      "At least 1 lowercase letter",
+    ),
+    "AtLeast1Number": MessageLookupByLibrary.simpleMessage("At least 1 number"),
+    "AtLeast1SpecialCharacter": MessageLookupByLibrary.simpleMessage(
+      "At least 1 special character",
+    ),
+    "AtLeast1UppercaseLetter": MessageLookupByLibrary.simpleMessage(
+      "At least 1 uppercase letter",
+    ),
+    "AtLeast8Characters": MessageLookupByLibrary.simpleMessage(
+      "At least 8 characters",
+    ),
     "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "Continue with Google",
+    ),
+    "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
+      "Don\'t have an account yet?",
+    ),
+    "EnterYourEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
+    "EnterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "Enter your password",
+    ),
+    "ForgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
+    "Or": MessageLookupByLibrary.simpleMessage("Or"),
     "Register": MessageLookupByLibrary.simpleMessage("Register"),
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Are you sure you want to change the language?",
+    ),
+    "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
+      "Welcome back! Glad\nto see you, Again!",
     ),
     "WelcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to"),
     "YourPersonalAssistantForMmanagingYourMmedicationSchedule":

@@ -4,6 +4,7 @@ import 'package:medicare/core/helpers/spacing.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 
 import '../../../../core/theming/colors_manager.dart';
+import '../../../../generated/l10n.dart';
 
 class PasswordValidations extends StatelessWidget {
   const PasswordValidations(
@@ -23,11 +24,12 @@ class PasswordValidations extends StatelessWidget {
     return Column(
       spacing: 2.h,
       children: [
-        buildValidationRow('At least 1 lowercase letter', hasLowerCase),
-        buildValidationRow('At least 1 uppercase letter', hasUpperCase),
-        buildValidationRow('At least 1 number', hasNumber),
-        buildValidationRow('At least 1 special character', hasSpecialCharacter),
-        buildValidationRow('Minimum of 8 characters', hasMinLength),
+        buildValidationRow(S.of(context).AtLeast1LowercaseLetter, hasLowerCase),
+        buildValidationRow(S.of(context).AtLeast1UppercaseLetter, hasUpperCase),
+        buildValidationRow(S.of(context).AtLeast1Number, hasNumber),
+        buildValidationRow(
+            S.of(context).AtLeast1SpecialCharacter, hasSpecialCharacter),
+        buildValidationRow(S.of(context).AtLeast8Characters, hasMinLength),
       ],
     );
   }

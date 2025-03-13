@@ -7,5 +7,18 @@
     "MediCare": "MediCare",
     "YourPersonalAssistantForMmanagingYourMmedicationSchedule": "Your personal assistant for managing\nyour medication schedule.",
     "Login": "Login",
-    "Register": "Register"
+    "Register": "Register",
+    "WelcomeBackGladToSeeYouAgain": "Welcome back! Glad\nto see you, Again!",
+    "ForgotPassword": "Forgot Password?",
+    "AtLeast1LowercaseLetter": "At least 1 lowercase letter",
+    "AtLeast1UppercaseLetter": "At least 1 uppercase letter",
+    "AtLeast1Number": "At least 1 number",
+    "AtLeast1SpecialCharacter": "At least 1 special character",
+    "AtLeast8Characters": "At least 8 characters",
+    "ContinueWithGoogle": "Continue with Google",
+    "EnterYourEmail": "Enter your email",
+    "EnterYourPassword": "Enter your password",
+    "DontHaveAnAccountYet": "Don't have an account yet?",
+    "Or": "Or"
+
 }

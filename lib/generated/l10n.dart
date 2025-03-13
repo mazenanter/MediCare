@@ -114,6 +114,121 @@ class S {
   String get Register {
     return Intl.message('Register', name: 'Register', desc: '', args: []);
   }
+
+  /// `Welcome back! Glad\nto see you, Again!`
+  String get WelcomeBackGladToSeeYouAgain {
+    return Intl.message(
+      'Welcome back! Glad\nto see you, Again!',
+      name: 'WelcomeBackGladToSeeYouAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password?`
+  String get ForgotPassword {
+    return Intl.message(
+      'Forgot Password?',
+      name: 'ForgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 lowercase letter`
+  String get AtLeast1LowercaseLetter {
+    return Intl.message(
+      'At least 1 lowercase letter',
+      name: 'AtLeast1LowercaseLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 uppercase letter`
+  String get AtLeast1UppercaseLetter {
+    return Intl.message(
+      'At least 1 uppercase letter',
+      name: 'AtLeast1UppercaseLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 number`
+  String get AtLeast1Number {
+    return Intl.message(
+      'At least 1 number',
+      name: 'AtLeast1Number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 special character`
+  String get AtLeast1SpecialCharacter {
+    return Intl.message(
+      'At least 1 special character',
+      name: 'AtLeast1SpecialCharacter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 8 characters`
+  String get AtLeast8Characters {
+    return Intl.message(
+      'At least 8 characters',
+      name: 'AtLeast8Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Google`
+  String get ContinueWithGoogle {
+    return Intl.message(
+      'Continue with Google',
+      name: 'ContinueWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email`
+  String get EnterYourEmail {
+    return Intl.message(
+      'Enter your email',
+      name: 'EnterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your password`
+  String get EnterYourPassword {
+    return Intl.message(
+      'Enter your password',
+      name: 'EnterYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account yet?`
+  String get DontHaveAnAccountYet {
+    return Intl.message(
+      'Don\'t have an account yet?',
+      name: 'DontHaveAnAccountYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get Or {
+    return Intl.message('Or', name: 'Or', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

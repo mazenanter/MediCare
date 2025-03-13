@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medicare/core/helpers/spacing.dart';
 import 'package:medicare/core/widgets/app_text_form_field.dart';
 import 'package:medicare/features/login/ui/widgets/password_validations.dart';
+import 'package:medicare/generated/l10n.dart';
 
 class EmailAndPassword extends StatefulWidget {
   const EmailAndPassword({super.key});
@@ -24,13 +25,13 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
     return Column(
       children: [
         AppTextFormField(
-          hintText: 'Enter your email',
+          hintText: S.of(context).EnterYourEmail,
           validator: (p0) {},
         ),
         verticalSpace(15),
         AppTextFormField(
           obsucreText: isObscure,
-          hintText: 'Enter your password',
+          hintText: S.of(context).EnterYourPassword,
           validator: (p0) {},
           suffixIcon: GestureDetector(
             onTap: () {
