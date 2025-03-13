@@ -38,6 +38,11 @@ class TextStylesManager {
     fontWeight: FontWeightHelper.bold,
     color: ColorsManager.cFF7551,
   );
+  static TextStyle font30MainColorBold = TextStyle(
+    fontSize: 30.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: ColorsManager.c196EB0,
+  );
   static TextStyle font60MainColorBold = TextStyle(
     fontSize: 60.sp,
     fontWeight: FontWeightHelper.bold,
