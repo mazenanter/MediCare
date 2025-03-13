@@ -7,5 +7,17 @@
     "MediCare": "دوائي",
     "YourPersonalAssistantForMmanagingYourMmedicationSchedule": "مساعدك الشخصي لتنظيم\nمواعيد أدويتك.",
     "Login": "تسجيل الدخول",
-    "Register": "تسجيل جديد"
+    "Register": "تسجيل جديد",
+    "WelcomeBackGladToSeeYouAgain": "أهلاً بيك! مبسوطين\nإننا نشوفك تاني!",
+    "ForgotPassword": "نسيت كلمة السر؟",
+    "AtLeast1LowercaseLetter": "على الأقل حرف صغير واحد",
+    "AtLeast1UppercaseLetter": "على الأقل حرف كبير واحد",
+    "AtLeast1Number": "على الأقل رقم واحد",
+    "AtLeast1SpecialCharacter": "على الأقل رمز خاص واحد",
+    "AtLeast8Characters": "على الأقل 8 حروف",
+    "ContinueWithGoogle": "كمل باستخدام جوجل",
+    "EnterYourEmail": "اكتب الإيميل بتاعك",
+    "EnterYourPassword": "اكتب كلمة السر بتاعتك",
+    "DontHaveAnAccountYet": "لسه معندكش حساب؟",
+    "Or": "أو"
 }
