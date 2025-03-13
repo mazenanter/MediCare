@@ -41,10 +41,14 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
+              borderSide: BorderSide.none,
             ),
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
+              borderSide: BorderSide(
+                color: ColorsManager.cE8ECF4,
+              ),
             ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
@@ -60,7 +64,10 @@ class AppTextFormField extends StatelessWidget {
             width: 1.3,
           ),
         ),
-        hintStyle: hintStyle ?? TextStylesManager.font15Meduim,
+        hintStyle: hintStyle ??
+            TextStylesManager.font15Meduim.copyWith(
+              color: ColorsManager.c8391A1,
+            ),
         hintText: hintText,
         fillColor: ColorsManager.cF7F8F9,
         contentPadding: contentPadding,

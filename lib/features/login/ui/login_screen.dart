@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/features/login/ui/widgets/email_and_password.dart';
 
 import '../../../core/helpers/spacing.dart';
@@ -17,12 +18,19 @@ class LoginScreen extends StatelessWidget {
           children: [
             BackArrowButton(),
             verticalSpace(80),
-            Text(
-              'Welcome back! Glad\nto see you, Again!',
-              style: TextStylesManager.font30MainColorBold,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 45.w),
+              child: Column(
+                children: [
+                  Text(
+                    'Welcome back! Glad\nto see you, Again!',
+                    style: TextStylesManager.font30MainColorBold,
+                  ),
+                  verticalSpace(32),
+                  EmailAndPassword(),
+                ],
+              ),
             ),
-            verticalSpace(32),
-            EmailAndPassword(),
           ],
         ),
       ),
