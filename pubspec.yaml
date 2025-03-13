@@ -48,6 +48,8 @@ dependencies:
   flutter_bloc: ^9.1.0
   # Which allows painting and displaying Scalable Vector
   flutter_svg: ^2.0.17
+  # For Icons
+  font_awesome_flutter: ^10.8.0
   # Notification
   flutter_local_notifications: ^18.0.1
   # internationalized/localized messages, date and number formatting and parsing, bi-directional text, and other
