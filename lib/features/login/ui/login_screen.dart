@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/widgets/back_arrow_button.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            BackArrowButton(),
+          ],
+        ),
+      ),
+    );
   }
 }

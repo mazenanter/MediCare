@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/features/login/ui/login_screen.dart';
-import 'package:medicare/features/welcome/ui/welcome_screen.dart';
+import 'package:medicare/features/welcome/welcome_screen.dart';
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
