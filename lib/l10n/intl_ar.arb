@@ -19,5 +19,9 @@
     "EnterYourEmail": "اكتب الإيميل بتاعك",
     "EnterYourPassword": "اكتب كلمة السر بتاعتك",
     "DontHaveAnAccountYet": "لسه معندكش حساب؟",
-    "Or": "أو"
+    "Or": "أو",
+    "HelloRegisterToGetStarted": "أهلاً! سجل حسابك عشان تبدأ",
+    "EnterYourUsername": "اكتب اسم المستخدم بتاعك",
+    "ConfirmPassword": "أكد كلمة السر",
+    "AlreadyHaveAnAccount": "عندك حساب بالفعل؟"
 }

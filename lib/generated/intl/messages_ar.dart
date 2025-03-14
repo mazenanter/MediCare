@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "عندك حساب بالفعل؟",
+    ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "على الأقل حرف صغير واحد",
     ),
@@ -39,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("غيّر اللغة"),
+    "ConfirmPassword": MessageLookupByLibrary.simpleMessage("أكد كلمة السر"),
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "كمل باستخدام جوجل",
     ),
@@ -51,7 +55,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "EnterYourPassword": MessageLookupByLibrary.simpleMessage(
       "اكتب كلمة السر بتاعتك",
     ),
+    "EnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "اكتب اسم المستخدم بتاعك",
+    ),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
+    "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
+      "أهلاً! سجل حسابك عشان تبدأ",
+    ),
     "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),

@@ -229,6 +229,46 @@ class S {
   String get Or {
     return Intl.message('Or', name: 'Or', desc: '', args: []);
   }
+
+  /// `Hello! Register to get\nstarted`
+  String get HelloRegisterToGetStarted {
+    return Intl.message(
+      'Hello! Register to get\nstarted',
+      name: 'HelloRegisterToGetStarted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Username`
+  String get EnterYourUsername {
+    return Intl.message(
+      'Enter Your Username',
+      name: 'EnterYourUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get ConfirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'ConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get AlreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'AlreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

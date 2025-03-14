@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
@@ -25,18 +26,18 @@ class _RegisterFormState extends State<RegisterForm> {
     return Column(
       children: [
         AppTextFormField(
-          hintText: ' Enter Your Username',
+          hintText: S.of(context).EnterYourUsername,
           validator: (p0) {},
         ),
         verticalSpace(12),
         AppTextFormField(
-          hintText: 'Enter Your Email',
+          hintText: S.of(context).EnterYourEmail,
           validator: (p0) {},
         ),
         verticalSpace(12),
         AppTextFormField(
           obsucreText: isObscure,
-          hintText: 'Enter Your Password',
+          hintText: S.of(context).EnterYourPassword,
           validator: (p0) {},
           suffixIcon: GestureDetector(
             onTap: () {
@@ -53,7 +54,7 @@ class _RegisterFormState extends State<RegisterForm> {
         verticalSpace(12),
         AppTextFormField(
           obsucreText: isObscure,
-          hintText: 'Confirm Password',
+          hintText: S.of(context).ConfirmPassword,
           validator: (p0) {},
           suffixIcon: GestureDetector(
             onTap: () {

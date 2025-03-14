@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "Already have an account?",
+    ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "At least 1 lowercase letter",
     ),
@@ -37,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "ConfirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
@@ -47,7 +51,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "EnterYourPassword": MessageLookupByLibrary.simpleMessage(
       "Enter your password",
     ),
+    "EnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "Enter Your Username",
+    ),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
+      "Hello! Register to get\nstarted",
+    ),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
