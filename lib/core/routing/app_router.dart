@@ -3,6 +3,8 @@ import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/features/login/ui/login_screen.dart';
 import 'package:medicare/features/welcome/welcome_screen.dart';
 
+import '../../features/register/ui/register_screen.dart';
+
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -13,6 +15,10 @@ class AppRouter {
       case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (context) => LoginScreen(),
+        );
+      case Routes.registerScreen:
+        return MaterialPageRoute(
+          builder: (context) => RegisterScreen(),
         );
       default:
         return MaterialPageRoute(
