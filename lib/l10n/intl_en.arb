@@ -19,6 +19,10 @@
     "EnterYourEmail": "Enter your email",
     "EnterYourPassword": "Enter your password",
     "DontHaveAnAccountYet": "Don't have an account yet?",
-    "Or": "Or"
+    "Or": "Or",
+    "HelloRegisterToGetStarted": "Hello! Register to get\nstarted",
+    "EnterYourUsername": "Enter Your Username",
+    "ConfirmPassword": "Confirm Password",
+    "AlreadyHaveAnAccount": "Already have an account?"
 
 }

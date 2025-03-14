@@ -7,6 +7,7 @@ import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/text_styles_manager.dart';
 import '../../../core/widgets/app_text_button.dart';
 import '../../../core/widgets/back_arrow_button.dart';
+import '../../../generated/l10n.dart';
 import '../../login/ui/widgets/divider_and_or_text.dart';
 import '../../login/ui/widgets/google_button.dart';
 
@@ -27,7 +28,7 @@ class RegisterScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Hello! Register to get\nstarted',
+                      S.of(context).HelloRegisterToGetStarted,
                       style: TextStylesManager.font30MainColorBold,
                     ),
                     verticalSpace(32),
@@ -35,7 +36,7 @@ class RegisterScreen extends StatelessWidget {
                     verticalSpace(33),
                     AppTextButton(
                       onPressed: () {},
-                      text: 'Register',
+                      text: S.of(context).Register,
                     ),
                     verticalSpace(33),
                     DividerAndOrText(),
