@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/features/register/ui/widgets/already_have_an_account.dart';
+import 'package:medicare/features/register/ui/widgets/register_bloc_listener.dart';
 import 'package:medicare/features/register/ui/widgets/register_form.dart';
 
 import '../../../core/helpers/spacing.dart';
@@ -10,6 +12,7 @@ import '../../../core/widgets/back_arrow_button.dart';
 import '../../../generated/l10n.dart';
 import '../../login/ui/widgets/divider_and_or_text.dart';
 import '../../login/ui/widgets/google_button.dart';
+import '../logic/register_cubit.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -35,7 +38,9 @@ class RegisterScreen extends StatelessWidget {
                     RegisterForm(),
                     verticalSpace(33),
                     AppTextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        validateThenDoRegister(context);
+                      },
                       text: S.of(context).Register,
                     ),
                     verticalSpace(33),
@@ -45,6 +50,7 @@ class RegisterScreen extends StatelessWidget {
                     verticalSpace(33),
                     AlreadyHaveAnAccount(),
                     verticalSpace(33),
+                    RegisterBlocListener(),
                   ],
                 ),
               ),
@@ -53,5 +59,11 @@ class RegisterScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  validateThenDoRegister(BuildContext context) {
+    if (context.read<RegisterCubit>().formKey.currentState!.validate()) {
+      context.read<RegisterCubit>().emitRegisterUserState();
+    }
   }
 }
