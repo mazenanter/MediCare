@@ -16,4 +16,6 @@ class RegisterResponse {
 
   factory RegisterResponse.fromJson(Map<String, dynamic> json) =>
       _$RegisterResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RegisterResponseToJson(this);
 }
