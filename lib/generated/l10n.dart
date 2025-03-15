@@ -269,6 +269,226 @@ class S {
       args: [],
     );
   }
+
+  /// `Something went wrong, please try again.`
+  String get SomethingWentWrongPleaseTtryAgain {
+    return Intl.message(
+      'Something went wrong, please try again.',
+      name: 'SomethingWentWrongPleaseTtryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email already in use, please use a different email.`
+  String get EmailAlreadyInUsePleaseUseADifferentEmail {
+    return Intl.message(
+      'Email already in use, please use a different email.',
+      name: 'EmailAlreadyInUsePleaseUseADifferentEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password too weak!`
+  String get PasswordTooWeak {
+    return Intl.message(
+      'Password too weak!',
+      name: 'PasswordTooWeak',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email address, please check and try again.`
+  String get InvalidEmailAddressPleaseCheckAndTryAgain {
+    return Intl.message(
+      'Invalid email address, please check and try again.',
+      name: 'InvalidEmailAddressPleaseCheckAndTryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User not found for that email address.`
+  String get UserNotFound {
+    return Intl.message(
+      'User not found for that email address.',
+      name: 'UserNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password for that user.`
+  String get WrongPassword {
+    return Intl.message(
+      'Wrong password for that user.',
+      name: 'WrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is no internet connection, please try again.`
+  String get ThereIsNoInternetConnection {
+    return Intl.message(
+      'There is no internet connection, please try again.',
+      name: 'ThereIsNoInternetConnection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attempts have been temporarily blocked due to too many requests. Please try again later.`
+  String get AttemptsHaveBeenTemporarilyBlocked {
+    return Intl.message(
+      'Attempts have been temporarily blocked due to too many requests. Please try again later.',
+      name: 'AttemptsHaveBeenTemporarilyBlocked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with this account is not enabled.`
+  String get LoginWithThisAaccountIsNotEnabled {
+    return Intl.message(
+      'Login with this account is not enabled.',
+      name: 'LoginWithThisAaccountIsNotEnabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred during login. Please try again.`
+  String get AnArrorOccurred {
+    return Intl.message(
+      'An error occurred during login. Please try again.',
+      name: 'AnArrorOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You do not have permission to access this resource.`
+  String get permissionDenied {
+    return Intl.message(
+      'You do not have permission to access this resource.',
+      name: 'permissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Firebase service is currently unavailable. Please try again later.`
+  String get firebaseUnavailable {
+    return Intl.message(
+      'Firebase service is currently unavailable. Please try again later.',
+      name: 'firebaseUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The operation has been canceled.`
+  String get operationCancelled {
+    return Intl.message(
+      'The operation has been canceled.',
+      name: 'operationCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The requested item is not found.`
+  String get itemNotFound {
+    return Intl.message(
+      'The requested item is not found.',
+      name: 'itemNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This item already exists.`
+  String get itemAlreadyExists {
+    return Intl.message(
+      'This item already exists.',
+      name: 'itemAlreadyExists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have exceeded the allowed limit. Please try again later.`
+  String get resourceExhausted {
+    return Intl.message(
+      'You have exceeded the allowed limit. Please try again later.',
+      name: 'resourceExhausted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while handling Firebase.`
+  String get firebaseErrors {
+    return Intl.message(
+      'An error occurred while handling Firebase.',
+      name: 'firebaseErrors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email created successfully`
+  String get EmailCreatedSuccessfully {
+    return Intl.message(
+      'Email created successfully',
+      name: 'EmailCreatedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get Success {
+    return Intl.message('Success', name: 'Success', desc: '', args: []);
+  }
+
+  /// `Error`
+  String get Error {
+    return Intl.message('Error', name: 'Error', desc: '', args: []);
+  }
+
+  /// `Please enter your name`
+  String get PleaseEnterYourName {
+    return Intl.message(
+      'Please enter your name',
+      name: 'PleaseEnterYourName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter valid email`
+  String get PleaseEnterValidEmail {
+    return Intl.message(
+      'Please enter valid email',
+      name: 'PleaseEnterValidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter valid passowrd`
+  String get PleaseEnterValidPassowrd {
+    return Intl.message(
+      'Please enter valid passowrd',
+      name: 'PleaseEnterValidPassowrd',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

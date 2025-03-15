@@ -1,55 +1,60 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+
+import '../../generated/l10n.dart';
 
 class FirebaseErrorHandler {
-  static String getErrorMessage(dynamic error) {
+  static String getErrorMessage(dynamic error, BuildContext context) {
     if (error is FirebaseAuthException) {
-      return _handleAuthError(error);
+      return _handleAuthError(error, context);
     } else if (error is FirebaseException) {
-      return _handleFirebaseException(error);
+      return _handleFirebaseException(error, context);
     } else {
-      return "حدث خطأ غير متوقع، حاول مرة أخرى.";
+      return S.of(context).SomethingWentWrongPleaseTtryAgain;
     }
   }
 
-  static String _handleAuthError(FirebaseAuthException e) {
+  static String _handleAuthError(
+      FirebaseAuthException e, BuildContext context) {
     switch (e.code) {
       case "email-already-in-use":
-        return "البريد الإلكتروني مستخدم بالفعل.";
+        return S.of(context).EmailAlreadyInUsePleaseUseADifferentEmail;
       case "weak-password":
-        return "كلمة المرور ضعيفة جدًا، حاول اختيار كلمة أقوى.";
+        return S.of(context).PasswordTooWeak;
       case "invalid-email":
-        return "البريد الإلكتروني غير صالح، تأكد من كتابته بشكل صحيح.";
+        return S.of(context).InvalidEmailAddressPleaseCheckAndTryAgain;
       case "user-not-found":
-        return "لم يتم العثور على مستخدم بهذا البريد الإلكتروني.";
+        return S.of(context).UserNotFound;
       case "wrong-password":
-        return "كلمة المرور غير صحيحة، حاول مرة أخرى.";
+        return S.of(context).WrongPassword;
       case "network-request-failed":
-        return "هناك مشكلة في الاتصال بالإنترنت، تحقق من الشبكة وحاول مرة أخرى.";
+        return S.of(context).ThereIsNoInternetConnection;
       case "too-many-requests":
-        return "تم حظر المحاولات مؤقتًا بسبب عدد كبير من الطلبات، حاول لاحقًا.";
+        return S.of(context).AttemptsHaveBeenTemporarilyBlocked;
       case "operation-not-allowed":
-        return "تسجيل الدخول باستخدام هذا الحساب غير مفعل.";
+        return S.of(context).LoginWithThisAaccountIsNotEnabled;
       default:
-        return "حدث خطأ أثناء تسجيل الدخول، حاول مرة أخرى.";
+        return S.of(context).AnArrorOccurred;
     }
   }
 
-  static String _handleFirebaseException(FirebaseException e) {
+  static String _handleFirebaseException(
+      FirebaseException e, BuildContext context) {
     switch (e.code) {
       case "permission-denied":
-        return "ليس لديك إذن للوصول إلى هذا المورد.";
+        return S.of(context).permissionDenied;
       case "unavailable":
-        return "خدمة Firebase غير متاحة حاليًا، حاول مرة أخرى لاحقًا.";
+        return S.of(context).firebaseUnavailable;
       case "cancelled":
-        return "تم إلغاء العملية.";
+        return S.of(context).operationCancelled;
       case "not-found":
-        return "العنصر المطلوب غير موجود.";
+        return S.of(context).itemNotFound;
       case "already-exists":
-        return "هذا العنصر موجود بالفعل.";
+        return S.of(context).itemAlreadyExists;
       case "resource-exhausted":
-        return "لقد تجاوزت الحد المسموح به، حاول مرة أخرى لاحقًا.";
+        return S.of(context).resourceExhausted;
       default:
-        return "حدث خطأ أثناء التعامل مع Firebase.";
+        return S.of(context).firebaseErrors;
     }
   }
 }

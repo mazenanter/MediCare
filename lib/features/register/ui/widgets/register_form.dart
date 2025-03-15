@@ -53,7 +53,7 @@ class _RegisterFormState extends State<RegisterForm> {
             hintText: S.of(context).EnterYourUsername,
             validator: (value) {
               if (value!.isEmpty) {
-                return 'Please enter your name';
+                return S.of(context).PleaseEnterYourName;
               }
               return null;
             },
@@ -64,7 +64,7 @@ class _RegisterFormState extends State<RegisterForm> {
             hintText: S.of(context).EnterYourEmail,
             validator: (value) {
               if (value!.isEmpty || !AppRegex.isEmailValid(value)) {
-                return 'Please enter valid email';
+                return S.of(context).PleaseEnterValidEmail;
               }
               return null;
             },
@@ -76,7 +76,7 @@ class _RegisterFormState extends State<RegisterForm> {
             hintText: S.of(context).EnterYourPassword,
             validator: (value) {
               if (value!.isEmpty || !AppRegex.isPasswordValid(value)) {
-                return 'Please enter valid passowrd';
+                return S.of(context).PleaseEnterValidPassowrd;
               }
               return null;
             },
@@ -99,7 +99,7 @@ class _RegisterFormState extends State<RegisterForm> {
             hintText: S.of(context).ConfirmPassword,
             validator: (value) {
               if (value!.isEmpty || !AppRegex.isPasswordValid(value)) {
-                return 'Please enter valid passowrd';
+                return S.of(context).PleaseEnterValidPassowrd;
               }
               return null;
             },

@@ -13,9 +13,10 @@ class RegisterCubit extends Cubit<RegisterState> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  void emitRegisterUserState() async {
+  void emitRegisterUserState(BuildContext context) async {
     emit(RegisterState.registerLoading());
     final result = await registerRepo.createAccount(
+      context: context,
         registerRequestBody: RegisterRequestBody(
       email: emailController.text,
       password: passwordController.text,

@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "عندك حساب بالفعل؟",
     ),
+    "AnArrorOccurred": MessageLookupByLibrary.simpleMessage(
+      "حصل خطأ أثناء تسجيل الدخول، حاول تاني.",
+    ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "على الأقل حرف صغير واحد",
     ),
@@ -40,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "AtLeast8Characters": MessageLookupByLibrary.simpleMessage(
       "على الأقل 8 حروف",
     ),
+    "AttemptsHaveBeenTemporarilyBlocked": MessageLookupByLibrary.simpleMessage(
+      "المحاولات اتقفلت مؤقتًا عشان في محاولات كتير، حاول بعد شوية.",
+    ),
     "Cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("غيّر اللغة"),
     "ConfirmPassword": MessageLookupByLibrary.simpleMessage("أكد كلمة السر"),
@@ -48,6 +54,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
       "لسه معندكش حساب؟",
+    ),
+    "EmailAlreadyInUsePleaseUseADifferentEmail":
+        MessageLookupByLibrary.simpleMessage(
+          "الإيميل ده مستخدم قبل كده، جرب إيميل تاني.",
+        ),
+    "EmailCreatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم إنشاء الإيميل بنجاح.",
     ),
     "EnterYourEmail": MessageLookupByLibrary.simpleMessage(
       "اكتب الإيميل بتاعك",
@@ -58,25 +71,79 @@ class MessageLookup extends MessageLookupByLibrary {
     "EnterYourUsername": MessageLookupByLibrary.simpleMessage(
       "اكتب اسم المستخدم بتاعك",
     ),
+    "Error": MessageLookupByLibrary.simpleMessage("خطأ"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "أهلاً! سجل حسابك عشان تبدأ",
     ),
+    "InvalidEmailAddressPleaseCheckAndTryAgain":
+        MessageLookupByLibrary.simpleMessage(
+          "الإيميل مش صحيح، راجعه وحاول تاني.",
+        ),
     "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بالحساب ده مش متاح.",
+    ),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
     "Or": MessageLookupByLibrary.simpleMessage("أو"),
+    "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
+      "كلمة السر ضعيفة جدًا!",
+    ),
+    "PleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
+      "من فضلك ادخل إيميل صحيح",
+    ),
+    "PleaseEnterValidPassowrd": MessageLookupByLibrary.simpleMessage(
+      "من فضلك ادخل كلمة سر صحيحة",
+    ),
+    "PleaseEnterYourName": MessageLookupByLibrary.simpleMessage(
+      "من فضلك ادخل اسمك",
+    ),
     "Register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
+    "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
+      "في حاجة غلط، حاول تاني.",
+    ),
+    "Success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "متأكد إنك عايز تغيّر اللغة؟",
+    ),
+    "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
+      "مفيش اتصال بالإنترنت، حاول تاني.",
+    ),
+    "UserNotFound": MessageLookupByLibrary.simpleMessage(
+      "مفيش مستخدم مسجل بالإيميل ده.",
     ),
     "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
       "أهلاً بيك! مبسوطين\nإننا نشوفك تاني!",
     ),
     "WelcomeTo": MessageLookupByLibrary.simpleMessage("أهلاً بيك في"),
+    "WrongPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة السر غلط للمستخدم ده.",
+    ),
     "YourPersonalAssistantForMmanagingYourMmedicationSchedule":
         MessageLookupByLibrary.simpleMessage(
           "مساعدك الشخصي لتنظيم\nمواعيد أدويتك.",
         ),
+    "firebaseErrors": MessageLookupByLibrary.simpleMessage(
+      "حصل خطأ أثناء التعامل مع Firebase.",
+    ),
+    "firebaseUnavailable": MessageLookupByLibrary.simpleMessage(
+      "خدمة Firebase مش متاحة دلوقتي، حاول بعد شوية.",
+    ),
+    "itemAlreadyExists": MessageLookupByLibrary.simpleMessage(
+      "العنصر ده موجود بالفعل.",
+    ),
+    "itemNotFound": MessageLookupByLibrary.simpleMessage(
+      "العنصر المطلوب مش موجود.",
+    ),
+    "operationCancelled": MessageLookupByLibrary.simpleMessage(
+      "العملية اتلغت.",
+    ),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "ملوش صلاحية للوصول للمصدر ده.",
+    ),
+    "resourceExhausted": MessageLookupByLibrary.simpleMessage(
+      "تعديت الحد المسموح بيه، حاول تاني بعد شوية.",
+    ),
   };
 }

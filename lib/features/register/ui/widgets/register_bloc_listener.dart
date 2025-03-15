@@ -36,8 +36,8 @@ class RegisterBlocListener extends StatelessWidget {
             builder: (context) {
               return AlertDialog(
                 icon: Icon(FontAwesomeIcons.circleCheck, color: Colors.green),
-                title: Text('Success'),
-                content: Text('Email created successfully'),
+                title: Text(S.of(context).Success),
+                content: Text(S.of(context).EmailCreatedSuccessfully),
                 actions: [
                   TextButton(
                     child: Text(S.of(context).Ok),
@@ -57,7 +57,7 @@ class RegisterBlocListener extends StatelessWidget {
             builder: (context) {
               return AlertDialog(
                 icon: Icon(FontAwesomeIcons.circleXmark, color: Colors.red),
-                title: Text('Error'),
+                title: Text(S.of(context).Error),
                 content: Text(message),
                 actions: [
                   TextButton(
