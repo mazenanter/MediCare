@@ -63,7 +63,7 @@ class RegisterScreen extends StatelessWidget {
 
   validateThenDoRegister(BuildContext context) {
     if (context.read<RegisterCubit>().formKey.currentState!.validate()) {
-      context.read<RegisterCubit>().emitRegisterUserState();
+      context.read<RegisterCubit>().emitRegisterUserState(context);
     }
   }
 }

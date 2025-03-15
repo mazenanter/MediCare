@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
+    "AnArrorOccurred": MessageLookupByLibrary.simpleMessage(
+      "An error occurred during login. Please try again.",
+    ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "At least 1 lowercase letter",
     ),
@@ -38,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "AtLeast8Characters": MessageLookupByLibrary.simpleMessage(
       "At least 8 characters",
     ),
+    "AttemptsHaveBeenTemporarilyBlocked": MessageLookupByLibrary.simpleMessage(
+      "Attempts have been temporarily blocked due to too many requests. Please try again later.",
+    ),
     "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
     "ConfirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
@@ -47,6 +53,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
     ),
+    "EmailAlreadyInUsePleaseUseADifferentEmail":
+        MessageLookupByLibrary.simpleMessage(
+          "Email already in use, please use a different email.",
+        ),
+    "EmailCreatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Email created successfully",
+    ),
     "EnterYourEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "EnterYourPassword": MessageLookupByLibrary.simpleMessage(
       "Enter your password",
@@ -54,25 +67,79 @@ class MessageLookup extends MessageLookupByLibrary {
     "EnterYourUsername": MessageLookupByLibrary.simpleMessage(
       "Enter Your Username",
     ),
+    "Error": MessageLookupByLibrary.simpleMessage("Error"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "Hello! Register to get\nstarted",
     ),
+    "InvalidEmailAddressPleaseCheckAndTryAgain":
+        MessageLookupByLibrary.simpleMessage(
+          "Invalid email address, please check and try again.",
+        ),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
+    "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
+      "Login with this account is not enabled.",
+    ),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
     "Or": MessageLookupByLibrary.simpleMessage("Or"),
+    "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
+      "Password too weak!",
+    ),
+    "PleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
+      "Please enter valid email",
+    ),
+    "PleaseEnterValidPassowrd": MessageLookupByLibrary.simpleMessage(
+      "Please enter valid passowrd",
+    ),
+    "PleaseEnterYourName": MessageLookupByLibrary.simpleMessage(
+      "Please enter your name",
+    ),
     "Register": MessageLookupByLibrary.simpleMessage("Register"),
+    "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
+      "Something went wrong, please try again.",
+    ),
+    "Success": MessageLookupByLibrary.simpleMessage("Success"),
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Are you sure you want to change the language?",
+    ),
+    "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
+      "There is no internet connection, please try again.",
+    ),
+    "UserNotFound": MessageLookupByLibrary.simpleMessage(
+      "User not found for that email address.",
     ),
     "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
       "Welcome back! Glad\nto see you, Again!",
     ),
     "WelcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to"),
+    "WrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Wrong password for that user.",
+    ),
     "YourPersonalAssistantForMmanagingYourMmedicationSchedule":
         MessageLookupByLibrary.simpleMessage(
           "Your personal assistant for managing\nyour medication schedule.",
         ),
+    "firebaseErrors": MessageLookupByLibrary.simpleMessage(
+      "An error occurred while handling Firebase.",
+    ),
+    "firebaseUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Firebase service is currently unavailable. Please try again later.",
+    ),
+    "itemAlreadyExists": MessageLookupByLibrary.simpleMessage(
+      "This item already exists.",
+    ),
+    "itemNotFound": MessageLookupByLibrary.simpleMessage(
+      "The requested item is not found.",
+    ),
+    "operationCancelled": MessageLookupByLibrary.simpleMessage(
+      "The operation has been canceled.",
+    ),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "You do not have permission to access this resource.",
+    ),
+    "resourceExhausted": MessageLookupByLibrary.simpleMessage(
+      "You have exceeded the allowed limit. Please try again later.",
+    ),
   };
 }
