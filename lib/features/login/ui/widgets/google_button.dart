@@ -8,8 +8,8 @@ import '../../../../core/theming/colors_manager.dart';
 import '../../../../core/theming/text_styles_manager.dart';
 
 class GoogleButton extends StatelessWidget {
-  const GoogleButton({super.key});
-
+  const GoogleButton({super.key, required this.onPressed});
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -32,7 +32,7 @@ class GoogleButton extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

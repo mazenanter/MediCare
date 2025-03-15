@@ -46,7 +46,13 @@ class RegisterScreen extends StatelessWidget {
                     verticalSpace(33),
                     DividerAndOrText(),
                     verticalSpace(61),
-                    GoogleButton(),
+                    GoogleButton(
+                      onPressed: () {
+                        context
+                            .read<RegisterCubit>()
+                            .emitGoogleUserState(context);
+                      },
+                    ),
                     verticalSpace(33),
                     AlreadyHaveAnAccount(),
                     verticalSpace(33),

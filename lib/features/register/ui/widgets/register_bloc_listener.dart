@@ -23,23 +23,27 @@ class RegisterBlocListener extends StatelessWidget {
           current is RegisterError,
       listener: (context, state) {
         state.whenOrNull(registerLoading: () {
-          showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                content: Lottie.asset('assets/animation/loading.json'),
-              );
-            },
-          );
-        }, registerSuccess: () {
+          setupLoading(context);
+        }, registerSuccess: (isGoogleSignin) {
           context.pop();
-          setupSuccess(context);
+          setupSuccess(context, isGoogleSignin);
         }, registerError: (message) {
           context.pop();
           setupError(context, message);
         });
       },
       child: SizedBox.shrink(),
+    );
+  }
+
+  Future<dynamic> setupLoading(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          content: Lottie.asset('assets/animation/loading.json'),
+        );
+      },
     );
   }
 
@@ -73,7 +77,7 @@ class RegisterBlocListener extends StatelessWidget {
     );
   }
 
-  Future<dynamic> setupSuccess(BuildContext context) {
+  Future<dynamic> setupSuccess(BuildContext context, bool isGoogleSginin) {
     return showDialog(
       context: context,
       builder: (context) {
@@ -98,7 +102,11 @@ class RegisterBlocListener extends StatelessWidget {
                 foregroundColor: WidgetStateProperty.all(ColorsManager.c196EB0),
               ),
               onPressed: () {
-                context.pushReplacementNamed(Routes.loginScreen);
+                if (isGoogleSginin) {
+                  context.pushNamedAndRemoveUntil(Routes.homeScreen);
+                } else {
+                  context.pushReplacementNamed(Routes.loginScreen);
+                }
               },
               child: Text(
                 S.of(context).Ok,

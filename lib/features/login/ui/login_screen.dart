@@ -49,7 +49,9 @@ class LoginScreen extends StatelessWidget {
                     verticalSpace(33),
                     DividerAndOrText(),
                     verticalSpace(61),
-                    GoogleButton(),
+                    GoogleButton(
+                      onPressed: () {},
+                    ),
                     verticalSpace(33),
                     DontHaveAccount(),
                     verticalSpace(33),
