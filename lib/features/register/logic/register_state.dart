@@ -8,7 +8,8 @@ class RegisterState with _$RegisterState {
 
   const factory RegisterState.registerLoading() = RegisterLoading;
 
-  const factory RegisterState.registerSuccess() = RegisterSuccess;
+  const factory RegisterState.registerSuccess({required bool isGoogleSignin}) =
+      RegisterSuccess;
 
   const factory RegisterState.registerError(String message) = RegisterError;
 }
