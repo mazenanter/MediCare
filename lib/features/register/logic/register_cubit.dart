@@ -16,14 +16,25 @@ class RegisterCubit extends Cubit<RegisterState> {
   void emitRegisterUserState(BuildContext context) async {
     emit(RegisterState.registerLoading());
     final result = await registerRepo.createAccount(
-      context: context,
+        context: context,
         registerRequestBody: RegisterRequestBody(
-      email: emailController.text,
-      password: passwordController.text,
-      name: usernameController.text,
-    ));
+          email: emailController.text,
+          password: passwordController.text,
+          name: usernameController.text,
+        ));
     result.when(
-      success: (registerResponse) => emit(RegisterState.registerSuccess()),
+      success: (registerResponse) =>
+          emit(RegisterState.registerSuccess(isGoogleSignin: false)),
+      error: (errorMsg) => emit(RegisterState.registerError(errorMsg)),
+    );
+  }
+
+  void emitGoogleUserState(BuildContext context) async {
+    emit(RegisterState.registerLoading());
+    final result = await registerRepo.signInWithGoogle(context);
+    result.when(
+      success: (registerResponse) =>
+          emit(RegisterState.registerSuccess(isGoogleSignin: true)),
       error: (errorMsg) => emit(RegisterState.registerError(errorMsg)),
     );
   }

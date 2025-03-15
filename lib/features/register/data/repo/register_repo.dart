@@ -41,4 +41,27 @@ class RegisterRepo {
           FirebaseErrorHandler.getErrorMessage(e, context));
     }
   }
+
+  Future<FirebaseResult<RegisterResponse>> signInWithGoogle(
+      BuildContext context) async {
+    try {
+      UserCredential? userCredential =
+          await firebaseAuthService.signInWithGoogle();
+      if (userCredential == null) {
+        return const FirebaseResult.error("Something went wrong");
+      }
+      RegisterResponse registerResponse = RegisterResponse(
+        email: userCredential.user?.email ?? '',
+        name: userCredential.user?.displayName ?? '',
+        uId: userCredential.user?.uid ?? '',
+      );
+
+      await firestoreService.addUser(registerResponse);
+      return FirebaseResult.success(registerResponse);
+    } catch (e) {
+      return FirebaseResult.error(
+          // ignore: use_build_context_synchronously
+          FirebaseErrorHandler.getErrorMessage(e, context));
+    }
+  }
 }
