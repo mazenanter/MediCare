@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lottie/lottie.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
+import 'package:medicare/core/theming/text_styles_manager.dart';
 import 'package:medicare/features/register/logic/register_cubit.dart';
 import 'package:medicare/features/register/logic/register_state.dart';
 
 import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/colors_manager.dart';
 import '../../../../generated/l10n.dart';
 
 class RegisterBlocListener extends StatelessWidget {
@@ -24,53 +27,87 @@ class RegisterBlocListener extends StatelessWidget {
             context: context,
             builder: (context) {
               return AlertDialog(
-                icon: CircularProgressIndicator(),
-                content: Text('Creating email...'),
+                content: Lottie.asset('assets/animation/loading.json'),
               );
             },
           );
         }, registerSuccess: () {
           context.pop();
-          showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                icon: Icon(FontAwesomeIcons.circleCheck, color: Colors.green),
-                title: Text(S.of(context).Success),
-                content: Text(S.of(context).EmailCreatedSuccessfully),
-                actions: [
-                  TextButton(
-                    child: Text(S.of(context).Ok),
-                    onPressed: () {
-                      context.pop();
-                      context.pushNamedAndRemoveUntil(Routes.loginScreen);
-                    },
-                  ),
-                ],
-              );
-            },
-          );
+          setupSuccess(context);
         }, registerError: (message) {
           context.pop();
-          showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                icon: Icon(FontAwesomeIcons.circleXmark, color: Colors.red),
-                title: Text(S.of(context).Error),
-                content: Text(message),
-                actions: [
-                  TextButton(
-                    child: Text(S.of(context).Ok),
-                    onPressed: () => context.pop(),
-                  ),
-                ],
-              );
-            },
-          );
+          setupError(context, message);
         });
       },
       child: SizedBox.shrink(),
+    );
+  }
+
+  Future<dynamic> setupError(BuildContext context, String message) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          actionsAlignment: MainAxisAlignment.center,
+          icon: Icon(
+            FontAwesomeIcons.circleXmark,
+            color: Colors.red,
+            size: 50,
+          ),
+          title: Text(S.of(context).Error, style: TextStylesManager.font16Bold),
+          content: Text(message, style: TextStylesManager.font20Meduim),
+          actions: [
+            TextButton(
+              style: ButtonStyle(
+                foregroundColor: WidgetStateProperty.all(ColorsManager.c196EB0),
+              ),
+              child: Text(
+                S.of(context).Ok,
+                style: TextStylesManager.font20Meduim,
+              ),
+              onPressed: () => context.pop(),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<dynamic> setupSuccess(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          actionsAlignment: MainAxisAlignment.center,
+          icon: Icon(
+            FontAwesomeIcons.circleCheck,
+            color: Colors.green,
+            size: 50,
+          ),
+          title: Text(
+            S.of(context).Success,
+            style: TextStylesManager.font16Bold,
+          ),
+          content: Text(
+            S.of(context).EmailCreatedSuccessfully,
+            style: TextStylesManager.font20Meduim,
+          ),
+          actions: [
+            TextButton(
+              style: ButtonStyle(
+                foregroundColor: WidgetStateProperty.all(ColorsManager.c196EB0),
+              ),
+              onPressed: () {
+                context.pushReplacementNamed(Routes.loginScreen);
+              },
+              child: Text(
+                S.of(context).Ok,
+                style: TextStylesManager.font20Meduim,
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }
