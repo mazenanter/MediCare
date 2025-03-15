@@ -20,7 +20,7 @@ mixin _$RegisterState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function() registerSuccess,
+    required TResult Function(bool isGoogleSignin) registerSuccess,
     required TResult Function(String message) registerError,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$RegisterState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function()? registerSuccess,
+    TResult? Function(bool isGoogleSignin)? registerSuccess,
     TResult? Function(String message)? registerError,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$RegisterState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function()? registerSuccess,
+    TResult Function(bool isGoogleSignin)? registerSuccess,
     TResult Function(String message)? registerError,
     required TResult orElse(),
   }) =>
@@ -132,7 +132,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function() registerSuccess,
+    required TResult Function(bool isGoogleSignin) registerSuccess,
     required TResult Function(String message) registerError,
   }) {
     return initial();
@@ -143,7 +143,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function()? registerSuccess,
+    TResult? Function(bool isGoogleSignin)? registerSuccess,
     TResult? Function(String message)? registerError,
   }) {
     return initial?.call();
@@ -154,7 +154,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function()? registerSuccess,
+    TResult Function(bool isGoogleSignin)? registerSuccess,
     TResult Function(String message)? registerError,
     required TResult orElse(),
   }) {
@@ -249,7 +249,7 @@ class _$RegisterLoadingImpl implements RegisterLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function() registerSuccess,
+    required TResult Function(bool isGoogleSignin) registerSuccess,
     required TResult Function(String message) registerError,
   }) {
     return registerLoading();
@@ -260,7 +260,7 @@ class _$RegisterLoadingImpl implements RegisterLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function()? registerSuccess,
+    TResult? Function(bool isGoogleSignin)? registerSuccess,
     TResult? Function(String message)? registerError,
   }) {
     return registerLoading?.call();
@@ -271,7 +271,7 @@ class _$RegisterLoadingImpl implements RegisterLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function()? registerSuccess,
+    TResult Function(bool isGoogleSignin)? registerSuccess,
     TResult Function(String message)? registerError,
     required TResult orElse(),
   }) {
@@ -328,6 +328,8 @@ abstract class _$$RegisterSuccessImplCopyWith<$Res> {
   factory _$$RegisterSuccessImplCopyWith(_$RegisterSuccessImpl value,
           $Res Function(_$RegisterSuccessImpl) then) =
       __$$RegisterSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isGoogleSignin});
 }
 
 /// @nodoc
@@ -340,36 +342,63 @@ class __$$RegisterSuccessImplCopyWithImpl<$Res>
 
   /// Create a copy of RegisterState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isGoogleSignin = null,
+  }) {
+    return _then(_$RegisterSuccessImpl(
+      isGoogleSignin: null == isGoogleSignin
+          ? _value.isGoogleSignin
+          : isGoogleSignin // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$RegisterSuccessImpl implements RegisterSuccess {
-  const _$RegisterSuccessImpl();
+  const _$RegisterSuccessImpl({required this.isGoogleSignin});
+
+  @override
+  final bool isGoogleSignin;
 
   @override
   String toString() {
-    return 'RegisterState.registerSuccess()';
+    return 'RegisterState.registerSuccess(isGoogleSignin: $isGoogleSignin)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RegisterSuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$RegisterSuccessImpl &&
+            (identical(other.isGoogleSignin, isGoogleSignin) ||
+                other.isGoogleSignin == isGoogleSignin));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, isGoogleSignin);
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RegisterSuccessImplCopyWith<_$RegisterSuccessImpl> get copyWith =>
+      __$$RegisterSuccessImplCopyWithImpl<_$RegisterSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function() registerSuccess,
+    required TResult Function(bool isGoogleSignin) registerSuccess,
     required TResult Function(String message) registerError,
   }) {
-    return registerSuccess();
+    return registerSuccess(isGoogleSignin);
   }
 
   @override
@@ -377,10 +406,10 @@ class _$RegisterSuccessImpl implements RegisterSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function()? registerSuccess,
+    TResult? Function(bool isGoogleSignin)? registerSuccess,
     TResult? Function(String message)? registerError,
   }) {
-    return registerSuccess?.call();
+    return registerSuccess?.call(isGoogleSignin);
   }
 
   @override
@@ -388,12 +417,12 @@ class _$RegisterSuccessImpl implements RegisterSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function()? registerSuccess,
+    TResult Function(bool isGoogleSignin)? registerSuccess,
     TResult Function(String message)? registerError,
     required TResult orElse(),
   }) {
     if (registerSuccess != null) {
-      return registerSuccess();
+      return registerSuccess(isGoogleSignin);
     }
     return orElse();
   }
@@ -437,7 +466,16 @@ class _$RegisterSuccessImpl implements RegisterSuccess {
 }
 
 abstract class RegisterSuccess implements RegisterState {
-  const factory RegisterSuccess() = _$RegisterSuccessImpl;
+  const factory RegisterSuccess({required final bool isGoogleSignin}) =
+      _$RegisterSuccessImpl;
+
+  bool get isGoogleSignin;
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RegisterSuccessImplCopyWith<_$RegisterSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -510,7 +548,7 @@ class _$RegisterErrorImpl implements RegisterError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() registerLoading,
-    required TResult Function() registerSuccess,
+    required TResult Function(bool isGoogleSignin) registerSuccess,
     required TResult Function(String message) registerError,
   }) {
     return registerError(message);
@@ -521,7 +559,7 @@ class _$RegisterErrorImpl implements RegisterError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? registerLoading,
-    TResult? Function()? registerSuccess,
+    TResult? Function(bool isGoogleSignin)? registerSuccess,
     TResult? Function(String message)? registerError,
   }) {
     return registerError?.call(message);
@@ -532,7 +570,7 @@ class _$RegisterErrorImpl implements RegisterError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? registerLoading,
-    TResult Function()? registerSuccess,
+    TResult Function(bool isGoogleSignin)? registerSuccess,
     TResult Function(String message)? registerError,
     required TResult orElse(),
   }) {
