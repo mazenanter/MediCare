@@ -47,5 +47,6 @@
   "Error": "Error",
   "PleaseEnterYourName": "Please enter your name",
   "PleaseEnterValidEmail": "Please enter valid email",
-  "PleaseEnterValidPassowrd": "Please enter valid passowrd"
+  "PleaseEnterValidPassowrd": "Please enter valid passowrd",
+  "MissingAccessTokenOrIDToken": "Missing access token or ID token"
 }

@@ -46,5 +46,6 @@
   "Error": "خطأ",
   "PleaseEnterYourName": "من فضلك ادخل اسمك",
   "PleaseEnterValidEmail": "من فضلك ادخل إيميل صحيح",
-  "PleaseEnterValidPassowrd": "من فضلك ادخل كلمة سر صحيحة"
+  "PleaseEnterValidPassowrd": "من فضلك ادخل كلمة سر صحيحة",
+  "MissingAccessTokenOrIDToken": "لا يوجد توكن او توكن ID"
 }
