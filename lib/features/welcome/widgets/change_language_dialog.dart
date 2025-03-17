@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
 
 import '../../../core/localization/locale_cubit.dart';
@@ -36,7 +37,9 @@ class ChangeLanguageDialog extends StatelessWidget {
             foregroundColor: WidgetStateProperty.all(ColorsManager.c196EB0),
           ),
           onPressed: () {
-            localeCubit.toggleLanguage();
+            localeCubit.changeLanguage(context.read<LocaleCubit>().isArabic
+                ? Locale('en')
+                : Locale('ar'));
             context.pop();
           },
           child: Text(
