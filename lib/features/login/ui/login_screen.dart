@@ -36,14 +36,14 @@ class LoginScreen extends StatelessWidget {
                     ),
                     verticalSpace(32),
                     EmailAndPassword(),
-                    verticalSpace(24),
-                    Align(
-                      alignment: AlignmentDirectional.centerEnd,
-                      child: Text(
-                        S.of(context).ForgotPassword,
-                        style: TextStylesManager.font14BlueSemiBold,
-                      ),
-                    ),
+                    //verticalSpace(24),
+                    // Align(
+                    //   alignment: AlignmentDirectional.centerEnd,
+                    //   child: Text(
+                    //     S.of(context).ForgotPassword,
+                    //     style: TextStylesManager.font14BlueSemiBold,
+                    //   ),
+                    // ),
                     verticalSpace(33),
                     AppTextButton(
                       onPressed: () {
