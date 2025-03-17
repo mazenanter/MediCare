@@ -6,6 +6,9 @@ import 'package:medicare/core/networking/firestore_service.dart';
 import 'package:medicare/features/register/data/repo/register_repo.dart';
 import 'package:medicare/features/register/logic/register_cubit.dart';
 
+import '../../features/login/data/repo/login_repo.dart';
+import '../../features/login/logic/login_cubit.dart';
+
 final getIt = GetIt.instance;
 
 Future<void> setupGetIt() async {
@@ -25,4 +28,9 @@ Future<void> setupGetIt() async {
       ));
   getIt.registerFactory<RegisterCubit>(
       () => RegisterCubit(getIt<RegisterRepo>()));
+
+  // login
+  getIt.registerLazySingleton<LoginRepo>(
+      () => LoginRepo(getIt<FirebaseAuthService>()));
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt<LoginRepo>()));
 }
