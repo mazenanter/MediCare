@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/core/networking/firebase_error_handler.dart';
 import 'package:medicare/core/networking/firebase_result.dart';
 import 'package:medicare/features/login/data/models/login_request_body.dart';
+import 'package:medicare/features/login/data/models/login_response.dart';
 
 import '../../../../core/networking/firebase_auth_service.dart';
 import '../../../../core/networking/firestore_service.dart';
@@ -13,13 +14,19 @@ class LoginRepo {
   final FirestoreService firestoreService;
   LoginRepo(this.firebaseAuthService, this.firestoreService);
 
-  Future<FirebaseResult<void>> login(
+  Future<FirebaseResult<LoginResponse>> login(
       {required LoginRequestBody loginRequestBody,
       required BuildContext context}) async {
     try {
-      await firebaseAuthService.login(
+      final user = await firebaseAuthService.login(
           email: loginRequestBody.email, password: loginRequestBody.password);
-      return const FirebaseResult.success(null);
+
+      final loginResponse = LoginResponse(
+        email: user?.email ?? '',
+        name: user?.displayName ?? '',
+        uId: user!.uid,
+      );
+      return FirebaseResult.success(loginResponse);
     } catch (e) {
       return FirebaseResult.error(
           FirebaseErrorHandler.getErrorMessage(e, context));

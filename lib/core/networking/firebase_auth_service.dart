@@ -39,7 +39,10 @@ class FirebaseAuthService {
     return await _auth.signInWithCredential(credential);
   }
 
-  Future<void> login({required String email, required String password}) async {
-    await _auth.signInWithEmailAndPassword(email: email, password: password);
+  Future<User?> login({required String email, required String password}) async {
+    final userCredential = await _auth.signInWithEmailAndPassword(
+        email: email, password: password);
+
+    return userCredential.user;
   }
 }
