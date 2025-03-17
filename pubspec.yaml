@@ -45,6 +45,8 @@ dependencies:
   firebase_auth: ^5.5.1
   cloud_firestore: ^5.6.5
   google_sign_in: ^6.3.0
+  # For reading and writing key-value pairs
+  shared_preferences: ^2.5.2
   # State Management
   flutter_bloc: ^9.1.0
   # Which allows painting and displaying Scalable Vector
