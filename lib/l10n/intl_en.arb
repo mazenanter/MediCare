@@ -48,5 +48,7 @@
   "PleaseEnterYourName": "Please enter your name",
   "PleaseEnterValidEmail": "Please enter valid email",
   "PleaseEnterValidPassowrd": "Please enter valid passowrd",
-  "MissingAccessTokenOrIDToken": "Missing access token or ID token"
+  "MissingAccessTokenOrIDToken": "Missing access token or ID token",
+  "LoginSuccess": "Login Success",
+  "InvalidCredential":"Email or password is incorrect."
 }
