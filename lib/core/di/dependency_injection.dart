@@ -31,6 +31,6 @@ Future<void> setupGetIt() async {
 
   // login
   getIt.registerLazySingleton<LoginRepo>(
-      () => LoginRepo(getIt<FirebaseAuthService>()));
+      () => LoginRepo(getIt<FirebaseAuthService>(), getIt<FirestoreService>()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt<LoginRepo>()));
 }
