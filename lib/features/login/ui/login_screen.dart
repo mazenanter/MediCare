@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/widgets/app_text_button.dart';
 import 'package:medicare/features/login/ui/widgets/divider_and_or_text.dart';
 import 'package:medicare/features/login/ui/widgets/dont_have_account.dart';
 import 'package:medicare/features/login/ui/widgets/email_and_password.dart';
 import 'package:medicare/features/login/ui/widgets/google_button.dart';
+import 'package:medicare/features/login/ui/widgets/login_bloc_listener.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/text_styles_manager.dart';
 import '../../../core/widgets/back_arrow_button.dart';
 import '../../../generated/l10n.dart';
+import '../logic/login_cubit.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -43,7 +46,9 @@ class LoginScreen extends StatelessWidget {
                     ),
                     verticalSpace(33),
                     AppTextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        validateThenDoLogin(context);
+                      },
                       text: S.of(context).Login,
                     ),
                     verticalSpace(33),
@@ -55,6 +60,7 @@ class LoginScreen extends StatelessWidget {
                     verticalSpace(33),
                     DontHaveAccount(),
                     verticalSpace(33),
+                    LoginBlocListener(),
                   ],
                 ),
               ),
@@ -63,5 +69,11 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  validateThenDoLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().login(context: context);
+    }
   }
 }
