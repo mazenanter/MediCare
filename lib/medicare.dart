@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/core/helpers/constants.dart';
 import 'package:medicare/core/localization/locale_cubit.dart';
 import 'package:medicare/core/routing/app_router.dart';
 import 'package:medicare/core/routing/routes.dart';
@@ -37,7 +38,8 @@ class MediCare extends StatelessWidget {
                     context.read<LocaleCubit>().isArabic ? 'Cairo' : 'Poppins',
               ),
               onGenerateRoute: appRouter.onGenerateRoute,
-              initialRoute: Routes.welcomeScreen,
+              initialRoute:
+                  isLoggedIn ? Routes.homeScreen : Routes.welcomeScreen,
             );
           },
         ),
