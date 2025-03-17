@@ -55,7 +55,11 @@ class LoginScreen extends StatelessWidget {
                     DividerAndOrText(),
                     verticalSpace(61),
                     GoogleButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context
+                            .read<LoginCubit>()
+                            .signInWithGoogle(context: context);
+                      },
                     ),
                     verticalSpace(33),
                     DontHaveAccount(),

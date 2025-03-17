@@ -24,4 +24,14 @@ class LoginCubit extends Cubit<LoginState> {
       emit(LoginState.loginError(message));
     });
   }
+
+  Future<void> signInWithGoogle({required BuildContext context}) async {
+    emit(LoginState.loginLoading());
+    final result = await loginRepo.signInWithGoogle(context);
+    result.when(success: (data) {
+      emit(LoginState.loginSuccess());
+    }, error: (message) {
+      emit(LoginState.loginError(message));
+    });
+  }
 }
