@@ -489,6 +489,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Missing access token or ID token`
+  String get MissingAccessTokenOrIDToken {
+    return Intl.message(
+      'Missing access token or ID token',
+      name: 'MissingAccessTokenOrIDToken',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Success`
+  String get LoginSuccess {
+    return Intl.message(
+      'Login Success',
+      name: 'LoginSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email or password is incorrect.`
+  String get InvalidCredential {
+    return Intl.message(
+      'Email or password is incorrect.',
+      name: 'InvalidCredential',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

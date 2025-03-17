@@ -5,6 +5,9 @@ import '../../generated/l10n.dart';
 
 class FirebaseErrorHandler {
   static String getErrorMessage(dynamic error, BuildContext context) {
+    debugPrint("🔥 ERROR TYPE: ${error.runtimeType}");
+    debugPrint(
+        "🔥 ERROR CODE: ${error is FirebaseAuthException ? error.code : 'UNKNOWN'}");
     if (error is FirebaseAuthException) {
       return _handleAuthError(error, context);
     } else if (error is FirebaseException) {
@@ -16,6 +19,7 @@ class FirebaseErrorHandler {
 
   static String _handleAuthError(
       FirebaseAuthException e, BuildContext context) {
+    debugPrint("🔥 AUTH ERROR CODE: ${e.code}");
     switch (e.code) {
       case "email-already-in-use":
         return S.of(context).EmailAlreadyInUsePleaseUseADifferentEmail;
@@ -29,6 +33,8 @@ class FirebaseErrorHandler {
         return S.of(context).WrongPassword;
       case "network-request-failed":
         return S.of(context).ThereIsNoInternetConnection;
+      case "invalid-credential":
+        return S.of(context).InvalidCredential;
       case "too-many-requests":
         return S.of(context).AttemptsHaveBeenTemporarilyBlocked;
       case "operation-not-allowed":
