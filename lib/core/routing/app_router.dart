@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medicare/core/di/dependency_injection.dart';
 import 'package:medicare/core/routing/routes.dart';
+import 'package:medicare/features/login/logic/login_cubit.dart';
 import 'package:medicare/features/login/ui/login_screen.dart';
 import 'package:medicare/features/register/logic/register_cubit.dart';
 import 'package:medicare/features/welcome/welcome_screen.dart';
@@ -17,7 +18,10 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => LoginCubit(getIt()),
+            child: LoginScreen(),
+          ),
         );
       case Routes.registerScreen:
         return MaterialPageRoute(
