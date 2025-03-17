@@ -47,6 +47,8 @@ dependencies:
   google_sign_in: ^6.3.0
   # For reading and writing key-value pairs
   shared_preferences: ^2.5.2
+  # For encrypting and decrypting data
+  flutter_secure_storage: ^9.2.4
   # State Management
   flutter_bloc: ^9.1.0
   # Which allows painting and displaying Scalable Vector
