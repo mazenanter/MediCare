@@ -72,15 +72,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "Hello! Register to get\nstarted",
     ),
+    "InvalidCredential": MessageLookupByLibrary.simpleMessage(
+      "Email or password is incorrect.",
+    ),
     "InvalidEmailAddressPleaseCheckAndTryAgain":
         MessageLookupByLibrary.simpleMessage(
           "Invalid email address, please check and try again.",
         ),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
+    "LoginSuccess": MessageLookupByLibrary.simpleMessage("Login Success"),
     "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
       "Login with this account is not enabled.",
     ),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
+    "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
+      "Missing access token or ID token",
+    ),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
     "Or": MessageLookupByLibrary.simpleMessage("Or"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(

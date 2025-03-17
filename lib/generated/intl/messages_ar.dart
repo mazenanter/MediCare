@@ -76,15 +76,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "أهلاً! سجل حسابك عشان تبدأ",
     ),
+    "InvalidCredential": MessageLookupByLibrary.simpleMessage(
+      "الايميل او الباسورد غلط, جرب تاني",
+    ),
     "InvalidEmailAddressPleaseCheckAndTryAgain":
         MessageLookupByLibrary.simpleMessage(
           "الإيميل مش صحيح، راجعه وحاول تاني.",
         ),
     "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "LoginSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح",
+    ),
     "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بالحساب ده مش متاح.",
     ),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
+    "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد توكن او توكن ID",
+    ),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
     "Or": MessageLookupByLibrary.simpleMessage("أو"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
