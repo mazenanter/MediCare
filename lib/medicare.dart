@@ -39,7 +39,7 @@ class MediCare extends StatelessWidget {
               ),
               onGenerateRoute: appRouter.onGenerateRoute,
               initialRoute:
-                  isLoggedIn ? Routes.manageMedScreen : Routes.welcomeScreen,
+                  isLoggedIn ? Routes.homeScreen : Routes.welcomeScreen,
             );
           },
         ),
