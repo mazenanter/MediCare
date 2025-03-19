@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/theming/colors_manager.dart';
 import '../../../../core/theming/text_styles_manager.dart';
@@ -19,7 +20,7 @@ class AddMedButton extends StatelessWidget {
       ),
       onPressed: () {},
       child: Text(
-        'Add medicine',
+        S.of(context).AddMedicine,
         style: TextStylesManager.font29Bold.copyWith(
           color: ColorsManager.cFFFFFF,
         ),
