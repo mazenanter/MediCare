@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/features/home/ui/widgets/dates_list_view.dart';
+import 'package:medicare/features/home/ui/widgets/fab_button.dart';
 import 'package:medicare/features/home/ui/widgets/home_top_bar.dart';
+import 'package:medicare/features/home/ui/widgets/intakes_counter.dart';
+import 'package:medicare/features/home/ui/widgets/intakes_list_view.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/colors_manager.dart';
@@ -22,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HomeTopBar(),
-                  verticalSpace(35),
+                  verticalSpace(30),
                   Text(
                     'Today',
                     style: TextStylesManager.font29Bold.copyWith(
@@ -40,9 +43,14 @@ class HomeScreen extends StatelessWidget {
                 color: ColorsManager.c196EB0,
               ),
             ),
+            verticalSpace(45),
+            IntakesCounter(),
+            verticalSpace(40),
+            IntakesListView(),
           ],
         ),
       ),
+      floatingActionButton: FabButton(),
     );
   }
 }
