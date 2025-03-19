@@ -30,6 +30,10 @@ class TextStylesManager {
     fontSize: 10.sp,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font45Bold = TextStyle(
+    fontSize: 45.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
   static TextStyle font12Bold = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.bold,
