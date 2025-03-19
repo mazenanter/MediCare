@@ -52,5 +52,7 @@
   "InvalidCredential":"الايميل او الباسورد غلط, جرب تاني",
   "ManageYourMeds": "إدارة أدويتك",
 "AddYourMedsToBeReminded": "ضيف أدويتك عشان تفتكرها في معادها وتتابع صحتك",
-"AddMedicine": "إضافة دواء"
+"AddMedicine": "إضافة دواء",
+"Today" : "انهاردة",
+"Intakes" : "الجرعات"
 }

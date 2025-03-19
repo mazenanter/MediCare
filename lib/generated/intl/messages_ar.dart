@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "أهلاً! سجل حسابك عشان تبدأ",
     ),
+    "Intakes": MessageLookupByLibrary.simpleMessage("الجرعات"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(
       "الايميل او الباسورد غلط, جرب تاني",
     ),
@@ -124,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "مفيش اتصال بالإنترنت، حاول تاني.",
     ),
+    "Today": MessageLookupByLibrary.simpleMessage("انهاردة"),
     "UserNotFound": MessageLookupByLibrary.simpleMessage(
       "مفيش مستخدم مسجل بالإيميل ده.",
     ),
