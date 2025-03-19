@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/features/home/ui/widgets/dates_list_view.dart';
 import 'package:medicare/features/home/ui/widgets/home_top_bar.dart';
 
 import '../../../core/helpers/spacing.dart';
@@ -29,6 +30,14 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            DatesListView(),
+            verticalSpace(45),
+            Text(
+              'Intakes',
+              style: TextStylesManager.font29Bold.copyWith(
+                color: ColorsManager.c196EB0,
               ),
             ),
           ],
