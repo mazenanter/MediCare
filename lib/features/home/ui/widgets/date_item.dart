@@ -36,7 +36,7 @@ class DateItem extends StatelessWidget {
           children: [
             Text(
               DateFormat.d().format(date),
-              style: TextStylesManager.font20Meduim.copyWith(
+              style: TextStylesManager.font16Bold.copyWith(
                 color: ColorsManager.c040415,
               ),
             ),
