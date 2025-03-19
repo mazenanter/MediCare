@@ -519,6 +519,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Manage your meds`
+  String get ManageYourMeds {
+    return Intl.message(
+      'Manage your meds',
+      name: 'ManageYourMeds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add your meds to be reminded on\ntime and track your health `
+  String get AddYourMedsToBeReminded {
+    return Intl.message(
+      'Add your meds to be reminded on\ntime and track your health ',
+      name: 'AddYourMedsToBeReminded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add medicine`
+  String get AddMedicine {
+    return Intl.message(
+      'Add medicine',
+      name: 'AddMedicine',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

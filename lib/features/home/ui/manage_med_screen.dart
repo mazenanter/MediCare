@@ -6,6 +6,7 @@ import 'package:medicare/features/home/ui/widgets/home_top_bar.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/colors_manager.dart';
+import '../../../generated/l10n.dart';
 
 class ManageMedScreen extends StatelessWidget {
   const ManageMedScreen({super.key});
@@ -27,14 +28,14 @@ class ManageMedScreen extends StatelessWidget {
               ),
               verticalSpace(60),
               Text(
-                'Manage your meds',
+                S.of(context).ManageYourMeds,
                 style: TextStylesManager.font29Bold.copyWith(
                   color: ColorsManager.c196EB0,
                 ),
               ),
               verticalSpace(90),
               Text(
-                'Add your meds to be reminded on\ntime and track your health ',
+                S.of(context).AddYourMedsToBeReminded,
                 textAlign: TextAlign.center,
                 style: TextStylesManager.font18Regular.copyWith(
                   color: ColorsManager.cB8B8B8,

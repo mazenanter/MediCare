@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AddMedicine": MessageLookupByLibrary.simpleMessage("إضافة دواء"),
+    "AddYourMedsToBeReminded": MessageLookupByLibrary.simpleMessage(
+      "ضيف أدويتك عشان تفتكرها في معادها وتتابع صحتك",
+    ),
     "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "عندك حساب بالفعل؟",
     ),
@@ -90,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بالحساب ده مش متاح.",
     ),
+    "ManageYourMeds": MessageLookupByLibrary.simpleMessage("إدارة أدويتك"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
       "لا يوجد توكن او توكن ID",
