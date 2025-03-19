@@ -76,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "Hello! Register to get\nstarted",
     ),
+    "Intakes": MessageLookupByLibrary.simpleMessage("Intakes"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(
       "Email or password is incorrect.",
     ),
@@ -118,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "There is no internet connection, please try again.",
     ),
+    "Today": MessageLookupByLibrary.simpleMessage("Today"),
     "UserNotFound": MessageLookupByLibrary.simpleMessage(
       "User not found for that email address.",
     ),

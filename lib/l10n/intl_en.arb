@@ -53,5 +53,7 @@
   "InvalidCredential":"Email or password is incorrect.",
   "ManageYourMeds": "Manage your meds",
   "AddYourMedsToBeReminded": "Add your meds to be reminded on\ntime and track your health ",
-"AddMedicine": "Add medicine"
+"AddMedicine": "Add medicine",
+"Today" : "Today",
+"Intakes" : "Intakes"
 }

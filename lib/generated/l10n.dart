@@ -549,6 +549,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Today`
+  String get Today {
+    return Intl.message('Today', name: 'Today', desc: '', args: []);
+  }
+
+  /// `Intakes`
+  String get Intakes {
+    return Intl.message('Intakes', name: 'Intakes', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

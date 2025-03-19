@@ -9,6 +9,7 @@ import 'package:medicare/features/home/ui/widgets/intakes_list_view.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/colors_manager.dart';
 import '../../../core/theming/text_styles_manager.dart';
+import '../../../generated/l10n.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   HomeTopBar(),
                   verticalSpace(30),
                   Text(
-                    'Today',
+                    S.of(context).Today,
                     style: TextStylesManager.font29Bold.copyWith(
                       color: ColorsManager.c196EB0,
                     ),
@@ -38,7 +39,7 @@ class HomeScreen extends StatelessWidget {
             DatesListView(),
             verticalSpace(45),
             Text(
-              'Intakes',
+              S.of(context).Intakes,
               style: TextStylesManager.font29Bold.copyWith(
                 color: ColorsManager.c196EB0,
               ),
