@@ -4,8 +4,11 @@ import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/core/theming/colors_manager.dart';
 
 class BackArrowButton extends StatelessWidget {
-  const BackArrowButton({super.key, this.arrowPadding});
+  const BackArrowButton(
+      {super.key, this.arrowPadding, this.buttonWidth, this.buttonHeight});
   final double? arrowPadding;
+  final double? buttonWidth;
+  final double? buttonHeight;
   @override
   Widget build(BuildContext context) {
     bool isRTL = Directionality.of(context) == TextDirection.rtl;
@@ -16,8 +19,8 @@ class BackArrowButton extends StatelessWidget {
           start: (arrowPadding ?? 26.w),
         ),
         child: Container(
-          width: 41.w,
-          height: 41.h,
+          width: buttonWidth ?? 41.w,
+          height: buttonHeight ?? 41.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: ColorsManager.cE8ECF4),

@@ -15,6 +15,7 @@ class AppTextButton extends StatelessWidget {
     this.horizontalPadding,
     this.verticalPadding,
     this.textColor,
+    this.hintStyle,
   });
   final void Function() onPressed;
   final String text;
@@ -25,6 +26,7 @@ class AppTextButton extends StatelessWidget {
   final double? horizontalPadding;
   final double? verticalPadding;
   final Color? textColor;
+  final TextStyle? hintStyle;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -51,9 +53,12 @@ class AppTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStylesManager.font15Bold.copyWith(
-          color: textColor ?? ColorsManager.cFFFFFF,
-        ),
+        style: hintStyle?.copyWith(
+              color: textColor ?? ColorsManager.cFFFFFF,
+            ) ??
+            TextStylesManager.font15Bold.copyWith(
+              color: textColor ?? ColorsManager.cFFFFFF,
+            ),
       ),
     );
   }
