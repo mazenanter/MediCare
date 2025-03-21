@@ -53,7 +53,7 @@ class AddMedFormField extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: BorderSide(
-                  color: ColorsManager.c196EB0,
+                  color: ColorsManager.cBBBBBB,
                   width: 1.5,
                 ),
               ),

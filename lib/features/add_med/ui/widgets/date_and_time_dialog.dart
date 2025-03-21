@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/features/add_med/ui/widgets/custom_dialog_button.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors_manager.dart';
@@ -30,7 +31,7 @@ class DateAndTimeDialog extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Add Reminder",
+              S.of(context).AddReminder,
               style: TextStylesManager.font24Bold,
             ),
             verticalSpace(20),
@@ -63,14 +64,14 @@ class DateAndTimeDialog extends StatelessWidget {
       children: [
         CustomDialogButton(
           onPressed: () => context.pop(),
-          text: 'Cancel',
+          text: S.of(context).Cancel,
           buttonColor: ColorsManager.cFFFFFF,
           textColor: ColorsManager.cEA4335,
         ),
         horizontalSpace(16),
         CustomDialogButton(
           onPressed: () {},
-          text: 'Add',
+          text: S.of(context).Add,
         ),
       ],
     );

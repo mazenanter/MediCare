@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/helpers/spacing.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 import 'package:medicare/core/widgets/back_arrow_button.dart';
+import 'package:medicare/generated/l10n.dart';
 
 class AddMedTopBar extends StatelessWidget {
   const AddMedTopBar({super.key});
@@ -19,7 +20,7 @@ class AddMedTopBar extends StatelessWidget {
           ),
           horizontalSpace(16),
           Text(
-            'Add New Medicine',
+            S.of(context).AddNewMedicine,
             style: TextStylesManager.font24Bold,
           ),
         ],

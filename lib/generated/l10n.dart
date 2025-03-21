@@ -559,6 +559,141 @@ class S {
   String get Intakes {
     return Intl.message('Intakes', name: 'Intakes', desc: '', args: []);
   }
+
+  /// `Tablet`
+  String get Tablet {
+    return Intl.message('Tablet', name: 'Tablet', desc: '', args: []);
+  }
+
+  /// `Capsule`
+  String get Capsule {
+    return Intl.message('Capsule', name: 'Capsule', desc: '', args: []);
+  }
+
+  /// `Injection`
+  String get Injection {
+    return Intl.message('Injection', name: 'Injection', desc: '', args: []);
+  }
+
+  /// `Drop`
+  String get Drop {
+    return Intl.message('Drop', name: 'Drop', desc: '', args: []);
+  }
+
+  /// `Name*`
+  String get Name {
+    return Intl.message('Name*', name: 'Name', desc: '', args: []);
+  }
+
+  /// `Type*`
+  String get Type {
+    return Intl.message('Type*', name: 'Type', desc: '', args: []);
+  }
+
+  /// `Dose*`
+  String get Dose {
+    return Intl.message('Dose*', name: 'Dose', desc: '', args: []);
+  }
+
+  /// `Time*`
+  String get Time {
+    return Intl.message('Time*', name: 'Time', desc: '', args: []);
+  }
+
+  /// `Add`
+  String get Add {
+    return Intl.message('Add', name: 'Add', desc: '', args: []);
+  }
+
+  /// `Amount*`
+  String get Amount {
+    return Intl.message('Amount*', name: 'Amount', desc: '', args: []);
+  }
+
+  /// `Date*`
+  String get Date {
+    return Intl.message('Date*', name: 'Date', desc: '', args: []);
+  }
+
+  /// `Reminder`
+  String get Reminder {
+    return Intl.message('Reminder', name: 'Reminder', desc: '', args: []);
+  }
+
+  /// `Name (e.g. Ibuprofen)`
+  String get NameEG {
+    return Intl.message(
+      'Name (e.g. Ibuprofen)',
+      name: 'NameEG',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type (e.g. Tablet)`
+  String get TypeEG {
+    return Intl.message(
+      'Type (e.g. Tablet)',
+      name: 'TypeEG',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dose (e.g. 400mg)`
+  String get DoseEG {
+    return Intl.message(
+      'Dose (e.g. 400mg)',
+      name: 'DoseEG',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount (e.g. 2)`
+  String get AmountEG {
+    return Intl.message(
+      'Amount (e.g. 2)',
+      name: 'AmountEG',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add New Medicine`
+  String get AddNewMedicine {
+    return Intl.message(
+      'Add New Medicine',
+      name: 'AddNewMedicine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Reminder`
+  String get AddReminder {
+    return Intl.message(
+      'Add Reminder',
+      name: 'AddReminder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill out the fields and hit the Save\nButton to add it!`
+  String get FillOutTheFields {
+    return Intl.message(
+      'Fill out the fields and hit the Save\nButton to add it!',
+      name: 'FillOutTheFields',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get Save {
+    return Intl.message('Save', name: 'Save', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
