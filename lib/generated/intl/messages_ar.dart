@@ -22,13 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Add": MessageLookupByLibrary.simpleMessage("إضافة"),
     "AddMedicine": MessageLookupByLibrary.simpleMessage("إضافة دواء"),
+    "AddNewMedicine": MessageLookupByLibrary.simpleMessage("إضافة دواء جديد"),
+    "AddReminder": MessageLookupByLibrary.simpleMessage("إضافة تذكير"),
     "AddYourMedsToBeReminded": MessageLookupByLibrary.simpleMessage(
       "ضيف أدويتك عشان تفتكرها في معادها وتتابع صحتك",
     ),
     "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "عندك حساب بالفعل؟",
     ),
+    "Amount": MessageLookupByLibrary.simpleMessage("الكمية*"),
+    "AmountEG": MessageLookupByLibrary.simpleMessage("الكمية (مثلاً: 2)"),
     "AnArrorOccurred": MessageLookupByLibrary.simpleMessage(
       "حصل خطأ أثناء تسجيل الدخول، حاول تاني.",
     ),
@@ -51,14 +56,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "المحاولات اتقفلت مؤقتًا عشان في محاولات كتير، حاول بعد شوية.",
     ),
     "Cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+    "Capsule": MessageLookupByLibrary.simpleMessage("كبسولات"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("غيّر اللغة"),
     "ConfirmPassword": MessageLookupByLibrary.simpleMessage("أكد كلمة السر"),
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "كمل باستخدام جوجل",
     ),
+    "Date": MessageLookupByLibrary.simpleMessage("التاريخ*"),
     "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
       "لسه معندكش حساب؟",
     ),
+    "Dose": MessageLookupByLibrary.simpleMessage("الجرعة*"),
+    "DoseEG": MessageLookupByLibrary.simpleMessage("الجرعة (مثلاً: 400 مجم)"),
+    "Drop": MessageLookupByLibrary.simpleMessage("نقط"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
           "الإيميل ده مستخدم قبل كده، جرب إيميل تاني.",
@@ -76,10 +86,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "اكتب اسم المستخدم بتاعك",
     ),
     "Error": MessageLookupByLibrary.simpleMessage("خطأ"),
+    "FillOutTheFields": MessageLookupByLibrary.simpleMessage(
+      "املأ البيانات واضغط زر الحفظ\nعشان تضيفه!",
+    ),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "أهلاً! سجل حسابك عشان تبدأ",
     ),
+    "Injection": MessageLookupByLibrary.simpleMessage("حقنة"),
     "Intakes": MessageLookupByLibrary.simpleMessage("الجرعات"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(
       "الايميل او الباسورد غلط, جرب تاني",
@@ -100,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
       "لا يوجد توكن او توكن ID",
     ),
+    "Name": MessageLookupByLibrary.simpleMessage("الاسم*"),
+    "NameEG": MessageLookupByLibrary.simpleMessage("الاسم (مثلاً: إيبوبروفين)"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
     "Or": MessageLookupByLibrary.simpleMessage("أو"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
@@ -115,6 +131,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "من فضلك ادخل اسمك",
     ),
     "Register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
+    "Reminder": MessageLookupByLibrary.simpleMessage("التذكير"),
+    "Save": MessageLookupByLibrary.simpleMessage("حفظ"),
     "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
       "في حاجة غلط، حاول تاني.",
     ),
@@ -122,10 +140,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "متأكد إنك عايز تغيّر اللغة؟",
     ),
+    "Tablet": MessageLookupByLibrary.simpleMessage("أقراص"),
     "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "مفيش اتصال بالإنترنت، حاول تاني.",
     ),
+    "Time": MessageLookupByLibrary.simpleMessage("الوقت*"),
     "Today": MessageLookupByLibrary.simpleMessage("انهاردة"),
+    "Type": MessageLookupByLibrary.simpleMessage("النوع*"),
+    "TypeEG": MessageLookupByLibrary.simpleMessage("النوع (مثلاً: أقراص)"),
     "UserNotFound": MessageLookupByLibrary.simpleMessage(
       "مفيش مستخدم مسجل بالإيميل ده.",
     ),

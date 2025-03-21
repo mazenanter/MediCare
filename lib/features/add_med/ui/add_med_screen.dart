@@ -6,6 +6,7 @@ import 'package:medicare/features/add_med/ui/widgets/add_med_top_bar.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/text_styles_manager.dart';
+import '../../../generated/l10n.dart';
 
 class AddMedScreen extends StatelessWidget {
   const AddMedScreen({super.key});
@@ -20,7 +21,7 @@ class AddMedScreen extends StatelessWidget {
               AddMedTopBar(),
               verticalSpace(30),
               Text(
-                'Fill out the fields and hit the Save\nButton to add it!',
+                S.of(context).FillOutTheFields,
                 style: TextStylesManager.font20GrayRegular,
                 textAlign: TextAlign.center,
               ),
@@ -33,7 +34,7 @@ class AddMedScreen extends StatelessWidget {
                     verticalSpace(23),
                     AppTextButton(
                       onPressed: () {},
-                      text: 'Save',
+                      text: S.of(context).Save,
                       hintStyle: TextStylesManager.font16Bold,
                       buttonWidth: 120,
                       buttonHeight: 34,

@@ -22,13 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Add": MessageLookupByLibrary.simpleMessage("Add"),
     "AddMedicine": MessageLookupByLibrary.simpleMessage("Add medicine"),
+    "AddNewMedicine": MessageLookupByLibrary.simpleMessage("Add New Medicine"),
+    "AddReminder": MessageLookupByLibrary.simpleMessage("Add Reminder"),
     "AddYourMedsToBeReminded": MessageLookupByLibrary.simpleMessage(
       "Add your meds to be reminded on\ntime and track your health ",
     ),
     "AlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
+    "Amount": MessageLookupByLibrary.simpleMessage("Amount*"),
+    "AmountEG": MessageLookupByLibrary.simpleMessage("Amount (e.g. 2)"),
     "AnArrorOccurred": MessageLookupByLibrary.simpleMessage(
       "An error occurred during login. Please try again.",
     ),
@@ -49,14 +54,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Attempts have been temporarily blocked due to too many requests. Please try again later.",
     ),
     "Cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "Capsule": MessageLookupByLibrary.simpleMessage("Capsule"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
     "ConfirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
+    "Date": MessageLookupByLibrary.simpleMessage("Date*"),
     "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
     ),
+    "Dose": MessageLookupByLibrary.simpleMessage("Dose*"),
+    "DoseEG": MessageLookupByLibrary.simpleMessage("Dose (e.g. 400mg)"),
+    "Drop": MessageLookupByLibrary.simpleMessage("Drop"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
           "Email already in use, please use a different email.",
@@ -72,10 +82,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter Your Username",
     ),
     "Error": MessageLookupByLibrary.simpleMessage("Error"),
+    "FillOutTheFields": MessageLookupByLibrary.simpleMessage(
+      "Fill out the fields and hit the Save\nButton to add it!",
+    ),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "Hello! Register to get\nstarted",
     ),
+    "Injection": MessageLookupByLibrary.simpleMessage("Injection"),
     "Intakes": MessageLookupByLibrary.simpleMessage("Intakes"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(
       "Email or password is incorrect.",
@@ -94,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
       "Missing access token or ID token",
     ),
+    "Name": MessageLookupByLibrary.simpleMessage("Name*"),
+    "NameEG": MessageLookupByLibrary.simpleMessage("Name (e.g. Ibuprofen)"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
     "Or": MessageLookupByLibrary.simpleMessage("Or"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
@@ -109,6 +125,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter your name",
     ),
     "Register": MessageLookupByLibrary.simpleMessage("Register"),
+    "Reminder": MessageLookupByLibrary.simpleMessage("Reminder"),
+    "Save": MessageLookupByLibrary.simpleMessage("Save"),
     "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
       "Something went wrong, please try again.",
     ),
@@ -116,10 +134,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "SureToChangeLanguage": MessageLookupByLibrary.simpleMessage(
       "Are you sure you want to change the language?",
     ),
+    "Tablet": MessageLookupByLibrary.simpleMessage("Tablet"),
     "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "There is no internet connection, please try again.",
     ),
+    "Time": MessageLookupByLibrary.simpleMessage("Time*"),
     "Today": MessageLookupByLibrary.simpleMessage("Today"),
+    "Type": MessageLookupByLibrary.simpleMessage("Type*"),
+    "TypeEG": MessageLookupByLibrary.simpleMessage("Type (e.g. Tablet)"),
     "UserNotFound": MessageLookupByLibrary.simpleMessage(
       "User not found for that email address.",
     ),
