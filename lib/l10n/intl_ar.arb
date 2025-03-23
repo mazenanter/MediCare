@@ -74,5 +74,7 @@
 "AddNewMedicine": "إضافة دواء جديد",
 "AddReminder": "إضافة تذكير",
 "FillOutTheFields": "املأ البيانات واضغط زر الحفظ\nعشان تضيفه!",
-"Save": "حفظ"
+"Save": "حفظ",
+"MedicineAddedSuccessfully": "تمت اضافة الدواء , دلوقتي تقدر تتابع جرعتك",
+"UserNotLoggedIn": "المستخدم مش مسجل دخوله"
 }

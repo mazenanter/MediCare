@@ -151,6 +151,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "UserNotFound": MessageLookupByLibrary.simpleMessage(
       "مفيش مستخدم مسجل بالإيميل ده.",
     ),
+    "UserNotLoggedIn": MessageLookupByLibrary.simpleMessage(
+      "المستخدم مش مسجل دخوله",
+    ),
     "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
       "أهلاً بيك! مبسوطين\nإننا نشوفك تاني!",
     ),
