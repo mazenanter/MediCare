@@ -75,5 +75,7 @@
 "AddNewMedicine": "Add New Medicine",
 "AddReminder": "Add Reminder",
 "FillOutTheFields": "Fill out the fields and hit the Save\nButton to add it!",
-"Save": "Save"
+"Save": "Save",
+"MedicationAddedSuccessfully": "Medication added successfully",
+"UserNotLoggedIn": "User not logged in"
 }

@@ -694,6 +694,26 @@ class S {
   String get Save {
     return Intl.message('Save', name: 'Save', desc: '', args: []);
   }
+
+  /// `Medication added successfully`
+  String get MedicationAddedSuccessfully {
+    return Intl.message(
+      'Medication added successfully',
+      name: 'MedicationAddedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User not logged in`
+  String get UserNotLoggedIn {
+    return Intl.message(
+      'User not logged in',
+      name: 'UserNotLoggedIn',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

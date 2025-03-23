@@ -105,6 +105,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ManageYourMeds": MessageLookupByLibrary.simpleMessage("Manage your meds"),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
+    "MedicationAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Medication added successfully",
+    ),
     "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
       "Missing access token or ID token",
     ),
@@ -144,6 +147,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "TypeEG": MessageLookupByLibrary.simpleMessage("Type (e.g. Tablet)"),
     "UserNotFound": MessageLookupByLibrary.simpleMessage(
       "User not found for that email address.",
+    ),
+    "UserNotLoggedIn": MessageLookupByLibrary.simpleMessage(
+      "User not logged in",
     ),
     "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
       "Welcome back! Glad\nto see you, Again!",
