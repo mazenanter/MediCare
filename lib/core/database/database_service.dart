@@ -9,6 +9,21 @@ class DatabaseService {
     return db!.insert(table, data);
   }
 
+  static Future<void> updateMedicationSyncStatus(String id) async {
+    final db = await database;
+    await db!.update(
+      'medication',
+      {'isSynced': 1},
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
+
+  static Future<List<Map<String, dynamic>>> getUnsyncedMedications() async {
+    final db = await database;
+    return await db!.query('medication', where: 'isSynced = 0');
+  }
+
   static Future<List<Map<String, dynamic>>> queryAllRows(String table) async {
     final db = await database;
     return db!.query(table);

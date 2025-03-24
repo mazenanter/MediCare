@@ -1,3 +1,4 @@
+import 'package:medicare/core/helpers/constants.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -11,20 +12,23 @@ class DatabaseHelper {
   }
 
   static Future<Database> _initDatabase() async {
-    final path = join(await getDatabasesPath(), 'medicare.db');
+    final path = join(await getDatabasesPath(), 'medi.db');
     return await openDatabase(
       path,
       version: 1,
       onCreate: (db, version) async {
         await db.execute('''
-          CREATE TABLE medication (
+          CREATE TABLE ${AppConstants.tableName} (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
             type TEXT,
             dose TEXT,
             amount INTEGER,
-            dateTime TEXT,
-            isTaken BOOLEAN
-          )
+            dateTime INTEGER,
+            createdAt INTEGER,
+            isTaken INTEGER DEFAULT 0,
+            isSynced INTEGER DEFAULT 0
+           )
         ''');
       },
     );
