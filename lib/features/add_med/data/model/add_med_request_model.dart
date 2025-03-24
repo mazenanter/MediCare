@@ -15,7 +15,7 @@ class AddMedRequestModel {
   final Timestamp createdAt;
   final String dose;
   final int amount;
-  final bool isTaken;
+  final int isTaken;
 
   AddMedRequestModel(
       {required this.name,
