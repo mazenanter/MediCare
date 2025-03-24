@@ -14,7 +14,8 @@ class AddMedFormField extends StatelessWidget {
       this.isDropDown = false,
       this.selectedValue,
       this.dropdownItems,
-      this.onChanged});
+      this.onChanged,
+      required this.controller});
   final String hintText;
   final Widget? prefIcon;
   final double? contentPadding;
@@ -22,6 +23,7 @@ class AddMedFormField extends StatelessWidget {
   final bool isDropDown;
   final String? selectedValue;
   final List<String>? dropdownItems;
+  final TextEditingController controller;
   final ValueChanged<String?>? onChanged;
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,12 @@ class AddMedFormField extends StatelessWidget {
             items: dropdownItems?.map((String item) {
               return DropdownMenuItem<String>(
                 value: item,
-                child: Text(item),
+                child: Text(
+                  item,
+                  style: TextStylesManager.font19Regular.copyWith(
+                    color: ColorsManager.c196EB0,
+                  ),
+                ),
               );
             }).toList(),
             onChanged: onChanged,
@@ -62,6 +69,7 @@ class AddMedFormField extends StatelessWidget {
             ),
           )
         : TextFormField(
+            controller: controller,
             readOnly: readOnly ?? false,
             style: TextStylesManager.font19Regular.copyWith(
               color: ColorsManager.c196EB0,
