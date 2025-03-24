@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/widgets/app_text_button.dart';
+import 'package:medicare/features/add_med/logic/add_med_cubit.dart';
+import 'package:medicare/features/add_med/ui/widgets/add_med_bloc_listener.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_form.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_top_bar.dart';
 
@@ -33,7 +36,9 @@ class AddMedScreen extends StatelessWidget {
                     AddMedForm(),
                     verticalSpace(23),
                     AppTextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.read<AddMedCubit>().addMedication(context);
+                      },
                       text: S.of(context).Save,
                       hintStyle: TextStylesManager.font16Bold,
                       buttonWidth: 120,
@@ -45,6 +50,7 @@ class AddMedScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              AddMedBlocListener(),
             ],
           ),
         ),
