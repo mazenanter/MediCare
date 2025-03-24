@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_form_field.dart';
-import 'package:medicare/features/add_med/ui/widgets/date_and_time_picker.dart'
-    show DateAndTimePicker;
+import 'package:medicare/features/add_med/ui/widgets/date_and_time_picker.dart';
 import 'package:medicare/generated/l10n.dart';
+
+import '../../logic/add_med_cubit.dart';
 
 class AddMedForm extends StatefulWidget {
   const AddMedForm({super.key});
@@ -14,8 +16,6 @@ class AddMedForm extends StatefulWidget {
 }
 
 class _AddMedFormState extends State<AddMedForm> {
-  String? selectedType;
-
   @override
   Widget build(BuildContext context) {
     final List<String> medicineTypes = [
@@ -33,6 +33,7 @@ class _AddMedFormState extends State<AddMedForm> {
           style: TextStylesManager.font20Meduim,
         ),
         AddMedFormField(
+          controller: context.read<AddMedCubit>().nameController,
           hintText: S.of(context).NameEG,
         ),
         Text(
@@ -40,14 +41,15 @@ class _AddMedFormState extends State<AddMedForm> {
           style: TextStylesManager.font20Meduim,
         ),
         AddMedFormField(
+          controller: TextEditingController(),
           dropdownItems: medicineTypes,
-          selectedValue: selectedType,
+          selectedValue: context.read<AddMedCubit>().selectedType,
           hintText: S.of(context).TypeEG,
           readOnly: true,
           isDropDown: true,
           onChanged: (value) {
             setState(() {
-              selectedType = value;
+              context.read<AddMedCubit>().selectedType = value;
             });
           },
         ),
@@ -56,6 +58,7 @@ class _AddMedFormState extends State<AddMedForm> {
           style: TextStylesManager.font20Meduim,
         ),
         AddMedFormField(
+          controller: context.read<AddMedCubit>().doseController,
           hintText: S.of(context).DoseEG,
         ),
         Text(
@@ -63,6 +66,7 @@ class _AddMedFormState extends State<AddMedForm> {
           style: TextStylesManager.font20Meduim,
         ),
         AddMedFormField(
+          controller: context.read<AddMedCubit>().amountController,
           hintText: S.of(context).AmountEG,
         ),
         Text(
