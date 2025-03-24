@@ -13,7 +13,7 @@ AddMedRequestModel _$AddMedRequestModelFromJson(Map<String, dynamic> json) =>
       dateTime: const TimestampConverter().fromJson(json['dateTime']),
       dose: json['dose'] as String,
       amount: (json['amount'] as num).toInt(),
-      isTaken: json['isTaken'] as bool,
+      isTaken: (json['isTaken'] as num).toInt(),
       createdAt: const TimestampConverter().fromJson(json['createdAt']),
     );
 
