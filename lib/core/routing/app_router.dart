@@ -9,6 +9,7 @@ import 'package:medicare/features/login/ui/login_screen.dart';
 import 'package:medicare/features/register/logic/register_cubit.dart';
 import 'package:medicare/features/welcome/welcome_screen.dart';
 
+import '../../features/add_med/logic/add_med_cubit.dart';
 import '../../features/home/ui/manage_med_screen.dart';
 import '../../features/register/ui/register_screen.dart';
 
@@ -43,7 +44,10 @@ class AppRouter {
         );
       case Routes.addMedScreen:
         return MaterialPageRoute(
-          builder: (context) => const AddMedScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<AddMedCubit>(),
+            child: const AddMedScreen(),
+          ),
         );
       default:
         return MaterialPageRoute(
