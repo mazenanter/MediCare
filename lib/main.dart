@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/di/dependency_injection.dart';
 import 'package:medicare/core/helpers/constants.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
@@ -31,6 +32,8 @@ void main() async {
   );
   setupGetIt();
   await checkIfLoggedIn();
+  // to fix text hidden bug in flutter screen util in release mode
+  await ScreenUtil.ensureScreenSize();
   runApp(MediCare(
     appRouter: AppRouter(),
   ));
