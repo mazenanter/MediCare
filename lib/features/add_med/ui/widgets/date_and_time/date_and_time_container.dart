@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/text_styles_manager.dart';
+import '../../../../../core/theming/text_styles_manager.dart';
 
 class DateAndTimeContainer extends StatelessWidget {
   const DateAndTimeContainer(

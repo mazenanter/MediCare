@@ -42,6 +42,7 @@ class DateItem extends StatelessWidget {
             ),
             Text(
               DateFormat.E().format(date),
+              overflow: TextOverflow.ellipsis,
               style: TextStylesManager.font12Bold.copyWith(
                 color: isToday ? ColorsManager.c196EB0 : ColorsManager.cCDCDD0,
               ),
