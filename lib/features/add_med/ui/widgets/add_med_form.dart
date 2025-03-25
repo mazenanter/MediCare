@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_form_field.dart';
-import 'package:medicare/features/add_med/ui/widgets/date_and_time_picker.dart';
+import 'package:medicare/features/add_med/ui/widgets/date_and_time/date_and_time_picker.dart';
 import 'package:medicare/generated/l10n.dart';
 
 import '../../logic/add_med_cubit.dart';

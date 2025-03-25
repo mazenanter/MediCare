@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
-import 'package:medicare/features/add_med/ui/widgets/date_and_time_container.dart';
-import 'package:medicare/features/add_med/ui/widgets/date_and_time_dialog_button.dart';
+import 'package:medicare/features/add_med/ui/widgets/date_and_time/date_and_time_container.dart';
+import 'package:medicare/features/add_med/ui/widgets/date_and_time/date_and_time_dialog_button.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/colors_manager.dart';
-import '../../../../core/theming/text_styles_manager.dart';
-import '../../../../generated/l10n.dart';
-import '../../logic/add_med_cubit.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/colors_manager.dart';
+import '../../../../../core/theming/text_styles_manager.dart';
+import '../../../../../generated/l10n.dart';
+import '../../../logic/add_med_cubit.dart';
 
 class DateAndTimeDialog extends StatelessWidget {
   const DateAndTimeDialog({super.key, required this.addMedCubit});

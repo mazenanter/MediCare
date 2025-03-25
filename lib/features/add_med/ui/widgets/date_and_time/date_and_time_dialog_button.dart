@@ -4,7 +4,7 @@ import 'package:medicare/core/helpers/spacing.dart';
 import 'package:medicare/features/add_med/ui/widgets/custom_dialog_button.dart';
 import 'package:medicare/generated/l10n.dart';
 
-import '../../../../core/theming/colors_manager.dart';
+import '../../../../../core/theming/colors_manager.dart';
 
 class DateAndTimeDialogButtons extends StatelessWidget {
   const DateAndTimeDialogButtons({super.key, required this.onPressed});

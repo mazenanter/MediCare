@@ -4,10 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:medicare/features/add_med/logic/add_med_cubit.dart';
 import 'package:medicare/features/add_med/logic/add_med_state.dart';
-import 'package:medicare/features/add_med/ui/widgets/date_and_time_dialog.dart';
+import 'package:medicare/features/add_med/ui/widgets/date_and_time/date_and_time_dialog.dart';
 
-import '../../../../core/theming/colors_manager.dart';
-import '../../../../core/theming/text_styles_manager.dart';
+import '../../../../../core/theming/colors_manager.dart';
+import '../../../../../core/theming/text_styles_manager.dart';
 
 class DateAndTimePicker extends StatelessWidget {
   const DateAndTimePicker({
