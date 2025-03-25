@@ -25,4 +25,12 @@ class FirestoreService {
           addMedRequestModel.toJson(),
         );
   }
+
+  Future<QuerySnapshot> getMedications(String userId) async {
+    return await firestore
+        .collection('users')
+        .doc(userId)
+        .collection('medications')
+        .get();
+  }
 }
