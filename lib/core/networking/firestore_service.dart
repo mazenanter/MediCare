@@ -26,11 +26,13 @@ class FirestoreService {
         );
   }
 
-  Future<QuerySnapshot> getMedications(String userId) async {
-    return await firestore
+  Future<List<Map<String, dynamic>>> getMedications(String userId) async {
+    final quereSnapshot = await firestore
         .collection('users')
         .doc(userId)
         .collection('medications')
         .get();
+
+    return quereSnapshot.docs.map((e) => e.data()).toList();
   }
 }
