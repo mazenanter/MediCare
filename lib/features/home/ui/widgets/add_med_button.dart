@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/core/helpers/extenstions.dart';
+import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/theming/colors_manager.dart';
@@ -18,7 +20,9 @@ class AddMedButton extends StatelessWidget {
         ),
         fixedSize: Size(269.w, 68.h),
       ),
-      onPressed: () {},
+      onPressed: () {
+        context.pushNamed(Routes.addMedScreen);
+      },
       child: Text(
         S.of(context).AddMedicine,
         style: TextStylesManager.font29Bold.copyWith(
