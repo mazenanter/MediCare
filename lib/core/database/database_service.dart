@@ -24,7 +24,8 @@ class DatabaseService {
     return await db!.query('medication', where: 'isSynced = 0');
   }
 
-  static Future<List<Map<String, dynamic>>> queryAllRows(String table) async {
+  static Future<List<Map<String, dynamic>>> getAllMedications(
+      String table) async {
     final db = await database;
     return db!.query(table);
   }
