@@ -68,6 +68,8 @@ dependencies:
   timezone: ^0.10.0
   # For animations
   lottie: ^3.3.1
+  # Allows you to display progress widgets based on percentage
+  percent_indicator: ^4.0.1
   # Easy way to add shimmer effect
   shimmer: ^3.0.0
   # For discovering the state of the network (WiFi & mobile/cellular)
