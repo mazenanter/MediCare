@@ -11,6 +11,7 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this.homeRepo) : super(HomeState.initial());
   final HomeRepo homeRepo;
   List<MedicationResponseModel> medicationsList = [];
+  List<MedicationResponseModel> intakesList = [];
   void getMedications(BuildContext context) async {
     emit(HomeState.homeLoading());
     String? userId = await SharedPrefHelper.getSecuredData(AppConstants.userId);
@@ -28,5 +29,11 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.homeError(message));
       },
     );
+  }
+
+  int getIntakesMedication() {
+    intakesList =
+        medicationsList.where((element) => element.isTaken == 1).toList();
+    return intakesList.length;
   }
 }
