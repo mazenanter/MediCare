@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/theming/colors_manager.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
+import 'package:medicare/features/home/data/models/medication_response_model.dart';
 
 class IntakesItem extends StatelessWidget {
-  const IntakesItem({super.key});
-
+  const IntakesItem({super.key, required this.medication});
+  final MedicationResponseModel medication;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,11 +22,11 @@ class IntakesItem extends StatelessWidget {
             color: ColorsManager.cFBBC05,
           ),
           title: Text(
-            'Vitamin D',
+            medication.name,
             style: TextStylesManager.font16Bold,
           ),
           subtitle: Text(
-            '1 Capsule, 1000mg',
+            '${medication.amount} ${medication.type}, ${medication.dose}',
             style: TextStylesManager.font12Regular,
           ),
           trailing: Container(

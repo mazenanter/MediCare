@@ -25,9 +25,9 @@ class AddMedCubit extends Cubit<AddMedState> {
   TimeOfDay selectedTime = TimeOfDay.now();
   AddMedCubit(this.addMedRepo) : super(AddMedState.initial());
   Future<void> addMedication(BuildContext context) async {
-    if (!formKey.currentState!.validate()) {
-      return;
-    }
+    // if (!formKey.currentState!.validate()) {
+    //   return;
+    // }
     emit(AddMedState.loading());
     final result = await addMedRepo.addMedication(
       AddMedRequestModel(
