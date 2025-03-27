@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/helpers/spacing.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/widgets/app_text_button.dart';
 
@@ -17,7 +18,7 @@ class TakeAndEditButtons extends StatelessWidget {
           verticalPadding: 12.h,
           buttonWidth: 102.w,
           buttonHeight: 40.h,
-          text: 'Take',
+          text: S.of(context).Take,
           onPressed: () {},
         ),
         horizontalSpace(35),
@@ -26,7 +27,7 @@ class TakeAndEditButtons extends StatelessWidget {
           verticalPadding: 12.h,
           buttonWidth: 102.w,
           buttonHeight: 40.h,
-          text: 'Edit',
+          text: S.of(context).Edit,
           onPressed: () {},
         ),
       ],

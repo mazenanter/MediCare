@@ -39,8 +39,8 @@ class IntakesCounter extends StatelessWidget {
         animation: true,
         animationDuration: 1200,
         center: Container(
-          width: 240.w,
-          height: 240.h,
+          width: 200.w,
+          height: 200.h,
           decoration: boxDecoration,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

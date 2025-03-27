@@ -76,5 +76,9 @@
 "FillOutTheFields": "املأ البيانات واضغط زر الحفظ\nعشان تضيفه!",
 "Save": "حفظ",
 "MedicineAddedSuccessfully": "تمت اضافة الدواء , دلوقتي تقدر تتابع جرعتك",
-"UserNotLoggedIn": "المستخدم مش مسجل دخوله"
+"UserNotLoggedIn": "المستخدم مش مسجل دخوله",
+"DidYouTakeYourMedicine": "هل أخدت دواءك؟",
+"ScheduledFor": "مجدول لـ",
+"Take": "خد الدواء",
+"Edit": "تعديل"
 }

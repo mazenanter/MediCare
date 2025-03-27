@@ -714,6 +714,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Did you take your Medicine?`
+  String get DidYouTakeYourMedicine {
+    return Intl.message(
+      'Did you take your Medicine?',
+      name: 'DidYouTakeYourMedicine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scheduled for`
+  String get ScheduledFor {
+    return Intl.message(
+      'Scheduled for',
+      name: 'ScheduledFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take`
+  String get Take {
+    return Intl.message('Take', name: 'Take', desc: '', args: []);
+  }
+
+  /// `Edit`
+  String get Edit {
+    return Intl.message('Edit', name: 'Edit', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

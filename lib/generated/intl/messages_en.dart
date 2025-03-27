@@ -61,12 +61,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Continue with Google",
     ),
     "Date": MessageLookupByLibrary.simpleMessage("Date*"),
+    "DidYouTakeYourMedicine": MessageLookupByLibrary.simpleMessage(
+      "Did you take your Medicine?",
+    ),
     "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
     ),
     "Dose": MessageLookupByLibrary.simpleMessage("Dose*"),
     "DoseEG": MessageLookupByLibrary.simpleMessage("Dose (e.g. 400mg)"),
     "Drop": MessageLookupByLibrary.simpleMessage("Drop"),
+    "Edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
           "Email already in use, please use a different email.",
@@ -130,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Register": MessageLookupByLibrary.simpleMessage("Register"),
     "Reminder": MessageLookupByLibrary.simpleMessage("Reminder"),
     "Save": MessageLookupByLibrary.simpleMessage("Save"),
+    "ScheduledFor": MessageLookupByLibrary.simpleMessage("Scheduled for"),
     "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
       "Something went wrong, please try again.",
     ),
@@ -138,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Are you sure you want to change the language?",
     ),
     "Tablet": MessageLookupByLibrary.simpleMessage("Tablet"),
+    "Take": MessageLookupByLibrary.simpleMessage("Take"),
     "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "There is no internet connection, please try again.",
     ),
