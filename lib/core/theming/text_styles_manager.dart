@@ -8,6 +8,11 @@ class TextStylesManager {
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.medium,
   );
+  static TextStyle font25Meduim = TextStyle(
+    fontSize: 25.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsManager.c196EB0,
+  );
   static TextStyle font20MainColorRegular = TextStyle(
     fontSize: 20.sp,
     color: ColorsManager.c196EB0,
@@ -39,6 +44,11 @@ class TextStylesManager {
   static TextStyle font10Bold = TextStyle(
     fontSize: 10.sp,
     fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font47Bold = TextStyle(
+    fontSize: 47.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: ColorsManager.c196EB0,
   );
   static TextStyle font24Bold = TextStyle(
     fontSize: 24.sp,
