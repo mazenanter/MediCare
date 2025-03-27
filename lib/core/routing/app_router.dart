@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medicare/core/di/dependency_injection.dart';
 import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/features/add_med/ui/add_med_screen.dart';
+import 'package:medicare/features/details/ui/details_screen.dart';
 import 'package:medicare/features/home/ui/home_screen.dart';
 import 'package:medicare/features/login/logic/login_cubit.dart';
 import 'package:medicare/features/login/ui/login_screen.dart';
@@ -52,6 +53,10 @@ class AppRouter {
             create: (context) => getIt<AddMedCubit>(),
             child: const AddMedScreen(),
           ),
+        );
+      case Routes.detailsScreen:
+        return MaterialPageRoute(
+          builder: (context) => DetailsScreen(),
         );
       default:
         return MaterialPageRoute(
