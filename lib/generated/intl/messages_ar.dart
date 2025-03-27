@@ -63,12 +63,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "كمل باستخدام جوجل",
     ),
     "Date": MessageLookupByLibrary.simpleMessage("التاريخ*"),
+    "DidYouTakeYourMedicine": MessageLookupByLibrary.simpleMessage(
+      "هل أخدت دواءك؟",
+    ),
     "DontHaveAnAccountYet": MessageLookupByLibrary.simpleMessage(
       "لسه معندكش حساب؟",
     ),
     "Dose": MessageLookupByLibrary.simpleMessage("الجرعة*"),
     "DoseEG": MessageLookupByLibrary.simpleMessage("الجرعة (مثلاً: 400 مجم)"),
     "Drop": MessageLookupByLibrary.simpleMessage("نقط"),
+    "Edit": MessageLookupByLibrary.simpleMessage("تعديل"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
           "الإيميل ده مستخدم قبل كده، جرب إيميل تاني.",
@@ -133,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
     "Reminder": MessageLookupByLibrary.simpleMessage("التذكير"),
     "Save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "ScheduledFor": MessageLookupByLibrary.simpleMessage("مجدول لـ"),
     "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
       "في حاجة غلط، حاول تاني.",
     ),
@@ -141,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "متأكد إنك عايز تغيّر اللغة؟",
     ),
     "Tablet": MessageLookupByLibrary.simpleMessage("أقراص"),
+    "Take": MessageLookupByLibrary.simpleMessage("خد الدواء"),
     "ThereIsNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "مفيش اتصال بالإنترنت، حاول تاني.",
     ),

@@ -77,5 +77,9 @@
 "FillOutTheFields": "Fill out the fields and hit the Save\nButton to add it!",
 "Save": "Save",
 "MedicationAddedSuccessfully": "Medication added successfully",
-"UserNotLoggedIn": "User not logged in"
+"UserNotLoggedIn": "User not logged in",
+"DidYouTakeYourMedicine": "Did you take your Medicine?",
+"ScheduledFor": "Scheduled for",
+"Take": "Take",
+"Edit": "Edit"
 }

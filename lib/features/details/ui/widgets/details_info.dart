@@ -4,6 +4,7 @@ import 'package:medicare/features/details/ui/widgets/details_header.dart';
 import 'package:medicare/features/details/ui/widgets/drop_and_dose_text.dart';
 import 'package:medicare/features/details/ui/widgets/scheduled_date_details.dart';
 import 'package:medicare/features/details/ui/widgets/take_and_edit_buttons.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/text_styles_manager.dart';
@@ -22,7 +23,7 @@ class DetailsInfo extends StatelessWidget {
           DetailsHeader(),
           verticalSpace(27),
           Text(
-            'Did you take your Medicine?',
+            S.of(context).DidYouTakeYourMedicine,
             style: TextStylesManager.font25Meduim,
           ),
           Image.asset(
