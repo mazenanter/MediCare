@@ -16,7 +16,8 @@ class IntakesListView extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 34.w),
           child: GestureDetector(
             onTap: () {
-              context.pushNamed(Routes.detailsScreen);
+              context.pushNamed(Routes.detailsScreen,
+                  arguments: medications[index]);
             },
             child: IntakesItem(
               medication: medications[index],
