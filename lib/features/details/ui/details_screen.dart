@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/helpers/spacing.dart';
 import 'package:medicare/features/details/ui/widgets/details_info.dart';
+import 'package:medicare/features/home/data/models/medication_response_model.dart';
 
 import '../../../core/theming/colors_manager.dart';
 import '../../../core/widgets/back_arrow_button.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
-
+  const DetailsScreen({super.key, required this.medicationResponseModel});
+  final MedicationResponseModel medicationResponseModel;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +31,9 @@ class DetailsScreen extends StatelessWidget {
                       width: 1.75.w,
                     ),
                   ),
-                  child: DetailsInfo(),
+                  child: DetailsInfo(
+                    medicationResponseModel: medicationResponseModel,
+                  ),
                 ),
               ),
               verticalSpace(60),

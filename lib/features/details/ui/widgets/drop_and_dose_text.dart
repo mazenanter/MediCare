@@ -7,8 +7,9 @@ import '../../../../core/theming/colors_manager.dart';
 import '../../../../core/theming/text_styles_manager.dart';
 
 class DropAndDoseText extends StatelessWidget {
-  const DropAndDoseText({super.key});
-
+  const DropAndDoseText(
+      {super.key, required this.drop, required this.dose, required this.type});
+  final String drop, dose, type;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,7 +21,7 @@ class DropAndDoseText extends StatelessWidget {
         ),
         horizontalSpace(10),
         Text(
-          '5 drops, 1200mg',
+          '$drop $type, $dose',
           style: TextStylesManager.font18Regular.copyWith(
             color: ColorsManager.c196EB0,
           ),
