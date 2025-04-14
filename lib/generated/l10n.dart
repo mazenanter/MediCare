@@ -610,14 +610,14 @@ class S {
     return Intl.message('Amount*', name: 'Amount', desc: '', args: []);
   }
 
-  /// `Date*`
-  String get Date {
-    return Intl.message('Date*', name: 'Date', desc: '', args: []);
+  /// `First Date*`
+  String get FirstDate {
+    return Intl.message('First Date*', name: 'FirstDate', desc: '', args: []);
   }
 
-  /// `Reminder`
-  String get Reminder {
-    return Intl.message('Reminder', name: 'Reminder', desc: '', args: []);
+  /// `Reminders`
+  String get Reminders {
+    return Intl.message('Reminders', name: 'Reminders', desc: '', args: []);
   }
 
   /// `Name (e.g. Ibuprofen)`
@@ -743,6 +743,66 @@ class S {
   /// `Edit`
   String get Edit {
     return Intl.message('Edit', name: 'Edit', desc: '', args: []);
+  }
+
+  /// `One time`
+  String get OneTime {
+    return Intl.message('One time', name: 'OneTime', desc: '', args: []);
+  }
+
+  /// `Daily`
+  String get Daily {
+    return Intl.message('Daily', name: 'Daily', desc: '', args: []);
+  }
+
+  /// `Every X hours`
+  String get EveryXHours {
+    return Intl.message(
+      'Every X hours',
+      name: 'EveryXHours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat every*`
+  String get RepeatEvery {
+    return Intl.message(
+      'Repeat every*',
+      name: 'RepeatEvery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select repeat time`
+  String get SelectRepeatTime {
+    return Intl.message(
+      'Select repeat time',
+      name: 'SelectRepeatTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hours*`
+  String get Hours {
+    return Intl.message('Hours*', name: 'Hours', desc: '', args: []);
+  }
+
+  /// `(e.g. 2 hours)`
+  String get EG2Hours {
+    return Intl.message('(e.g. 2 hours)', name: 'EG2Hours', desc: '', args: []);
+  }
+
+  /// `Days*`
+  String get Days {
+    return Intl.message('Days*', name: 'Days', desc: '', args: []);
+  }
+
+  /// `(e.g. 2 Days)`
+  String get EG2Days {
+    return Intl.message('(e.g. 2 Days)', name: 'EG2Days', desc: '', args: []);
   }
 }
 

@@ -71,14 +71,14 @@ class _AddMedFormState extends State<AddMedForm> {
           hintText: S.of(context).AmountEG,
         ),
         Text(
-          S.of(context).Reminder,
+          S.of(context).Reminders,
           style: TextStylesManager.font20Meduim,
         ),
         RemindersFormFields(
           addMedCubit: context.read<AddMedCubit>(),
         ),
         Text(
-          S.of(context).Date,
+          S.of(context).FirstDate,
           style: TextStylesManager.font15Bold,
         ),
         DateAndTimePicker(),

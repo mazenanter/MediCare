@@ -4,6 +4,7 @@ import 'package:medicare/features/add_med/logic/add_med_cubit.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_form_field.dart';
 
 import '../../../../core/theming/text_styles_manager.dart';
+import '../../../../generated/l10n.dart';
 
 class RemindersFormFields extends StatefulWidget {
   const RemindersFormFields({super.key, required this.addMedCubit});
@@ -15,24 +16,24 @@ class RemindersFormFields extends StatefulWidget {
 class _RemindersFormFieldsState extends State<RemindersFormFields> {
   @override
   Widget build(BuildContext context) {
-    const List<String> medicineTypes = [
-      'One time',
-      'Daily',
-      'Every X hours',
+    List<String> medicineTypes = [
+      S.of(context).OneTime,
+      S.of(context).Daily,
+      S.of(context).EveryXHours,
     ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: 18.h,
       children: [
         Text(
-          'Repeat every*',
+          S.of(context).RepeatEvery,
           style: TextStylesManager.font15Bold,
         ),
         AddMedFormField(
           controller: widget.addMedCubit.repeatTypeController,
           dropdownItems: medicineTypes,
           selectedValue: widget.addMedCubit.selectedRepeatType,
-          hintText: 'Select repeat time',
+          hintText: S.of(context).SelectRepeatTime,
           readOnly: true,
           isDropDown: true,
           onChanged: (value) {
@@ -43,22 +44,22 @@ class _RemindersFormFieldsState extends State<RemindersFormFields> {
         ),
         if (widget.addMedCubit.selectedRepeatType == 'Every X hours') ...[
           Text(
-            'Hours*',
+            S.of(context).Hours,
             style: TextStylesManager.font15Bold,
           ),
           AddMedFormField(
             controller: widget.addMedCubit.hoursController,
-            hintText: '(e.g. 2 hours)',
+            hintText: S.of(context).EG2Hours,
           ),
         ],
         if (widget.addMedCubit.selectedRepeatType != 'One time') ...[
           Text(
-            'Days*',
+            S.of(context).Days,
             style: TextStylesManager.font15Bold,
           ),
           AddMedFormField(
             controller: widget.addMedCubit.daysController,
-            hintText: '(e.g. 2 days)',
+            hintText: S.of(context).EG2Days,
           ),
         ],
       ],
