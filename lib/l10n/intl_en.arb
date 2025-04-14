@@ -66,8 +66,8 @@
 "Time" : "Time*",
 "Add" : "Add",
 "Amount" : "Amount*",
-"Date" : "Date*",
-"Reminder" : "Reminder",
+"FirstDate" : "First Date*",
+"Reminders" : "Reminders",
 "NameEG" : "Name (e.g. Ibuprofen)",
 "TypeEG" : "Type (e.g. Tablet)",
 "DoseEG" : "Dose (e.g. 400mg)",
@@ -81,5 +81,14 @@
 "DidYouTakeYourMedicine": "Did you take your Medicine?",
 "ScheduledFor": "Scheduled for",
 "Take": "Take",
-"Edit": "Edit"
+"Edit": "Edit",
+"OneTime":"One time",
+"Daily":"Daily",
+"EveryXHours":"Every X hours",
+"RepeatEvery":"Repeat every*",
+"SelectRepeatTime": "Select repeat time",
+"Hours": "Hours*",
+"EG2Hours": "(e.g. 2 hours)",
+"Days": "Days*",
+"EG2Days": "(e.g. 2 Days)"
 }

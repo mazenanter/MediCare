@@ -60,7 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
-    "Date": MessageLookupByLibrary.simpleMessage("Date*"),
+    "Daily": MessageLookupByLibrary.simpleMessage("Daily"),
+    "Days": MessageLookupByLibrary.simpleMessage("Days*"),
     "DidYouTakeYourMedicine": MessageLookupByLibrary.simpleMessage(
       "Did you take your Medicine?",
     ),
@@ -70,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "Dose": MessageLookupByLibrary.simpleMessage("Dose*"),
     "DoseEG": MessageLookupByLibrary.simpleMessage("Dose (e.g. 400mg)"),
     "Drop": MessageLookupByLibrary.simpleMessage("Drop"),
+    "EG2Days": MessageLookupByLibrary.simpleMessage("(e.g. 2 Days)"),
+    "EG2Hours": MessageLookupByLibrary.simpleMessage("(e.g. 2 hours)"),
     "Edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
@@ -86,13 +89,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter Your Username",
     ),
     "Error": MessageLookupByLibrary.simpleMessage("Error"),
+    "EveryXHours": MessageLookupByLibrary.simpleMessage("Every X hours"),
     "FillOutTheFields": MessageLookupByLibrary.simpleMessage(
       "Fill out the fields and hit the Save\nButton to add it!",
     ),
+    "FirstDate": MessageLookupByLibrary.simpleMessage("First Date*"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "Hello! Register to get\nstarted",
     ),
+    "Hours": MessageLookupByLibrary.simpleMessage("Hours*"),
     "Injection": MessageLookupByLibrary.simpleMessage("Injection"),
     "Intakes": MessageLookupByLibrary.simpleMessage("Intakes"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(
@@ -118,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Name": MessageLookupByLibrary.simpleMessage("Name*"),
     "NameEG": MessageLookupByLibrary.simpleMessage("Name (e.g. Ibuprofen)"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
+    "OneTime": MessageLookupByLibrary.simpleMessage("One time"),
     "Or": MessageLookupByLibrary.simpleMessage("Or"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
       "Password too weak!",
@@ -132,9 +139,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter your name",
     ),
     "Register": MessageLookupByLibrary.simpleMessage("Register"),
-    "Reminder": MessageLookupByLibrary.simpleMessage("Reminder"),
+    "Reminders": MessageLookupByLibrary.simpleMessage("Reminders"),
+    "RepeatEvery": MessageLookupByLibrary.simpleMessage("Repeat every*"),
     "Save": MessageLookupByLibrary.simpleMessage("Save"),
     "ScheduledFor": MessageLookupByLibrary.simpleMessage("Scheduled for"),
+    "SelectRepeatTime": MessageLookupByLibrary.simpleMessage(
+      "Select repeat time",
+    ),
     "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
       "Something went wrong, please try again.",
     ),

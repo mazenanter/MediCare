@@ -62,7 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "كمل باستخدام جوجل",
     ),
-    "Date": MessageLookupByLibrary.simpleMessage("التاريخ*"),
+    "Daily": MessageLookupByLibrary.simpleMessage("كل يوم"),
+    "Days": MessageLookupByLibrary.simpleMessage("أيام*"),
     "DidYouTakeYourMedicine": MessageLookupByLibrary.simpleMessage(
       "هل أخدت دواءك؟",
     ),
@@ -72,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "Dose": MessageLookupByLibrary.simpleMessage("الجرعة*"),
     "DoseEG": MessageLookupByLibrary.simpleMessage("الجرعة (مثلاً: 400 مجم)"),
     "Drop": MessageLookupByLibrary.simpleMessage("نقط"),
+    "EG2Days": MessageLookupByLibrary.simpleMessage("(مثال: كل 2 يوم)"),
+    "EG2Hours": MessageLookupByLibrary.simpleMessage("(مثال: كل 2 ساعة)"),
     "Edit": MessageLookupByLibrary.simpleMessage("تعديل"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
@@ -90,13 +93,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "اكتب اسم المستخدم بتاعك",
     ),
     "Error": MessageLookupByLibrary.simpleMessage("خطأ"),
+    "EveryXHours": MessageLookupByLibrary.simpleMessage(
+      "كل عدد معين من الساعات",
+    ),
     "FillOutTheFields": MessageLookupByLibrary.simpleMessage(
       "املأ البيانات واضغط زر الحفظ\nعشان تضيفه!",
     ),
+    "FirstDate": MessageLookupByLibrary.simpleMessage("اول تاريخ*"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
     "HelloRegisterToGetStarted": MessageLookupByLibrary.simpleMessage(
       "أهلاً! سجل حسابك عشان تبدأ",
     ),
+    "Hours": MessageLookupByLibrary.simpleMessage("ساعات*"),
     "Injection": MessageLookupByLibrary.simpleMessage("حقنة"),
     "Intakes": MessageLookupByLibrary.simpleMessage("الجرعات"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(
@@ -121,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Name": MessageLookupByLibrary.simpleMessage("الاسم*"),
     "NameEG": MessageLookupByLibrary.simpleMessage("الاسم (مثلاً: إيبوبروفين)"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
+    "OneTime": MessageLookupByLibrary.simpleMessage("مرة واحدة"),
     "Or": MessageLookupByLibrary.simpleMessage("أو"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
       "كلمة السر ضعيفة جدًا!",
@@ -135,9 +144,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "من فضلك ادخل اسمك",
     ),
     "Register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
-    "Reminder": MessageLookupByLibrary.simpleMessage("التذكير"),
+    "Reminders": MessageLookupByLibrary.simpleMessage("التذكيرات"),
+    "RepeatEvery": MessageLookupByLibrary.simpleMessage("كرر كل*"),
     "Save": MessageLookupByLibrary.simpleMessage("حفظ"),
     "ScheduledFor": MessageLookupByLibrary.simpleMessage("مجدول لـ"),
+    "SelectRepeatTime": MessageLookupByLibrary.simpleMessage(
+      "اختار وقت التكرار",
+    ),
     "SomethingWentWrongPleaseTtryAgain": MessageLookupByLibrary.simpleMessage(
       "في حاجة غلط، حاول تاني.",
     ),
