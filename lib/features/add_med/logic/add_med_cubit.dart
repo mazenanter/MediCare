@@ -14,15 +14,20 @@ class AddMedCubit extends Cubit<AddMedState> {
   TextEditingController nameController = TextEditingController();
   TextEditingController doseController = TextEditingController();
   TextEditingController amountController = TextEditingController();
+  TextEditingController daysController = TextEditingController();
+  TextEditingController hoursController = TextEditingController();
+  TextEditingController repeatTypeController = TextEditingController();
   // Form key for validation
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   // Dropdown selection
   String? selectedType;
+  String? selectedRepeatType;
   // Medication status
   MedicationStatus isTaken = MedicationStatus.notTaken;
   // Date and time for reminder
   DateTime selectedDate = DateTime.now();
   TimeOfDay selectedTime = TimeOfDay.now();
+
   AddMedCubit(this.addMedRepo) : super(AddMedState.initial());
   Future<void> addMedication(BuildContext context) async {
     // if (!formKey.currentState!.validate()) {
@@ -38,6 +43,11 @@ class AddMedCubit extends Cubit<AddMedState> {
         isTaken: isTaken == MedicationStatus.taken ? 1 : 0,
         dateTime: _getSelectedTimestamp(),
         createdAt: Timestamp.now(),
+        repeatType: selectedRepeatType ?? 'One time',
+        intervalHours: selectedRepeatType == 'Every X hours'
+            ? int.tryParse(hoursController.text)
+            : null,
+        durationDays: int.tryParse(daysController.text) ?? 0,
       ),
       context,
     );
@@ -77,9 +87,11 @@ class AddMedCubit extends Cubit<AddMedState> {
   @override
   Future<void> close() {
     nameController.dispose();
-
     doseController.dispose();
     amountController.dispose();
+    daysController.dispose();
+    hoursController.dispose();
+    repeatTypeController.dispose();
     return super.close();
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_form_field.dart';
 import 'package:medicare/features/add_med/ui/widgets/date_and_time/date_and_time_picker.dart';
+import 'package:medicare/features/add_med/ui/widgets/reminders_form_fields.dart';
 import 'package:medicare/generated/l10n.dart';
 
 import '../../logic/add_med_cubit.dart';
@@ -72,6 +73,9 @@ class _AddMedFormState extends State<AddMedForm> {
         Text(
           S.of(context).Reminder,
           style: TextStylesManager.font20Meduim,
+        ),
+        RemindersFormFields(
+          addMedCubit: context.read<AddMedCubit>(),
         ),
         Text(
           S.of(context).Date,
