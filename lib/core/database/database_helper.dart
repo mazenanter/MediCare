@@ -12,7 +12,7 @@ class DatabaseHelper {
   }
 
   static Future<Database> _initDatabase() async {
-    final path = join(await getDatabasesPath(), 'medi.db');
+    final path = join(await getDatabasesPath(), 'medicare.db');
     return await openDatabase(
       path,
       version: 1,
@@ -26,6 +26,9 @@ class DatabaseHelper {
             amount INTEGER,
             dateTime INTEGER,
             createdAt INTEGER,
+            repeatType TEXT,
+            intervalHours INTEGER,
+            durationDays INTEGER,
             isTaken INTEGER DEFAULT 0,
             isSynced INTEGER DEFAULT 0
            )

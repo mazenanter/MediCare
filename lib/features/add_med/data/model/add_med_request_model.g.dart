@@ -9,6 +9,9 @@ part of 'add_med_request_model.dart';
 AddMedRequestModel _$AddMedRequestModelFromJson(Map<String, dynamic> json) =>
     AddMedRequestModel(
       name: json['name'] as String,
+      repeatType: json['repeatType'] as String,
+      intervalHours: (json['intervalHours'] as num?)?.toInt(),
+      durationDays: (json['durationDays'] as num?)?.toInt(),
       type: json['type'] as String,
       dateTime: const TimestampConverter().fromJson(json['dateTime']),
       dose: json['dose'] as String,
@@ -26,4 +29,7 @@ Map<String, dynamic> _$AddMedRequestModelToJson(AddMedRequestModel instance) =>
       'dose': instance.dose,
       'amount': instance.amount,
       'isTaken': instance.isTaken,
+      'repeatType': instance.repeatType,
+      'intervalHours': instance.intervalHours,
+      'durationDays': instance.durationDays,
     };
