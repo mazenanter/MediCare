@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:medicare/features/details/ui/widgets/details_header.dart';
 import 'package:medicare/features/details/ui/widgets/drop_and_dose_text.dart';
+import 'package:medicare/features/details/ui/widgets/repeat_info.dart';
 import 'package:medicare/features/details/ui/widgets/scheduled_date_details.dart';
 import 'package:medicare/features/details/ui/widgets/take_and_edit_buttons.dart';
 import 'package:medicare/features/home/data/models/medication_response_model.dart';
@@ -46,13 +47,21 @@ class DetailsInfo extends StatelessWidget {
             day: day,
             scheduledDate: timeOnly,
           ),
-          verticalSpace(45),
+          if (medicationResponseModel.intervalHours != null ||
+              medicationResponseModel.intervalHours == 0) ...[
+            verticalSpace(35),
+            RepeatAndDaysInfo(
+              repeat: medicationResponseModel.intervalHours.toString(),
+              days: medicationResponseModel.durationDays.toString(),
+            ),
+          ],
+          verticalSpace(35),
           DropAndDoseText(
             drop: medicationResponseModel.amount.toString(),
             dose: medicationResponseModel.dose,
             type: medicationResponseModel.type,
           ),
-          verticalSpace(45),
+          verticalSpace(35),
           TakeAndEditButtons(),
           verticalSpace(55),
         ],

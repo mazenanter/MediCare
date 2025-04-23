@@ -16,12 +16,12 @@ class DetailsScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(top: 45.h, left: 20.w, right: 20.w),
-          child: Column(
-            children: [
-              BackArrowButton(),
-              verticalSpace(60),
-              Expanded(
-                child: Container(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                BackArrowButton(),
+                verticalSpace(40),
+                Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: ColorsManager.cDDF2FC,
@@ -35,9 +35,9 @@ class DetailsScreen extends StatelessWidget {
                     medicationResponseModel: medicationResponseModel,
                   ),
                 ),
-              ),
-              verticalSpace(60),
-            ],
+                verticalSpace(60),
+              ],
+            ),
           ),
         ),
       ),
