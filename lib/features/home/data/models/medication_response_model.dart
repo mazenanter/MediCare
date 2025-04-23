@@ -14,11 +14,17 @@ class MedicationResponseModel {
   @TimestampConverter()
   final Timestamp createdAt;
   final String dose;
+  final String repeatType;
+  final int? intervalHours;
+  final int? durationDays;
   final int amount;
   final int isTaken;
 
   MedicationResponseModel(
       {required this.name,
+      required this.repeatType,
+      this.intervalHours,
+      this.durationDays,
       required this.type,
       required this.dateTime,
       required this.createdAt,
