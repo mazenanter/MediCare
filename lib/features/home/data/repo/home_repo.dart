@@ -16,9 +16,11 @@ class HomeRepo {
       String userId, BuildContext context) async {
     try {
       final isOnline = await NetworkService.hasInternetConnection();
-      List<MedicationResponseModel> medications = await getFromLocalDatabase();
+      List<MedicationResponseModel> medications;
       if (isOnline) {
         medications = await getFromFirebase(userId);
+      } else {
+        medications = await getFromLocalDatabase();
       }
 
       return FirebaseResult.success(medications);

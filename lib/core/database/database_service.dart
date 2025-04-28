@@ -1,4 +1,5 @@
 import 'package:medicare/core/database/database_helper.dart';
+import 'package:medicare/core/helpers/constants.dart';
 import 'package:sqflite/sqlite_api.dart';
 
 class DatabaseService {
@@ -36,8 +37,22 @@ class DatabaseService {
     return await db!.update(table, data, where: 'id = ?', whereArgs: [id]);
   }
 
-  static Future<int> delete(String table, int id) async {
+  static Future<int> delete(String table, String id) async {
     final db = await database;
     return db!.delete(table, where: 'id = ?', whereArgs: [id]);
+  }
+
+  static Future<List<Map<String, dynamic>>> getPendingOperations() async {
+    final db = await database;
+    return db!.query(AppConstants.pendingOperationsTaple);
+  }
+
+  static Future deletePendingOperation(int id) async {
+    final db = await database;
+    await db!.delete(
+      AppConstants.pendingOperationsTaple,
+      where: 'id = ?',
+      whereArgs: [id],
+    );
   }
 }

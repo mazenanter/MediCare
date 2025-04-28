@@ -11,6 +11,7 @@ MedicationResponseModel _$MedicationResponseModelFromJson(
     MedicationResponseModel(
       name: json['name'] as String,
       repeatType: json['repeatType'] as String,
+      id: json['id'] as String,
       intervalHours: (json['intervalHours'] as num?)?.toInt(),
       durationDays: (json['durationDays'] as num?)?.toInt(),
       type: json['type'] as String,
@@ -24,6 +25,7 @@ MedicationResponseModel _$MedicationResponseModelFromJson(
 Map<String, dynamic> _$MedicationResponseModelToJson(
         MedicationResponseModel instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'type': instance.type,
       'dateTime': const TimestampConverter().toJson(instance.dateTime),

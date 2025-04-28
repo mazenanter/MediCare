@@ -11,6 +11,7 @@ import 'package:medicare/features/register/logic/register_cubit.dart';
 import 'package:medicare/features/welcome/welcome_screen.dart';
 
 import '../../features/add_med/logic/add_med_cubit.dart';
+import '../../features/details/logic/details_cubit.dart';
 import '../../features/home/data/models/medication_response_model.dart';
 import '../../features/home/logic/home_cubit.dart';
 import '../../features/home/ui/manage_med_screen.dart';
@@ -57,9 +58,12 @@ class AppRouter {
         );
       case Routes.detailsScreen:
         return MaterialPageRoute(
-          builder: (context) => DetailsScreen(
-            medicationResponseModel:
-                settings.arguments as MedicationResponseModel,
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<DetailsCubit>(),
+            child: DetailsScreen(
+              medicationResponseModel:
+                  settings.arguments as MedicationResponseModel,
+            ),
           ),
         );
       default:

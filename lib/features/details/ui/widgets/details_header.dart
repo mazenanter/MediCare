@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medicare/core/helpers/extenstions.dart';
 
 import '../../../../core/theming/colors_manager.dart';
+import '../../../../core/theming/text_styles_manager.dart';
 
 class DetailsHeader extends StatelessWidget {
-  const DetailsHeader({super.key});
-
+  const DetailsHeader({super.key, required this.onDelete});
+  final void Function() onDelete;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,7 +35,56 @@ class DetailsHeader extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          actionsAlignment: MainAxisAlignment.center,
+                          icon: Icon(
+                            FontAwesomeIcons.trashCan,
+                            color: ColorsManager.cEA4335,
+                          ),
+                          title: Text(
+                            'Delete Medication',
+                            style: TextStylesManager.font16Bold,
+                            textAlign: TextAlign.center,
+                          ),
+                          content: Text(
+                            'Are you sure you want to delete this medication?',
+                            style: TextStylesManager.font20Meduim,
+                            textAlign: TextAlign.center,
+                          ),
+                          actions: [
+                            TextButton(
+                              style: ButtonStyle(
+                                foregroundColor: WidgetStateProperty.all(
+                                    ColorsManager.c196EB0),
+                              ),
+                              child: Text(
+                                "Cancel",
+                                style: TextStylesManager.font20Meduim,
+                                textAlign: TextAlign.center,
+                              ),
+                              onPressed: () => context.pop(),
+                            ),
+                            TextButton(
+                              style: ButtonStyle(
+                                foregroundColor: WidgetStateProperty.all(
+                                    ColorsManager.cEA4335),
+                              ),
+                              onPressed: onDelete,
+                              child: Text(
+                                "Delete",
+                                style: TextStylesManager.font20Meduim,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
                   child: Container(
                     width: 50.w,
                     height: 50.h,

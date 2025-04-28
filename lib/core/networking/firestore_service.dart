@@ -21,9 +21,8 @@ class FirestoreService {
         .collection('users')
         .doc(userId)
         .collection('medications')
-        .add(
-          addMedRequestModel.toJson(),
-        );
+        .doc(addMedRequestModel.id)
+        .set(addMedRequestModel.toJson());
   }
 
   Future<List<Map<String, dynamic>>> getMedications(String userId) async {
@@ -34,5 +33,14 @@ class FirestoreService {
         .get();
 
     return quereSnapshot.docs.map((e) => e.data()).toList();
+  }
+
+  Future<void> deleteMedication(String userId, String medicationId) async {
+    await firestore
+        .collection('users')
+        .doc(userId)
+        .collection('medications')
+        .doc(medicationId)
+        .delete();
   }
 }

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
-import 'package:medicare/features/details/ui/widgets/details_header.dart';
 import 'package:medicare/features/details/ui/widgets/drop_and_dose_text.dart';
 import 'package:medicare/features/details/ui/widgets/repeat_info.dart';
 import 'package:medicare/features/details/ui/widgets/scheduled_date_details.dart';
-import 'package:medicare/features/details/ui/widgets/take_and_edit_buttons.dart';
 import 'package:medicare/features/home/data/models/medication_response_model.dart';
 import 'package:medicare/generated/l10n.dart';
 
@@ -28,8 +26,6 @@ class DetailsInfo extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 14.w),
       child: Column(
         children: [
-          DetailsHeader(),
-          verticalSpace(27),
           Text(
             S.of(context).DidYouTakeYourMedicine,
             style: TextStylesManager.font25Meduim,
@@ -61,9 +57,6 @@ class DetailsInfo extends StatelessWidget {
             dose: medicationResponseModel.dose,
             type: medicationResponseModel.type,
           ),
-          verticalSpace(35),
-          TakeAndEditButtons(),
-          verticalSpace(55),
         ],
       ),
     );

@@ -36,6 +36,12 @@ class AddMedCubit extends Cubit<AddMedState> {
     emit(AddMedState.loading());
     final result = await addMedRepo.addMedication(
       AddMedRequestModel(
+        id: addMedRepo.firestoreService.firestore
+            .collection('users')
+            .doc()
+            .collection('medications')
+            .doc()
+            .id,
         name: nameController.text,
         type: selectedType ?? 'Unknown',
         amount: int.tryParse(amountController.text) ?? 0,
