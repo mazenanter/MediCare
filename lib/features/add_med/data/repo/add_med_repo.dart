@@ -60,6 +60,19 @@ class AddMedRepo {
 
         log("✅ تم مزامنة الدواء بنجاح!");
       }
+
+      final List<Map<String, dynamic>> pendingOperations =
+          await DatabaseService.getPendingOperations();
+      log("📝 عدد العمليات المعلقة: ${pendingOperations.length}");
+      for (var operation in pendingOperations) {
+        log("⬆️ جاري رفع العملية: ${operation['operationType']}");
+        if (operation['operationType'] == 'delete') {
+          await firestoreService.deleteMedication(
+              user.uid, operation['medicationId']);
+          await DatabaseService.deletePendingOperation(operation['id']);
+          log("✅ تم مزامنة العملية بنجاح!");
+        }
+      }
     }
   }
 }

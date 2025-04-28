@@ -7,6 +7,7 @@ part 'add_med_request_model.g.dart';
 
 @JsonSerializable()
 class AddMedRequestModel {
+  final String id;
   final String name;
   final String type;
   @TimestampConverter()
@@ -21,6 +22,7 @@ class AddMedRequestModel {
   final int? durationDays;
   AddMedRequestModel(
       {required this.name,
+      required this.id,
       required this.repeatType,
       this.intervalHours,
       this.durationDays,

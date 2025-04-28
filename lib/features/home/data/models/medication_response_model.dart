@@ -7,7 +7,9 @@ part 'medication_response_model.g.dart';
 
 @JsonSerializable()
 class MedicationResponseModel {
+  final String id;
   final String name;
+
   final String type;
   @TimestampConverter()
   final Timestamp dateTime;
@@ -23,6 +25,7 @@ class MedicationResponseModel {
   MedicationResponseModel(
       {required this.name,
       required this.repeatType,
+      required this.id,
       this.intervalHours,
       this.durationDays,
       required this.type,
