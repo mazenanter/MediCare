@@ -90,5 +90,10 @@
 "Hours": "Hours*",
 "EG2Hours": "(e.g. 2 hours)",
 "Days": "Days*",
-"EG2Days": "(e.g. 2 Days)"
+"EG2Days": "(e.g. 2 Days)",
+"DeletedSuccessfully": "Deleted successfully",
+"DeleteMedication": "Delete Medication",
+"AreYouSureYouWantToDeleteThisMedication": "Are you sure you want to delete this medication?",
+"Delete": "Delete",
+"HoursFor": "Hours for"
 }

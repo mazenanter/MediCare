@@ -37,6 +37,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "AnArrorOccurred": MessageLookupByLibrary.simpleMessage(
       "حصل خطأ أثناء تسجيل الدخول، حاول تاني.",
     ),
+    "AreYouSureYouWantToDeleteThisMedication":
+        MessageLookupByLibrary.simpleMessage(
+          "هل أنت متأكد أنك عايز تحذف الدواء ده؟",
+        ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "على الأقل حرف صغير واحد",
     ),
@@ -64,6 +68,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Daily": MessageLookupByLibrary.simpleMessage("كل يوم"),
     "Days": MessageLookupByLibrary.simpleMessage("أيام*"),
+    "Delete": MessageLookupByLibrary.simpleMessage("حذف"),
+    "DeleteMedication": MessageLookupByLibrary.simpleMessage("حذف الدواء"),
+    "DeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم الحذف بنجاح",
+    ),
     "DidYouTakeYourMedicine": MessageLookupByLibrary.simpleMessage(
       "هل أخدت دواءك؟",
     ),
@@ -105,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "أهلاً! سجل حسابك عشان تبدأ",
     ),
     "Hours": MessageLookupByLibrary.simpleMessage("ساعات*"),
+    "HoursFor": MessageLookupByLibrary.simpleMessage("ساعات لـ"),
     "Injection": MessageLookupByLibrary.simpleMessage("حقنة"),
     "Intakes": MessageLookupByLibrary.simpleMessage("الجرعات"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(

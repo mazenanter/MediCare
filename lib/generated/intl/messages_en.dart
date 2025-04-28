@@ -37,6 +37,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "AnArrorOccurred": MessageLookupByLibrary.simpleMessage(
       "An error occurred during login. Please try again.",
     ),
+    "AreYouSureYouWantToDeleteThisMedication":
+        MessageLookupByLibrary.simpleMessage(
+          "Are you sure you want to delete this medication?",
+        ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "At least 1 lowercase letter",
     ),
@@ -62,6 +66,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Daily": MessageLookupByLibrary.simpleMessage("Daily"),
     "Days": MessageLookupByLibrary.simpleMessage("Days*"),
+    "Delete": MessageLookupByLibrary.simpleMessage("Delete"),
+    "DeleteMedication": MessageLookupByLibrary.simpleMessage(
+      "Delete Medication",
+    ),
+    "DeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Deleted successfully",
+    ),
     "DidYouTakeYourMedicine": MessageLookupByLibrary.simpleMessage(
       "Did you take your Medicine?",
     ),
@@ -99,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Hello! Register to get\nstarted",
     ),
     "Hours": MessageLookupByLibrary.simpleMessage("Hours*"),
+    "HoursFor": MessageLookupByLibrary.simpleMessage("Hours for"),
     "Injection": MessageLookupByLibrary.simpleMessage("Injection"),
     "Intakes": MessageLookupByLibrary.simpleMessage("Intakes"),
     "InvalidCredential": MessageLookupByLibrary.simpleMessage(

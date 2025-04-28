@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medicare/core/helpers/spacing.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/theming/colors_manager.dart';
 import '../../../../core/theming/text_styles_manager.dart';
@@ -22,7 +23,7 @@ class RepeatAndDaysInfo extends StatelessWidget {
         ),
         horizontalSpace(10),
         Text(
-          '$repeat Hours for $days Days',
+          '$repeat ${S.of(context).HoursFor} $days ${S.of(context).Days}',
           style: TextStylesManager.font18Regular.copyWith(
             color: ColorsManager.c196EB0,
           ),
