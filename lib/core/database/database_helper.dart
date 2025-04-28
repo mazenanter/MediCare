@@ -12,14 +12,14 @@ class DatabaseHelper {
   }
 
   static Future<Database> _initDatabase() async {
-    final path = join(await getDatabasesPath(), 'medicare.db');
+    final path = join(await getDatabasesPath(), 'medications.db');
     return await openDatabase(
       path,
       version: 1,
       onCreate: (db, version) async {
         await db.execute('''
           CREATE TABLE ${AppConstants.tableName} (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id TEXT PRIMARY KEY,
             name TEXT,
             type TEXT,
             dose TEXT,
@@ -33,6 +33,15 @@ class DatabaseHelper {
             isSynced INTEGER DEFAULT 0
            )
         ''');
+
+        await db
+            .execute('''CREATE TABLE ${AppConstants.pendingOperationsTaple} (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            operationType TEXT,
+            medicationId TEXT,
+            userId TEXT,
+            createdAt INTEGER
+          )''');
       },
     );
   }
