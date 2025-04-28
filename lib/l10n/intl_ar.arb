@@ -89,5 +89,10 @@
 "Hours": "ساعات*",
 "EG2Hours": "(مثال: كل 2 ساعة)",
 "Days": "أيام*",
-"EG2Days": "(مثال: كل 2 يوم)"
+"EG2Days": "(مثال: كل 2 يوم)",
+"DeletedSuccessfully":"تم الحذف بنجاح",
+"DeleteMedication": "حذف الدواء",
+"AreYouSureYouWantToDeleteThisMedication": "هل أنت متأكد أنك عايز تحذف الدواء ده؟",
+"Delete": "حذف",
+"HoursFor": "ساعات لـ"
 }

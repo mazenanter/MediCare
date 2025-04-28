@@ -8,6 +8,8 @@ import 'package:medicare/core/widgets/custom_alert_dialog.dart';
 import 'package:medicare/features/details/logic/details_cubit.dart';
 import 'package:medicare/features/details/logic/details_state.dart';
 
+import '../../../../generated/l10n.dart';
+
 class DetailsBlocListener extends StatelessWidget {
   const DetailsBlocListener({super.key});
 
@@ -58,12 +60,12 @@ class DetailsBlocListener extends StatelessWidget {
       context: context,
       builder: (context) {
         return CustomAlertDialog(
-          content: "Deleted Successfully",
+          content: S.of(context).DeletedSuccessfully,
           icon: Icon(
             Icons.check_circle,
             color: Colors.green,
           ),
-          title: "Success",
+          title: S.of(context).Success,
           actions: [
             TextButton(
               onPressed: () {
@@ -71,7 +73,7 @@ class DetailsBlocListener extends StatelessWidget {
                 context.pushNamedAndRemoveUntil(Routes.homeScreen);
               },
               child: Text(
-                "OK",
+                S.of(context).Ok,
                 style: TextStylesManager.font16Bold,
               ),
             ),
@@ -91,14 +93,14 @@ class DetailsBlocListener extends StatelessWidget {
             Icons.error,
             color: Colors.red,
           ),
-          title: "Error",
+          title: S.of(context).Error,
           actions: [
             TextButton(
               onPressed: () {
                 context.pop();
               },
               child: Text(
-                "OK",
+                S.of(context).Ok,
                 style: TextStylesManager.font16Bold,
               ),
             ),

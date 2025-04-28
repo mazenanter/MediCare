@@ -804,6 +804,46 @@ class S {
   String get EG2Days {
     return Intl.message('(e.g. 2 Days)', name: 'EG2Days', desc: '', args: []);
   }
+
+  /// `Deleted successfully`
+  String get DeletedSuccessfully {
+    return Intl.message(
+      'Deleted successfully',
+      name: 'DeletedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Medication`
+  String get DeleteMedication {
+    return Intl.message(
+      'Delete Medication',
+      name: 'DeleteMedication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this medication?`
+  String get AreYouSureYouWantToDeleteThisMedication {
+    return Intl.message(
+      'Are you sure you want to delete this medication?',
+      name: 'AreYouSureYouWantToDeleteThisMedication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get Delete {
+    return Intl.message('Delete', name: 'Delete', desc: '', args: []);
+  }
+
+  /// `Hours for`
+  String get HoursFor {
+    return Intl.message('Hours for', name: 'HoursFor', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
