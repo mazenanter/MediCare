@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/helpers/spacing.dart';
+import 'package:medicare/features/details/ui/widgets/details_bloc_listener.dart';
+import 'package:medicare/features/details/ui/widgets/details_header.dart';
 import 'package:medicare/features/details/ui/widgets/details_info.dart';
+import 'package:medicare/features/details/ui/widgets/take_and_edit_buttons.dart';
 import 'package:medicare/features/home/data/models/medication_response_model.dart';
 
 import '../../../core/theming/colors_manager.dart';
 import '../../../core/widgets/back_arrow_button.dart';
+import '../logic/details_cubit.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key, required this.medicationResponseModel});
@@ -17,6 +22,7 @@ class DetailsScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(top: 45.h, left: 20.w, right: 20.w),
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 BackArrowButton(),
@@ -31,8 +37,23 @@ class DetailsScreen extends StatelessWidget {
                       width: 1.75.w,
                     ),
                   ),
-                  child: DetailsInfo(
-                    medicationResponseModel: medicationResponseModel,
+                  child: Column(
+                    children: [
+                      DetailsHeader(
+                        onDelete: () {
+                          context
+                              .read<DetailsCubit>()
+                              .deleteMedication(medicationResponseModel.id);
+                        },
+                      ),
+                      verticalSpace(27),
+                      DetailsInfo(
+                        medicationResponseModel: medicationResponseModel,
+                      ),
+                      verticalSpace(35),
+                      TakeAndEditButtons(),
+                      verticalSpace(55),
+                    ],
                   ),
                 ),
                 verticalSpace(60),
@@ -41,6 +62,8 @@ class DetailsScreen extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: DetailsBlocListener(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

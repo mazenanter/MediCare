@@ -8,6 +8,8 @@ import 'package:medicare/features/register/logic/register_cubit.dart';
 
 import '../../features/add_med/data/repo/add_med_repo.dart';
 import '../../features/add_med/logic/add_med_cubit.dart';
+import '../../features/details/data/repo/details_repo.dart';
+import '../../features/details/logic/details_cubit.dart';
 import '../../features/home/data/repo/home_repo.dart';
 import '../../features/home/logic/home_cubit.dart';
 import '../../features/login/data/repo/login_repo.dart';
@@ -47,4 +49,9 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<HomeRepo>(
       () => HomeRepo(getIt<FirestoreService>()));
   getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt<HomeRepo>()));
+
+  // details
+  getIt.registerLazySingleton<DetailsRepo>(
+      () => DetailsRepo(getIt<FirestoreService>()));
+  getIt.registerFactory<DetailsCubit>(() => DetailsCubit(getIt<DetailsRepo>()));
 }
