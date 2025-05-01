@@ -13,7 +13,7 @@ class AddMedRequestModel {
   @TimestampConverter()
   final Timestamp dateTime;
   @TimestampConverter()
-  final Timestamp createdAt;
+  final Timestamp? createdAt;
   final String dose;
   final int amount;
   final int isTaken;
@@ -31,7 +31,7 @@ class AddMedRequestModel {
       required this.dose,
       required this.amount,
       required this.isTaken,
-      required this.createdAt});
+      this.createdAt});
   factory AddMedRequestModel.fromJson(Map<String, dynamic> json) =>
       _$AddMedRequestModelFromJson(json);
   Map<String, dynamic> toJson() => _$AddMedRequestModelToJson(this);
