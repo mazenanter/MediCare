@@ -27,7 +27,8 @@ Map<String, dynamic> _$AddMedRequestModelToJson(AddMedRequestModel instance) =>
       'name': instance.name,
       'type': instance.type,
       'dateTime': const TimestampConverter().toJson(instance.dateTime),
-      'createdAt': const TimestampConverter().toJson(instance.createdAt),
+      'createdAt': _$JsonConverterToJson<dynamic, Timestamp>(
+          instance.createdAt, const TimestampConverter().toJson),
       'dose': instance.dose,
       'amount': instance.amount,
       'isTaken': instance.isTaken,
@@ -35,3 +36,9 @@ Map<String, dynamic> _$AddMedRequestModelToJson(AddMedRequestModel instance) =>
       'intervalHours': instance.intervalHours,
       'durationDays': instance.durationDays,
     };
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

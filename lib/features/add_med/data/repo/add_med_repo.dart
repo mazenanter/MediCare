@@ -71,6 +71,15 @@ class AddMedRepo {
               user.uid, operation['medicationId']);
           await DatabaseService.deletePendingOperation(operation['id']);
           log("✅ تم مزامنة العملية بنجاح!");
+        } else if (operation['operationType'] == 'update') {
+          final medication = await DatabaseService.getMedicationById(
+              operation['medicationId']);
+          await firestoreService.updateMedication(
+              user.uid,
+              operation['medicationId'],
+              AddMedRequestModel.fromJson(medication));
+          await DatabaseService.deletePendingOperation(operation['id']);
+          log("✅ تم مزامنة العملية بنجاح!");
         }
       }
     }
