@@ -6,22 +6,32 @@ import 'package:medicare/features/add_med/logic/add_med_cubit.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_bloc_listener.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_form.dart';
 import 'package:medicare/features/add_med/ui/widgets/add_med_top_bar.dart';
+import 'package:medicare/features/home/data/models/medication_response_model.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/text_styles_manager.dart';
 import '../../../generated/l10n.dart';
 
 class AddMedScreen extends StatelessWidget {
-  const AddMedScreen({super.key});
-
+  const AddMedScreen({super.key, this.medicationResponseModel});
+  final MedicationResponseModel? medicationResponseModel;
   @override
   Widget build(BuildContext context) {
+    // Initialize the AddMedCubit and pass the medicationResponseModel if available
+    final addMedCubit = context.read<AddMedCubit>();
+    if (medicationResponseModel != null) {
+      addMedCubit.init(medicationResponseModel!);
+    }
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              AddMedTopBar(),
+              AddMedTopBar(
+                title: medicationResponseModel != null
+                    ? '${S.of(context).Edit} ${medicationResponseModel!.name}'
+                    : S.of(context).AddNewMedicine,
+              ),
               verticalSpace(30),
               Text(
                 S.of(context).FillOutTheFields,

@@ -43,7 +43,8 @@ Future<void> setupGetIt() async {
   // add medication
   getIt.registerLazySingleton<AddMedRepo>(
       () => AddMedRepo(getIt<FirestoreService>()));
-  getIt.registerFactory<AddMedCubit>(() => AddMedCubit(getIt<AddMedRepo>()));
+  getIt.registerFactory<AddMedCubit>(
+      () => AddMedCubit(getIt<AddMedRepo>(), getIt<DetailsRepo>()));
 
   // home
   getIt.registerLazySingleton<HomeRepo>(

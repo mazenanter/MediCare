@@ -6,8 +6,8 @@ import 'package:medicare/core/widgets/back_arrow_button.dart';
 import 'package:medicare/generated/l10n.dart';
 
 class AddMedTopBar extends StatelessWidget {
-  const AddMedTopBar({super.key});
-
+  const AddMedTopBar({super.key, this.title});
+  final String? title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +20,7 @@ class AddMedTopBar extends StatelessWidget {
           ),
           horizontalSpace(16),
           Text(
-            S.of(context).AddNewMedicine,
+            title ?? S.of(context).AddNewMedicine,
             style: TextStylesManager.font24Bold,
           ),
         ],

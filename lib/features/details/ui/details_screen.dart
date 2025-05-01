@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/core/helpers/spacing.dart';
+import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/features/details/ui/widgets/details_bloc_listener.dart';
 import 'package:medicare/features/details/ui/widgets/details_header.dart';
 import 'package:medicare/features/details/ui/widgets/details_info.dart';
@@ -51,7 +53,14 @@ class DetailsScreen extends StatelessWidget {
                         medicationResponseModel: medicationResponseModel,
                       ),
                       verticalSpace(35),
-                      TakeAndEditButtons(),
+                      TakeAndEditButtons(
+                        onEdit: () {
+                          context.pushNamed(
+                            Routes.addMedScreen,
+                            arguments: medicationResponseModel,
+                          );
+                        },
+                      ),
                       verticalSpace(55),
                     ],
                   ),
