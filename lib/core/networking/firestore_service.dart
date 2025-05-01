@@ -22,7 +22,10 @@ class FirestoreService {
         .doc(userId)
         .collection('medications')
         .doc(addMedRequestModel.id)
-        .set(addMedRequestModel.toJson());
+        .set({
+      ...addMedRequestModel.toJson(),
+      'createdAt': Timestamp.now(),
+    });
   }
 
   Future<List<Map<String, dynamic>>> getMedications(String userId) async {
@@ -42,5 +45,15 @@ class FirestoreService {
         .collection('medications')
         .doc(medicationId)
         .delete();
+  }
+
+  Future<void> updateMedication(
+      String userId, String medicationId, AddMedRequestModel data) async {
+    await firestore
+        .collection('users')
+        .doc(userId)
+        .collection('medications')
+        .doc(medicationId)
+        .update(data.toJson());
   }
 }

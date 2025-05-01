@@ -55,4 +55,13 @@ class DatabaseService {
       whereArgs: [id],
     );
   }
+
+  static Future getMedicationById(String id) async {
+    final db = await database;
+    return await db!.query(
+      AppConstants.tableName,
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
 }
