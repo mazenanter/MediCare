@@ -6,8 +6,8 @@ import 'package:medicare/generated/l10n.dart';
 import '../../../../core/widgets/app_text_button.dart';
 
 class TakeAndEditButtons extends StatelessWidget {
-  const TakeAndEditButtons({super.key});
-
+  const TakeAndEditButtons({super.key, required this.onEdit});
+  final void Function() onEdit;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -28,7 +28,7 @@ class TakeAndEditButtons extends StatelessWidget {
           buttonWidth: 102.w,
           buttonHeight: 40.h,
           text: S.of(context).Edit,
-          onPressed: () {},
+          onPressed: onEdit,
         ),
       ],
     );

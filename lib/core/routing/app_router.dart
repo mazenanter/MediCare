@@ -53,7 +53,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => getIt<AddMedCubit>(),
-            child: const AddMedScreen(),
+            child: AddMedScreen(
+              medicationResponseModel:
+                  settings.arguments as MedicationResponseModel?,
+            ),
           ),
         );
       case Routes.detailsScreen:
