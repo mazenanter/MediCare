@@ -844,6 +844,36 @@ class S {
   String get HoursFor {
     return Intl.message('Hours for', name: 'HoursFor', desc: '', args: []);
   }
+
+  /// `Medication taken successfully`
+  String get MedicationTakenSuccessfully {
+    return Intl.message(
+      'Medication taken successfully',
+      name: 'MedicationTakenSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medication not taken successfully`
+  String get MedicationNotTakenSuccessfully {
+    return Intl.message(
+      'Medication not taken successfully',
+      name: 'MedicationNotTakenSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `updated successfully`
+  String get updatedSuccessfully {
+    return Intl.message(
+      'updated successfully',
+      name: 'updatedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:medicare/core/helpers/constants.dart';
 import 'package:medicare/core/networking/firebase_result.dart';
 import 'package:medicare/features/add_med/data/model/add_med_request_model.dart';
+import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/database/database_service.dart';
 import '../../../../core/networking/firestore_service.dart';
@@ -36,7 +38,9 @@ class DetailsRepo {
   }
 
   Future<FirebaseResult<String>> updateMedication(
-      {required String medicationId, required AddMedRequestModel model}) async {
+      {required String medicationId,
+      required AddMedRequestModel model,
+      required BuildContext context}) async {
     try {
       final userId = FirebaseAuth.instance.currentUser?.uid;
       await DatabaseService.update(
@@ -53,7 +57,40 @@ class DetailsRepo {
         });
       }
 
-      return FirebaseResult.success("${model.name} updated successfully");
+      return FirebaseResult.success(
+          "${model.name} ${S.of(context).updatedSuccessfully}");
+    } catch (e) {
+      return FirebaseResult.error(e.toString());
+    }
+  }
+
+  Future<FirebaseResult<String>> takeMedication(
+      {required String medicationId,
+      required int isTaken,
+      required BuildContext context}) async {
+    try {
+      final userId = FirebaseAuth.instance.currentUser?.uid;
+      await DatabaseService.update(
+          AppConstants.tableName, {'isTaken': isTaken}, medicationId);
+      final isOnline = await NetworkService.hasInternetConnection();
+      if (isOnline && userId != null) {
+        await firestoreService.updateTakeMedication(
+            userId, medicationId, isTaken);
+      } else {
+        await DatabaseService.insert(AppConstants.pendingOperationsTaple, {
+          'operationType': 'take',
+          'medicationId': medicationId,
+          'userId': userId,
+          'createdAt': DateTime.now().millisecondsSinceEpoch,
+        });
+      }
+      if (isTaken == 1) {
+        return FirebaseResult.success(
+            S.of(context).MedicationTakenSuccessfully);
+      } else {
+        return FirebaseResult.success(
+            S.of(context).MedicationNotTakenSuccessfully);
+      }
     } catch (e) {
       return FirebaseResult.error(e.toString());
     }

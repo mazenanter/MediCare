@@ -95,5 +95,8 @@
 "DeleteMedication": "Delete Medication",
 "AreYouSureYouWantToDeleteThisMedication": "Are you sure you want to delete this medication?",
 "Delete": "Delete",
-"HoursFor": "Hours for"
+"HoursFor": "Hours for",
+"MedicationTakenSuccessfully": "Medication taken successfully",
+"MedicationNotTakenSuccessfully": "Medication not taken successfully",
+"updatedSuccessfully": "updated successfully"
 }

@@ -1,3 +1,5 @@
+import 'package:cherry_toast/cherry_toast.dart';
+import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -19,11 +21,11 @@ class DetailsBlocListener extends StatelessWidget {
       listenWhen: (previous, current) =>
           current is DeleteSuccess ||
           current is DeleteError ||
-          current is DeleteLoading,
+          current is UpdateSuccess ||
+          current is UpdateError ||
+          current is DeleteLoading ||
+          current is UpdateLoading,
       listener: (context, state) {
-        if (state is! DeleteLoading && Navigator.canPop(context)) {
-          context.pop();
-        }
         state.whenOrNull(
           deleteLoading: () {
             setupDeleteLoading(context);
@@ -35,6 +37,15 @@ class DetailsBlocListener extends StatelessWidget {
           deleteError: (message) {
             context.pop();
             setupDeleteError(context, message);
+          },
+          updateLoading: () {},
+          updateSuccess: (message) {
+            setupUpdateSuccess(context, message);
+            Future.delayed(Duration(seconds: 4));
+            context.pushNamedAndRemoveUntil(Routes.homeScreen);
+          },
+          updateError: (message) {
+            setupUpdateError(context, message);
           },
         );
       },
@@ -108,5 +119,23 @@ class DetailsBlocListener extends StatelessWidget {
         );
       },
     );
+  }
+
+  void setupUpdateSuccess(BuildContext context, String message) {
+    CherryToast.success(
+      title: Text(message),
+      autoDismiss: true,
+      animationType: AnimationType.fromRight,
+      animationDuration: Duration(milliseconds: 1000),
+    ).show(context);
+  }
+
+  void setupUpdateError(BuildContext context, String message) {
+    CherryToast.error(
+      title: Text(message),
+      autoDismiss: true,
+      animationType: AnimationType.fromRight,
+      animationDuration: Duration(milliseconds: 1000),
+    ).show(context);
   }
 }

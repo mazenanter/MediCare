@@ -133,6 +133,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ManageYourMeds": MessageLookupByLibrary.simpleMessage("إدارة أدويتك"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
+    "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "لم يتم أخذ الدواء بنجاح",
+    ),
+    "MedicationTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم أخذ الدواء بنجاح",
+    ),
     "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
       "لا يوجد توكن او توكن ID",
     ),
@@ -214,6 +220,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "resourceExhausted": MessageLookupByLibrary.simpleMessage(
       "تعديت الحد المسموح بيه، حاول تاني بعد شوية.",
+    ),
+    "updatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم التحديث بنجاح",
     ),
   };
 }

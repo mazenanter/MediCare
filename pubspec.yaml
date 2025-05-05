@@ -88,6 +88,8 @@ dependencies:
   get_it: ^8.0.3
   # Splash Screen
   flutter_native_splash: ^2.4.5
+  # A new way to display toasts in flutter with elegant design and animations
+  cherry_toast: ^1.12.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

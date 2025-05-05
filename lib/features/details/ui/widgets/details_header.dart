@@ -9,8 +9,10 @@ import '../../../../core/theming/text_styles_manager.dart';
 import '../../../../generated/l10n.dart';
 
 class DetailsHeader extends StatelessWidget {
-  const DetailsHeader({super.key, required this.onDelete});
+  const DetailsHeader(
+      {super.key, required this.onDelete, required this.isTaken});
   final void Function() onDelete;
+  final int isTaken;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,7 +35,13 @@ class DetailsHeader extends StatelessWidget {
                           Border.all(color: ColorsManager.cEAECF0, width: 2.w),
                       color: ColorsManager.cEFFAFF,
                     ),
-                    child: Icon(Icons.info, color: ColorsManager.cFBBC05),
+                    child: Icon(
+                        isTaken == 0
+                            ? Icons.info
+                            : FontAwesomeIcons.circleCheck,
+                        color: isTaken == 0
+                            ? ColorsManager.cFBBC05
+                            : ColorsManager.c34A853),
                   ),
                 ),
                 GestureDetector(
