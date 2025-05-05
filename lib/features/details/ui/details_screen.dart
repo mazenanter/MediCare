@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,6 +14,7 @@ import 'package:medicare/features/home/data/models/medication_response_model.dar
 
 import '../../../core/theming/colors_manager.dart';
 import '../../../core/widgets/back_arrow_button.dart';
+import '../../../generated/l10n.dart';
 import '../logic/details_cubit.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -42,6 +45,7 @@ class DetailsScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       DetailsHeader(
+                        isTaken: medicationResponseModel.isTaken,
                         onDelete: () {
                           context
                               .read<DetailsCubit>()
@@ -54,6 +58,19 @@ class DetailsScreen extends StatelessWidget {
                       ),
                       verticalSpace(35),
                       TakeAndEditButtons(
+                        takeTitle: medicationResponseModel.isTaken == 0
+                            ? S.of(context).Take
+                            : 'UnTake',
+                        onTake: () {
+                          context.read<DetailsCubit>().updateTakeMedication(
+                                context: context,
+                                medicationId: medicationResponseModel.id,
+                                isTaken: medicationResponseModel.isTaken == 0
+                                    ? 1
+                                    : 0,
+                              );
+                          log('${medicationResponseModel.isTaken}');
+                        },
                         onEdit: () {
                           context.pushNamed(
                             Routes.addMedScreen,

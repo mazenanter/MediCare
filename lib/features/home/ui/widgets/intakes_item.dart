@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:medicare/core/theming/colors_manager.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
@@ -27,8 +28,12 @@ class _IntakesItemState extends State<IntakesItem> {
         ),
         child: ListTile(
           leading: Icon(
-            Icons.info,
-            color: ColorsManager.cFBBC05,
+            widget.medication.isTaken == 0
+                ? Icons.info
+                : FontAwesomeIcons.circleCheck,
+            color: widget.medication.isTaken == 0
+                ? ColorsManager.cFBBC05
+                : ColorsManager.c34A853,
           ),
           title: Text(
             widget.medication.name,
