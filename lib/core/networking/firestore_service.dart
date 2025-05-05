@@ -56,4 +56,14 @@ class FirestoreService {
         .doc(medicationId)
         .update(data.toJson());
   }
+
+  Future<void> updateTakeMedication(
+      String userId, String medicationId, int isTaken) async {
+    await firestore
+        .collection('users')
+        .doc(userId)
+        .collection('medications')
+        .doc(medicationId)
+        .update({'isTaken': isTaken});
+  }
 }

@@ -80,6 +80,11 @@ class AddMedRepo {
               AddMedRequestModel.fromJson(medication));
           await DatabaseService.deletePendingOperation(operation['id']);
           log("✅ تم مزامنة العملية بنجاح!");
+        } else if (operation['operationType'] == 'take') {
+          await firestoreService.updateTakeMedication(
+              user.uid, operation['medicationId'], operation['isTaken']);
+          await DatabaseService.deletePendingOperation(operation['id']);
+          log("✅ تم مزامنة العملية بنجاح!");
         }
       }
     }

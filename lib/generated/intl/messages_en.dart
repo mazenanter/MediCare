@@ -130,6 +130,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "MedicationAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
       "Medication added successfully",
     ),
+    "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Medication not taken successfully",
+    ),
+    "MedicationTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Medication taken successfully",
+    ),
     "MissingAccessTokenOrIDToken": MessageLookupByLibrary.simpleMessage(
       "Missing access token or ID token",
     ),
@@ -211,6 +217,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "resourceExhausted": MessageLookupByLibrary.simpleMessage(
       "You have exceeded the allowed limit. Please try again later.",
+    ),
+    "updatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "updated successfully",
     ),
   };
 }

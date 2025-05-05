@@ -94,5 +94,9 @@
 "DeleteMedication": "حذف الدواء",
 "AreYouSureYouWantToDeleteThisMedication": "هل أنت متأكد أنك عايز تحذف الدواء ده؟",
 "Delete": "حذف",
-"HoursFor": "ساعات لـ"
+"HoursFor": "ساعات لـ",
+"MedicationTakenSuccessfully": "تم أخذ الدواء بنجاح",
+"MedicationNotTakenSuccessfully": "لم يتم أخذ الدواء بنجاح",
+"updatedSuccessfully": "تم التحديث بنجاح"
+
 }

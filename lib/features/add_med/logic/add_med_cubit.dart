@@ -57,6 +57,7 @@ class AddMedCubit extends Cubit<AddMedState> {
     emit(AddMedState.loading());
     if (medicationId != null) {
       final result = await detailsRepo.updateMedication(
+        context: context,
         medicationId: medicationId!,
         model: AddMedRequestModel(
           id: medicationId!,
