@@ -16,6 +16,7 @@ class AppTextButton extends StatelessWidget {
     this.verticalPadding,
     this.textColor,
     this.hintStyle,
+    this.borderColor,
   });
   final void Function() onPressed;
   final String text;
@@ -27,6 +28,7 @@ class AppTextButton extends StatelessWidget {
   final double? verticalPadding;
   final Color? textColor;
   final TextStyle? hintStyle;
+  final Color? borderColor;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -46,7 +48,7 @@ class AppTextButton extends StatelessWidget {
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 8.r),
-            side: BorderSide(color: ColorsManager.c196EB0),
+            side: BorderSide(color: borderColor ?? ColorsManager.c196EB0),
           ),
         ),
       ),

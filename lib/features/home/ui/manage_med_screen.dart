@@ -7,6 +7,7 @@ import 'package:medicare/features/home/ui/widgets/home_top_bar.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/colors_manager.dart';
 import '../../../generated/l10n.dart';
+import '../../setting/ui/settings_drawer.dart';
 
 class ManageMedScreen extends StatelessWidget {
   const ManageMedScreen({super.key});
@@ -14,12 +15,15 @@ class ManageMedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SettingsDrawer(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 18.w),
           child: Column(
             children: [
-              HomeTopBar(),
+              HomeTopBar(
+                onTapSetting: () => Scaffold.of(context).openDrawer(),
+              ),
               verticalSpace(60),
               Image.asset(
                 'assets/images/reminder_12570772.png',

@@ -6,4 +6,5 @@ class Routes {
   static const String manageMedScreen = '/manageMedScreen';
   static const String addMedScreen = '/addMedScreen';
   static const String detailsScreen = '/detailsScreen';
+  static const String settingsScreen = '/settingsScreen';
 }

@@ -97,6 +97,21 @@
 "HoursFor": "ساعات لـ",
 "MedicationTakenSuccessfully": "تم أخذ الدواء بنجاح",
 "MedicationNotTakenSuccessfully": "لم يتم أخذ الدواء بنجاح",
-"updatedSuccessfully": "تم التحديث بنجاح"
+"updatedSuccessfully": "تم التحديث بنجاح",
+"Notifications": "الإشعارات",
+"About": "عن التطبيق",
+"ContactUs": "اتصل بنا",
+"Logout": "تسجيل الخروج",
+"View": "عرض",
+"AboutTheApp": "عن التطبيق",
+"OurMission": "مهمتنا",
+"Westrivetoimprovemedicationadherenceandenhancehealthoutcomesbyprovidingeasytousetoolsformedicationmanagement": "بنحاول نحسّن التزام الناس بالأدوية ونساعدهم يحققوا نتائج صحية أحسن عن طريق أدوات سهلة الاستخدام لإدارة الأدوية.",
+"KeyFeatures": "الميزات الأساسية",
+"MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface": "1. تذكير بمواعيد الأدوية\n2. معلومات عن الأدوية\n3. متابعة الحالة الصحية\n4. واجهة سهلة الاستخدام",
+"VersionInformation": "إصدار ومعلومات",
+"VersionReleaseDateJuneDevelopedby": "الإصدار: 1.0.0\nتاريخ الإصدار: يونيو 2025\nتم التطوير بواسطة: ",
+"Email": "البريد الإلكتروني",
+"Phone": "الهاتف"
+
 
 }
