@@ -1,5 +1,3 @@
-import 'package:cherry_toast/cherry_toast.dart';
-import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -7,6 +5,7 @@ import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 import 'package:medicare/core/widgets/custom_alert_dialog.dart';
+import 'package:medicare/core/widgets/toast_message.dart';
 import 'package:medicare/features/details/logic/details_cubit.dart';
 import 'package:medicare/features/details/logic/details_state.dart';
 
@@ -122,20 +121,10 @@ class DetailsBlocListener extends StatelessWidget {
   }
 
   void setupUpdateSuccess(BuildContext context, String message) {
-    CherryToast.success(
-      title: Text(message),
-      autoDismiss: true,
-      animationType: AnimationType.fromRight,
-      animationDuration: Duration(milliseconds: 1000),
-    ).show(context);
+    ToastMessage.successToast(context, message);
   }
 
   void setupUpdateError(BuildContext context, String message) {
-    CherryToast.error(
-      title: Text(message),
-      autoDismiss: true,
-      animationType: AnimationType.fromRight,
-      animationDuration: Duration(milliseconds: 1000),
-    ).show(context);
+    ToastMessage.errorToast(context, message);
   }
 }

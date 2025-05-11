@@ -112,5 +112,7 @@
 "VersionInformation": "Version & Information",
 "VersionReleaseDateJuneDevelopedby": "Version: 1.0.0\nRelease Date: June 2025\nDeveloped by: ",
 "Email": "Email",
-"Phone": "Phone"
+"Phone": "Phone",
+"AreYouSureYouWantToLogout": "Are you sure you want to logout?",
+"LogoutSuccessfully": "Logout successfully"
 }
