@@ -14,6 +14,7 @@ import '../../features/home/data/repo/home_repo.dart';
 import '../../features/home/logic/home_cubit.dart';
 import '../../features/login/data/repo/login_repo.dart';
 import '../../features/login/logic/login_cubit.dart';
+import '../../features/setting/logic/setting_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -55,4 +56,9 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<DetailsRepo>(
       () => DetailsRepo(getIt<FirestoreService>()));
   getIt.registerFactory<DetailsCubit>(() => DetailsCubit(getIt<DetailsRepo>()));
+
+  // setting
+  // getIt.registerLazySingleton<SettingRepo>(
+  //     () => SettingRepo(getIt<FirebaseAuthService>(), getIt<FirestoreService>()));
+  getIt.registerFactory<SettingCubit>(() => SettingCubit());
 }

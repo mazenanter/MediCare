@@ -983,6 +983,26 @@ class S {
   String get Phone {
     return Intl.message('Phone', name: 'Phone', desc: '', args: []);
   }
+
+  /// `Are you sure you want to logout?`
+  String get AreYouSureYouWantToLogout {
+    return Intl.message(
+      'Are you sure you want to logout?',
+      name: 'AreYouSureYouWantToLogout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout successfully`
+  String get LogoutSuccessfully {
+    return Intl.message(
+      'Logout successfully',
+      name: 'LogoutSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

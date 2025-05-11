@@ -43,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "هل أنت متأكد أنك عايز تحذف الدواء ده؟",
         ),
+    "AreYouSureYouWantToLogout": MessageLookupByLibrary.simpleMessage(
+      "هل أنت متأكد أنك عايز تسجل خروجك؟",
+    ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "على الأقل حرف صغير واحد",
     ),
@@ -137,6 +140,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تسجيل الدخول بالحساب ده مش متاح.",
     ),
     "Logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "LogoutSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الخروج بنجاح",
+    ),
     "ManageYourMeds": MessageLookupByLibrary.simpleMessage("إدارة أدويتك"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(

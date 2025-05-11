@@ -111,7 +111,9 @@
 "VersionInformation": "إصدار ومعلومات",
 "VersionReleaseDateJuneDevelopedby": "الإصدار: 1.0.0\nتاريخ الإصدار: يونيو 2025\nتم التطوير بواسطة: ",
 "Email": "البريد الإلكتروني",
-"Phone": "الهاتف"
+"Phone": "الهاتف",
+"AreYouSureYouWantToLogout": "هل أنت متأكد أنك عايز تسجل خروجك؟",
+"LogoutSuccessfully": "تم تسجيل الخروج بنجاح"
 
 
 }

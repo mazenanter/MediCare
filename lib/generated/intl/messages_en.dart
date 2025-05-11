@@ -43,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "Are you sure you want to delete this medication?",
         ),
+    "AreYouSureYouWantToLogout": MessageLookupByLibrary.simpleMessage(
+      "Are you sure you want to logout?",
+    ),
     "AtLeast1LowercaseLetter": MessageLookupByLibrary.simpleMessage(
       "At least 1 lowercase letter",
     ),
@@ -131,6 +134,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Login with this account is not enabled.",
     ),
     "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "LogoutSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Logout successfully",
+    ),
     "ManageYourMeds": MessageLookupByLibrary.simpleMessage("Manage your meds"),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
     "MedicationAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
