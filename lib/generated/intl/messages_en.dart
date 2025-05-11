@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "About": MessageLookupByLibrary.simpleMessage("About"),
+    "AboutTheApp": MessageLookupByLibrary.simpleMessage("About the App"),
     "Add": MessageLookupByLibrary.simpleMessage("Add"),
     "AddMedicine": MessageLookupByLibrary.simpleMessage("Add medicine"),
     "AddNewMedicine": MessageLookupByLibrary.simpleMessage("Add New Medicine"),
@@ -61,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Capsule": MessageLookupByLibrary.simpleMessage("Capsule"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("Change Language"),
     "ConfirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
+    "ContactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
@@ -85,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "EG2Days": MessageLookupByLibrary.simpleMessage("(e.g. 2 Days)"),
     "EG2Hours": MessageLookupByLibrary.simpleMessage("(e.g. 2 hours)"),
     "Edit": MessageLookupByLibrary.simpleMessage("Edit"),
+    "Email": MessageLookupByLibrary.simpleMessage("Email"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
           "Email already in use, please use a different email.",
@@ -120,11 +124,13 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "Invalid email address, please check and try again.",
         ),
+    "KeyFeatures": MessageLookupByLibrary.simpleMessage("Key Features"),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "LoginSuccess": MessageLookupByLibrary.simpleMessage("Login Success"),
     "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
       "Login with this account is not enabled.",
     ),
+    "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "ManageYourMeds": MessageLookupByLibrary.simpleMessage("Manage your meds"),
     "MediCare": MessageLookupByLibrary.simpleMessage("MediCare"),
     "MedicationAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
@@ -133,6 +139,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
       "Medication not taken successfully",
     ),
+    "MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface":
+        MessageLookupByLibrary.simpleMessage(
+          "1. Medication Reminders\n2. Drug Information\n3. Health Tracking\n4. User-Friendly Interface",
+        ),
     "MedicationTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
       "Medication taken successfully",
     ),
@@ -141,12 +151,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Name": MessageLookupByLibrary.simpleMessage("Name*"),
     "NameEG": MessageLookupByLibrary.simpleMessage("Name (e.g. Ibuprofen)"),
+    "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "Ok": MessageLookupByLibrary.simpleMessage("Ok"),
     "OneTime": MessageLookupByLibrary.simpleMessage("One time"),
     "Or": MessageLookupByLibrary.simpleMessage("Or"),
+    "OurMission": MessageLookupByLibrary.simpleMessage("Our Mission"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
       "Password too weak!",
     ),
+    "Phone": MessageLookupByLibrary.simpleMessage("Phone"),
     "PleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter valid email",
     ),
@@ -186,10 +199,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "UserNotLoggedIn": MessageLookupByLibrary.simpleMessage(
       "User not logged in",
     ),
+    "VersionInformation": MessageLookupByLibrary.simpleMessage(
+      "Version & Information",
+    ),
+    "VersionReleaseDateJuneDevelopedby": MessageLookupByLibrary.simpleMessage(
+      "Version: 1.0.0\nRelease Date: June 2025\nDeveloped by: ",
+    ),
+    "View": MessageLookupByLibrary.simpleMessage("View"),
     "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
       "Welcome back! Glad\nto see you, Again!",
     ),
     "WelcomeTo": MessageLookupByLibrary.simpleMessage("Welcome to"),
+    "Westrivetoimprovemedicationadherenceandenhancehealthoutcomesbyprovidingeasytousetoolsformedicationmanagement":
+        MessageLookupByLibrary.simpleMessage(
+          "We strive to improve medication adherence and enhance health outcomes by providing easy-to-use tools for medication management.",
+        ),
     "WrongPassword": MessageLookupByLibrary.simpleMessage(
       "Wrong password for that user.",
     ),

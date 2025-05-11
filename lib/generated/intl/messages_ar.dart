@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "About": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
+    "AboutTheApp": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
     "Add": MessageLookupByLibrary.simpleMessage("إضافة"),
     "AddMedicine": MessageLookupByLibrary.simpleMessage("إضافة دواء"),
     "AddNewMedicine": MessageLookupByLibrary.simpleMessage("إضافة دواء جديد"),
@@ -63,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Capsule": MessageLookupByLibrary.simpleMessage("كبسولات"),
     "ChangeLanguage": MessageLookupByLibrary.simpleMessage("غيّر اللغة"),
     "ConfirmPassword": MessageLookupByLibrary.simpleMessage("أكد كلمة السر"),
+    "ContactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
     "ContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
       "كمل باستخدام جوجل",
     ),
@@ -85,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "EG2Days": MessageLookupByLibrary.simpleMessage("(مثال: كل 2 يوم)"),
     "EG2Hours": MessageLookupByLibrary.simpleMessage("(مثال: كل 2 ساعة)"),
     "Edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+    "Email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "EmailAlreadyInUsePleaseUseADifferentEmail":
         MessageLookupByLibrary.simpleMessage(
           "الإيميل ده مستخدم قبل كده، جرب إيميل تاني.",
@@ -124,6 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "الإيميل مش صحيح، راجعه وحاول تاني.",
         ),
+    "KeyFeatures": MessageLookupByLibrary.simpleMessage("الميزات الأساسية"),
     "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "LoginSuccess": MessageLookupByLibrary.simpleMessage(
       "تم تسجيل الدخول بنجاح",
@@ -131,11 +136,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginWithThisAaccountIsNotEnabled": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بالحساب ده مش متاح.",
     ),
+    "Logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "ManageYourMeds": MessageLookupByLibrary.simpleMessage("إدارة أدويتك"),
     "MediCare": MessageLookupByLibrary.simpleMessage("دوائي"),
     "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
       "لم يتم أخذ الدواء بنجاح",
     ),
+    "MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface":
+        MessageLookupByLibrary.simpleMessage(
+          "1. تذكير بمواعيد الأدوية\n2. معلومات عن الأدوية\n3. متابعة الحالة الصحية\n4. واجهة سهلة الاستخدام",
+        ),
     "MedicationTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
       "تم أخذ الدواء بنجاح",
     ),
@@ -144,12 +154,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Name": MessageLookupByLibrary.simpleMessage("الاسم*"),
     "NameEG": MessageLookupByLibrary.simpleMessage("الاسم (مثلاً: إيبوبروفين)"),
+    "Notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "Ok": MessageLookupByLibrary.simpleMessage("تمام"),
     "OneTime": MessageLookupByLibrary.simpleMessage("مرة واحدة"),
     "Or": MessageLookupByLibrary.simpleMessage("أو"),
+    "OurMission": MessageLookupByLibrary.simpleMessage("مهمتنا"),
     "PasswordTooWeak": MessageLookupByLibrary.simpleMessage(
       "كلمة السر ضعيفة جدًا!",
     ),
+    "Phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
     "PleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "من فضلك ادخل إيميل صحيح",
     ),
@@ -189,10 +202,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "UserNotLoggedIn": MessageLookupByLibrary.simpleMessage(
       "المستخدم مش مسجل دخوله",
     ),
+    "VersionInformation": MessageLookupByLibrary.simpleMessage(
+      "إصدار ومعلومات",
+    ),
+    "VersionReleaseDateJuneDevelopedby": MessageLookupByLibrary.simpleMessage(
+      "الإصدار: 1.0.0\nتاريخ الإصدار: يونيو 2025\nتم التطوير بواسطة: ",
+    ),
+    "View": MessageLookupByLibrary.simpleMessage("عرض"),
     "WelcomeBackGladToSeeYouAgain": MessageLookupByLibrary.simpleMessage(
       "أهلاً بيك! مبسوطين\nإننا نشوفك تاني!",
     ),
     "WelcomeTo": MessageLookupByLibrary.simpleMessage("أهلاً بيك في"),
+    "Westrivetoimprovemedicationadherenceandenhancehealthoutcomesbyprovidingeasytousetoolsformedicationmanagement":
+        MessageLookupByLibrary.simpleMessage(
+          "بنحاول نحسّن التزام الناس بالأدوية ونساعدهم يحققوا نتائج صحية أحسن عن طريق أدوات سهلة الاستخدام لإدارة الأدوية.",
+        ),
     "WrongPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة السر غلط للمستخدم ده.",
     ),

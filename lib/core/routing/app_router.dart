@@ -8,6 +8,7 @@ import 'package:medicare/features/home/ui/home_screen.dart';
 import 'package:medicare/features/login/logic/login_cubit.dart';
 import 'package:medicare/features/login/ui/login_screen.dart';
 import 'package:medicare/features/register/logic/register_cubit.dart';
+import 'package:medicare/features/setting/ui/settings_drawer.dart';
 import 'package:medicare/features/welcome/welcome_screen.dart';
 
 import '../../features/add_med/logic/add_med_cubit.dart';
@@ -68,6 +69,10 @@ class AppRouter {
                   settings.arguments as MedicationResponseModel,
             ),
           ),
+        );
+      case Routes.settingsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SettingsDrawer(),
         );
       default:
         return MaterialPageRoute(

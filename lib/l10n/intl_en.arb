@@ -98,5 +98,19 @@
 "HoursFor": "Hours for",
 "MedicationTakenSuccessfully": "Medication taken successfully",
 "MedicationNotTakenSuccessfully": "Medication not taken successfully",
-"updatedSuccessfully": "updated successfully"
+"updatedSuccessfully": "updated successfully",
+"Notifications": "Notifications",
+"About": "About",
+"ContactUs": "Contact Us",
+"Logout": "Logout",
+"View": "View",
+"AboutTheApp": "About the App",
+"OurMission": "Our Mission",
+"Westrivetoimprovemedicationadherenceandenhancehealthoutcomesbyprovidingeasytousetoolsformedicationmanagement": "We strive to improve medication adherence and enhance health outcomes by providing easy-to-use tools for medication management.",
+"KeyFeatures"  : "Key Features",
+"MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface": "1. Medication Reminders\n2. Drug Information\n3. Health Tracking\n4. User-Friendly Interface",
+"VersionInformation": "Version & Information",
+"VersionReleaseDateJuneDevelopedby": "Version: 1.0.0\nRelease Date: June 2025\nDeveloped by: ",
+"Email": "Email",
+"Phone": "Phone"
 }

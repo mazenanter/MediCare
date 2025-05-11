@@ -874,6 +874,115 @@ class S {
       args: [],
     );
   }
+
+  /// `Notifications`
+  String get Notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'Notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About`
+  String get About {
+    return Intl.message('About', name: 'About', desc: '', args: []);
+  }
+
+  /// `Contact Us`
+  String get ContactUs {
+    return Intl.message('Contact Us', name: 'ContactUs', desc: '', args: []);
+  }
+
+  /// `Logout`
+  String get Logout {
+    return Intl.message('Logout', name: 'Logout', desc: '', args: []);
+  }
+
+  /// `View`
+  String get View {
+    return Intl.message('View', name: 'View', desc: '', args: []);
+  }
+
+  /// `About the App`
+  String get AboutTheApp {
+    return Intl.message(
+      'About the App',
+      name: 'AboutTheApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our Mission`
+  String get OurMission {
+    return Intl.message('Our Mission', name: 'OurMission', desc: '', args: []);
+  }
+
+  /// `We strive to improve medication adherence and enhance health outcomes by providing easy-to-use tools for medication management.`
+  String
+  get Westrivetoimprovemedicationadherenceandenhancehealthoutcomesbyprovidingeasytousetoolsformedicationmanagement {
+    return Intl.message(
+      'We strive to improve medication adherence and enhance health outcomes by providing easy-to-use tools for medication management.',
+      name:
+          'Westrivetoimprovemedicationadherenceandenhancehealthoutcomesbyprovidingeasytousetoolsformedicationmanagement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Key Features`
+  String get KeyFeatures {
+    return Intl.message(
+      'Key Features',
+      name: 'KeyFeatures',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1. Medication Reminders\n2. Drug Information\n3. Health Tracking\n4. User-Friendly Interface`
+  String
+  get MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface {
+    return Intl.message(
+      '1. Medication Reminders\n2. Drug Information\n3. Health Tracking\n4. User-Friendly Interface',
+      name:
+          'MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version & Information`
+  String get VersionInformation {
+    return Intl.message(
+      'Version & Information',
+      name: 'VersionInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version: 1.0.0\nRelease Date: June 2025\nDeveloped by: `
+  String get VersionReleaseDateJuneDevelopedby {
+    return Intl.message(
+      'Version: 1.0.0\nRelease Date: June 2025\nDeveloped by: ',
+      name: 'VersionReleaseDateJuneDevelopedby',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get Email {
+    return Intl.message('Email', name: 'Email', desc: '', args: []);
+  }
+
+  /// `Phone`
+  String get Phone {
+    return Intl.message('Phone', name: 'Phone', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

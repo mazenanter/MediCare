@@ -6,8 +6,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../core/theming/colors_manager.dart';
 
 class HomeTopBar extends StatelessWidget {
-  const HomeTopBar({super.key});
-
+  const HomeTopBar({super.key, required this.onTapSetting});
+  final Function() onTapSetting;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,6 +19,22 @@ class HomeTopBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                GestureDetector(
+                  onTap: onTapSetting,
+                  child: Container(
+                    width: 50.w,
+                    height: 50.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16.r),
+                      border: Border.all(color: ColorsManager.cEAECF0),
+                      color: ColorsManager.cFFFFFF,
+                    ),
+                    child: Icon(
+                      FontAwesomeIcons.gear,
+                      color: ColorsManager.c414042,
+                    ),
+                  ),
+                ),
                 GestureDetector(
                   onTap: () {},
                   child: Container(
@@ -37,22 +53,6 @@ class HomeTopBar extends StatelessWidget {
                     ),
                   ),
                 ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    width: 50.w,
-                    height: 50.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16.r),
-                      border: Border.all(color: ColorsManager.cEAECF0),
-                      color: ColorsManager.cFFFFFF,
-                    ),
-                    child: Icon(
-                      FontAwesomeIcons.gear,
-                      color: ColorsManager.c414042,
-                    ),
-                  ),
-                )
               ],
             ),
           ),
