@@ -66,4 +66,9 @@ class FirestoreService {
         .doc(medicationId)
         .update({'isTaken': isTaken});
   }
+
+  Future<Map<String, dynamic>> getUserData(String userId) async {
+    final docSnapshot = await firestore.collection('users').doc(userId).get();
+    return docSnapshot.data()!;
+  }
 }

@@ -5,10 +5,11 @@ import 'package:medicare/core/helpers/spacing.dart';
 import 'package:medicare/core/theming/text_styles_manager.dart';
 
 import '../../../../core/theming/colors_manager.dart';
+import '../../data/models/user_model.dart';
 
 class CustomDrawerHeader extends StatelessWidget {
-  const CustomDrawerHeader({super.key});
-
+  const CustomDrawerHeader({super.key, required this.userModel});
+  final UserModel userModel;
   @override
   Widget build(BuildContext context) {
     return DrawerHeader(
@@ -28,13 +29,13 @@ class CustomDrawerHeader extends StatelessWidget {
           ),
           verticalSpace(10),
           Text(
-            'Mazen Anter',
+            userModel.name,
             style: TextStylesManager.font20Meduim.copyWith(
               color: ColorsManager.cFFFFFF,
             ),
           ),
           Text(
-            'mazenanter99@gmail.com',
+            userModel.email,
             style: TextStylesManager.font16Meduim.copyWith(
               color: ColorsManager.cF7F8F9,
             ),

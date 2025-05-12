@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/generated/l10n.dart';
 
 import '../../../../core/helpers/spacing.dart';
@@ -18,7 +19,7 @@ class ContactUs extends StatelessWidget {
           Icons.contact_mail_outlined,
           size: 24,
         ),
-        SizedBox(width: 16),
+        horizontalSpace(16),
         Text(
           S.of(context).ContactUs,
           style: TextStylesManager.font20Meduim,
@@ -33,7 +34,7 @@ class ContactUs extends StatelessWidget {
           ),
           child: GestureDetector(
             onTap: () {
-              bottomSheet(context);
+              showAboutBottomSheet(context);
             },
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
@@ -48,7 +49,7 @@ class ContactUs extends StatelessWidget {
     );
   }
 
-  Future<dynamic> bottomSheet(BuildContext context) {
+  Future<dynamic> showAboutBottomSheet(BuildContext context) {
     return showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -65,11 +66,11 @@ class ContactUs extends StatelessWidget {
                     S.of(context).ContactUs,
                     style: TextStylesManager.font16Bold,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
+                  IconButton(
+                    onPressed: () {
+                      context.pop();
                     },
-                    child: Icon(
+                    icon: Icon(
                       Icons.close,
                       color: ColorsManager.cEA4335,
                       size: 24,
@@ -77,7 +78,7 @@ class ContactUs extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              verticalSpace(16),
               Row(
                 spacing: 10.w,
                 children: [

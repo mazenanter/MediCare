@@ -12,6 +12,7 @@ class RepeatAndDaysInfo extends StatelessWidget {
       {super.key, required this.repeat, required this.days});
   final String repeat;
   final String days;
+
   @override
   Widget build(BuildContext context) {
     return Row(

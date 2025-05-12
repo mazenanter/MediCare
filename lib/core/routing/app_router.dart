@@ -46,7 +46,7 @@ class AppRouter {
               create: (context) => getIt<HomeCubit>()..getMedications(context),
             ),
             BlocProvider(
-              create: (context) => getIt<SettingCubit>(),
+              create: (context) => getIt<SettingCubit>()..getUserData(),
             ),
           ], child: const HomeScreen()),
         );
