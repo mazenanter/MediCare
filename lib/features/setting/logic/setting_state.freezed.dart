@@ -20,7 +20,7 @@ mixin _$SettingState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
@@ -30,7 +30,7 @@ mixin _$SettingState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
@@ -40,7 +40,7 @@ mixin _$SettingState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,
@@ -144,7 +144,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
@@ -157,7 +157,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
@@ -170,7 +170,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,
@@ -273,7 +273,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
@@ -286,7 +286,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
@@ -299,7 +299,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,
@@ -364,6 +364,8 @@ abstract class _$$ProfileSuccessImplCopyWith<$Res> {
   factory _$$ProfileSuccessImplCopyWith(_$ProfileSuccessImpl value,
           $Res Function(_$ProfileSuccessImpl) then) =
       __$$ProfileSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserModel userModel});
 }
 
 /// @nodoc
@@ -376,38 +378,65 @@ class __$$ProfileSuccessImplCopyWithImpl<$Res>
 
   /// Create a copy of SettingState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userModel = null,
+  }) {
+    return _then(_$ProfileSuccessImpl(
+      null == userModel
+          ? _value.userModel
+          : userModel // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ProfileSuccessImpl implements ProfileSuccess {
-  const _$ProfileSuccessImpl();
+  const _$ProfileSuccessImpl(this.userModel);
+
+  @override
+  final UserModel userModel;
 
   @override
   String toString() {
-    return 'SettingState.profileSuccess()';
+    return 'SettingState.profileSuccess(userModel: $userModel)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ProfileSuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileSuccessImpl &&
+            (identical(other.userModel, userModel) ||
+                other.userModel == userModel));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, userModel);
+
+  /// Create a copy of SettingState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileSuccessImplCopyWith<_$ProfileSuccessImpl> get copyWith =>
+      __$$ProfileSuccessImplCopyWithImpl<_$ProfileSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
   }) {
-    return profileSuccess();
+    return profileSuccess(userModel);
   }
 
   @override
@@ -415,12 +444,12 @@ class _$ProfileSuccessImpl implements ProfileSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
   }) {
-    return profileSuccess?.call();
+    return profileSuccess?.call(userModel);
   }
 
   @override
@@ -428,14 +457,14 @@ class _$ProfileSuccessImpl implements ProfileSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,
     required TResult orElse(),
   }) {
     if (profileSuccess != null) {
-      return profileSuccess();
+      return profileSuccess(userModel);
     }
     return orElse();
   }
@@ -485,7 +514,16 @@ class _$ProfileSuccessImpl implements ProfileSuccess {
 }
 
 abstract class ProfileSuccess implements SettingState {
-  const factory ProfileSuccess() = _$ProfileSuccessImpl;
+  const factory ProfileSuccess(final UserModel userModel) =
+      _$ProfileSuccessImpl;
+
+  UserModel get userModel;
+
+  /// Create a copy of SettingState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProfileSuccessImplCopyWith<_$ProfileSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -558,7 +596,7 @@ class _$ProfileErrorImpl implements ProfileError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
@@ -571,7 +609,7 @@ class _$ProfileErrorImpl implements ProfileError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
@@ -584,7 +622,7 @@ class _$ProfileErrorImpl implements ProfileError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,
@@ -695,7 +733,7 @@ class _$SignOutImpl implements SignOut {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
@@ -708,7 +746,7 @@ class _$SignOutImpl implements SignOut {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
@@ -721,7 +759,7 @@ class _$SignOutImpl implements SignOut {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,
@@ -851,7 +889,7 @@ class _$SignOutErrorImpl implements SignOutError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() profileLoading,
-    required TResult Function() profileSuccess,
+    required TResult Function(UserModel userModel) profileSuccess,
     required TResult Function(String message) profileError,
     required TResult Function() signOut,
     required TResult Function(String message) signOutError,
@@ -864,7 +902,7 @@ class _$SignOutErrorImpl implements SignOutError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? profileLoading,
-    TResult? Function()? profileSuccess,
+    TResult? Function(UserModel userModel)? profileSuccess,
     TResult? Function(String message)? profileError,
     TResult? Function()? signOut,
     TResult? Function(String message)? signOutError,
@@ -877,7 +915,7 @@ class _$SignOutErrorImpl implements SignOutError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? profileLoading,
-    TResult Function()? profileSuccess,
+    TResult Function(UserModel userModel)? profileSuccess,
     TResult Function(String message)? profileError,
     TResult Function()? signOut,
     TResult Function(String message)? signOutError,

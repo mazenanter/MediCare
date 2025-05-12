@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/core/widgets/toast_message.dart';
 import 'package:medicare/generated/l10n.dart';
@@ -37,8 +38,13 @@ class SettingBlocListener extends StatelessWidget {
           },
           profileLoading: () {
             // Handle profile loading state
+            return Lottie.asset(
+              'assets/animation/loading2.json',
+              width: 100,
+              height: 100,
+            );
           },
-          profileSuccess: () {
+          profileSuccess: (data) {
             // Handle profile success state
           },
           profileError: (message) {
