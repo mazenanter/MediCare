@@ -148,6 +148,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
       "لم يتم أخذ الدواء بنجاح",
     ),
+    "MedicationReminders": MessageLookupByLibrary.simpleMessage(
+      "معاد الدواء جه",
+    ),
     "MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface":
         MessageLookupByLibrary.simpleMessage(
           "1. تذكير بمواعيد الأدوية\n2. معلومات عن الأدوية\n3. متابعة الحالة الصحية\n4. واجهة سهلة الاستخدام",
@@ -199,6 +202,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "مفيش اتصال بالإنترنت، حاول تاني.",
     ),
     "Time": MessageLookupByLibrary.simpleMessage("الوقت*"),
+    "Timetotakeyourmedication": MessageLookupByLibrary.simpleMessage(
+      "وقت أخذ الدواء بتاعك",
+    ),
     "Today": MessageLookupByLibrary.simpleMessage("انهاردة"),
     "Type": MessageLookupByLibrary.simpleMessage("النوع*"),
     "TypeEG": MessageLookupByLibrary.simpleMessage("النوع (مثلاً: أقراص)"),

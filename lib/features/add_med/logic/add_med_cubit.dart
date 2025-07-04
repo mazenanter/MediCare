@@ -1,11 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:medicare/core/helpers/notification_service.dart';
 import 'package:medicare/features/add_med/data/model/add_med_request_model.dart';
 import 'package:medicare/features/add_med/data/repo/add_med_repo.dart';
 import 'package:medicare/features/add_med/logic/add_med_state.dart';
 import 'package:medicare/features/details/data/repo/details_repo.dart';
 import 'package:medicare/features/home/data/models/medication_response_model.dart';
+import 'package:medicare/generated/l10n.dart';
 
 enum MedicationStatus { taken, notTaken }
 
@@ -24,6 +26,8 @@ class AddMedCubit extends Cubit<AddMedState> {
   // Dropdown selection
   String? selectedType;
   String? selectedRepeatType;
+  AddMedRequestModel? addMedRequestModel;
+  AddMedRequestModel? updateRequestModel;
   // Medication status
   MedicationStatus isTaken = MedicationStatus.notTaken;
   // Date and time for reminder
@@ -33,7 +37,30 @@ class AddMedCubit extends Cubit<AddMedState> {
   String? medicationId;
   AddMedCubit(this.addMedRepo, this.detailsRepo) : super(AddMedState.initial());
   MedicationResponseModel? medicationResponseModel;
-  init(MedicationResponseModel model) {
+
+  // Map stored type to current locale dropdown items
+  String? _mapStoredTypeToCurrentLocale(
+      String? storedType, BuildContext context) {
+    if (storedType == null) return null;
+
+    // Create a mapping between stored values and current locale values
+    final Map<String, String> typeMapping = {
+      // English to current locale
+      'Tablet': S.of(context).Tablet,
+      'Capsule': S.of(context).Capsule,
+      'Injection': S.of(context).Injection,
+      'Drop': S.of(context).Drop,
+      // Arabic to current locale
+      'أقراص': S.of(context).Tablet,
+      'كبسولات': S.of(context).Capsule,
+      'حقنة': S.of(context).Injection,
+      'نقط': S.of(context).Drop,
+    };
+
+    return typeMapping[storedType] ?? storedType;
+  }
+
+  init(MedicationResponseModel model, BuildContext context) {
     medicationResponseModel = model;
     medicationId = model.id;
     nameController.text = model.name;
@@ -42,7 +69,7 @@ class AddMedCubit extends Cubit<AddMedState> {
     daysController.text = model.durationDays.toString();
     hoursController.text = model.intervalHours?.toString() ?? '';
     repeatTypeController.text = model.repeatType;
-    selectedType = model.type;
+    selectedType = _mapStoredTypeToCurrentLocale(model.type, context);
     selectedRepeatType = model.repeatType;
     isTaken =
         model.isTaken == 1 ? MedicationStatus.taken : MedicationStatus.notTaken;
@@ -56,28 +83,37 @@ class AddMedCubit extends Cubit<AddMedState> {
     // }
     emit(AddMedState.loading());
     if (medicationId != null) {
+      updateRequestModel = AddMedRequestModel(
+        id: medicationId!,
+        name: nameController.text,
+        type: selectedType ?? 'Unknown',
+        amount: int.tryParse(amountController.text) ?? 0,
+        dose: doseController.text,
+        createdAt: medicationResponseModel?.createdAt ?? Timestamp.now(),
+        isTaken: isTaken == MedicationStatus.taken ? 1 : 0,
+        dateTime: _getSelectedTimestamp(),
+        repeatType: selectedRepeatType ?? 'One time',
+        intervalHours: selectedRepeatType == 'Every X hours'
+            ? int.tryParse(hoursController.text)
+            : null,
+        durationDays: (int.tryParse(daysController.text) ?? 1) < 1
+            ? 1
+            : int.tryParse(daysController.text) ?? 1,
+      );
       final result = await detailsRepo.updateMedication(
         context: context,
         medicationId: medicationId!,
-        model: AddMedRequestModel(
-          id: medicationId!,
-          name: nameController.text,
-          type: selectedType ?? 'Unknown',
-          amount: int.tryParse(amountController.text) ?? 0,
-          dose: doseController.text,
-          createdAt: medicationResponseModel?.createdAt ?? Timestamp.now(),
-          isTaken: isTaken == MedicationStatus.taken ? 1 : 0,
-          dateTime: _getSelectedTimestamp(),
-          repeatType: selectedRepeatType ?? 'One time',
-          intervalHours: selectedRepeatType == 'Every X hours'
-              ? int.tryParse(hoursController.text)
-              : null,
-          durationDays: int.tryParse(daysController.text) ?? 0,
-        ),
+        model: updateRequestModel!,
       );
       result.when(
         success: (message) {
           emit(AddMedState.success(message));
+          NotificationService()
+              .cancelNotification(updateRequestModel!.id.toString().hashCode);
+          NotificationService().scheduleNotification(
+            addMedRequestModel: updateRequestModel!,
+            context: context,
+          );
         },
         error: (message) {
           emit(AddMedState.error(message));
@@ -85,7 +121,7 @@ class AddMedCubit extends Cubit<AddMedState> {
       );
     } else {
       final result = await addMedRepo.addMedication(
-        AddMedRequestModel(
+        addMedRequestModel = AddMedRequestModel(
           id: addMedRepo.firestoreService.firestore
               .collection('users')
               .doc()
@@ -103,13 +139,17 @@ class AddMedCubit extends Cubit<AddMedState> {
           intervalHours: selectedRepeatType == 'Every X hours'
               ? int.tryParse(hoursController.text)
               : null,
-          durationDays: int.tryParse(daysController.text) ?? 0,
+          durationDays: (int.tryParse(daysController.text) ?? 1) < 1
+              ? 1
+              : int.tryParse(daysController.text) ?? 1,
         ),
         context,
       );
       result.when(
-        success: (message) {
+        success: (message) async {
           emit(AddMedState.success(message));
+          await NotificationService().scheduleNotification(
+              addMedRequestModel: addMedRequestModel!, context: context);
         },
         error: (message) {
           emit(AddMedState.error(message));

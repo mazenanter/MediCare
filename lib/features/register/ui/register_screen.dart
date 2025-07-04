@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/core/helpers/extenstions.dart';
 import 'package:medicare/features/register/ui/widgets/already_have_an_account.dart';
 import 'package:medicare/features/register/ui/widgets/register_bloc_listener.dart';
 import 'package:medicare/features/register/ui/widgets/register_form.dart';
 
 import '../../../core/helpers/spacing.dart';
+import '../../../core/routing/routes.dart';
 import '../../../core/theming/text_styles_manager.dart';
 import '../../../core/widgets/app_text_button.dart';
 import '../../../core/widgets/back_arrow_button.dart';
@@ -24,7 +26,11 @@ class RegisterScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              BackArrowButton(),
+              BackArrowButton(
+                onPressed: () {
+                  context.pushNamedAndRemoveUntil(Routes.loginScreen);
+                },
+              ),
               verticalSpace(59),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 45.w),

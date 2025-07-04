@@ -1003,6 +1003,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Medication Reminders`
+  String get MedicationReminders {
+    return Intl.message(
+      'Medication Reminders',
+      name: 'MedicationReminders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time to take your medication`
+  String get Timetotakeyourmedication {
+    return Intl.message(
+      'Time to take your medication',
+      name: 'Timetotakeyourmedication',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

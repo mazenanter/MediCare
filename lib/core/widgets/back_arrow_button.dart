@@ -5,10 +5,15 @@ import 'package:medicare/core/theming/colors_manager.dart';
 
 class BackArrowButton extends StatelessWidget {
   const BackArrowButton(
-      {super.key, this.arrowPadding, this.buttonWidth, this.buttonHeight});
+      {super.key,
+      this.arrowPadding,
+      this.buttonWidth,
+      this.buttonHeight,
+      this.onPressed});
   final double? arrowPadding;
   final double? buttonWidth;
   final double? buttonHeight;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     bool isRTL = Directionality.of(context) == TextDirection.rtl;
@@ -30,9 +35,10 @@ class BackArrowButton extends StatelessWidget {
               Icons.arrow_back_ios_new,
               size: 19,
             ),
-            onPressed: () {
-              context.pop();
-            },
+            onPressed: onPressed ??
+                () {
+                  context.pop();
+                },
           ),
         ),
       ),

@@ -113,7 +113,9 @@
 "Email": "البريد الإلكتروني",
 "Phone": "الهاتف",
 "AreYouSureYouWantToLogout": "هل أنت متأكد أنك عايز تسجل خروجك؟",
-"LogoutSuccessfully": "تم تسجيل الخروج بنجاح"
+"LogoutSuccessfully": "تم تسجيل الخروج بنجاح",
+"MedicationReminders": "معاد الدواء جه",
+"Timetotakeyourmedication": "وقت أخذ الدواء بتاعك"
 
 
 }

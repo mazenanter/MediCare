@@ -35,7 +35,9 @@ class AddMedFormField extends StatelessWidget {
               Icons.arrow_drop_down,
               size: 24.sp,
             ),
-            value: selectedValue,
+            value: dropdownItems?.contains(selectedValue) == true
+                ? selectedValue
+                : null,
             hint: Text(hintText),
             items: dropdownItems?.map((String item) {
               return DropdownMenuItem<String>(

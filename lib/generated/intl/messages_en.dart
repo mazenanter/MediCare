@@ -145,6 +145,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "MedicationNotTakenSuccessfully": MessageLookupByLibrary.simpleMessage(
       "Medication not taken successfully",
     ),
+    "MedicationReminders": MessageLookupByLibrary.simpleMessage(
+      "Medication Reminders",
+    ),
     "MedicationReminders2DrugInformation3HealthTracking4UserFriendlyInterface":
         MessageLookupByLibrary.simpleMessage(
           "1. Medication Reminders\n2. Drug Information\n3. Health Tracking\n4. User-Friendly Interface",
@@ -196,6 +199,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "There is no internet connection, please try again.",
     ),
     "Time": MessageLookupByLibrary.simpleMessage("Time*"),
+    "Timetotakeyourmedication": MessageLookupByLibrary.simpleMessage(
+      "Time to take your medication",
+    ),
     "Today": MessageLookupByLibrary.simpleMessage("Today"),
     "Type": MessageLookupByLibrary.simpleMessage("Type*"),
     "TypeEG": MessageLookupByLibrary.simpleMessage("Type (e.g. Tablet)"),

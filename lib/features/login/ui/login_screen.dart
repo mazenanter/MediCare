@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medicare/core/helpers/extenstions.dart';
+import 'package:medicare/core/routing/routes.dart';
 import 'package:medicare/core/widgets/app_text_button.dart';
 import 'package:medicare/features/login/ui/widgets/divider_and_or_text.dart';
 import 'package:medicare/features/login/ui/widgets/dont_have_account.dart';
@@ -24,7 +26,11 @@ class LoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              BackArrowButton(),
+              BackArrowButton(
+                onPressed: () {
+                  context.pushNamedAndRemoveUntil(Routes.welcomeScreen);
+                },
+              ),
               verticalSpace(80),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 45.w),
