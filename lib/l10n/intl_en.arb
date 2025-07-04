@@ -114,5 +114,7 @@
 "Email": "Email",
 "Phone": "Phone",
 "AreYouSureYouWantToLogout": "Are you sure you want to logout?",
-"LogoutSuccessfully": "Logout successfully"
+"LogoutSuccessfully": "Logout successfully",
+"MedicationReminders": "Medication Reminders",
+"Timetotakeyourmedication": "Time to take your medication"
 }

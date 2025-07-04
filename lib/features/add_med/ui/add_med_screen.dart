@@ -20,7 +20,7 @@ class AddMedScreen extends StatelessWidget {
     // Initialize the AddMedCubit and pass the medicationResponseModel if available
     final addMedCubit = context.read<AddMedCubit>();
     if (medicationResponseModel != null) {
-      addMedCubit.init(medicationResponseModel!);
+      addMedCubit.init(medicationResponseModel!, context);
     }
     return Scaffold(
       body: SafeArea(

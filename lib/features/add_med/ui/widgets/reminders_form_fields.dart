@@ -42,7 +42,8 @@ class _RemindersFormFieldsState extends State<RemindersFormFields> {
             });
           },
         ),
-        if (widget.addMedCubit.selectedRepeatType == 'Every X hours') ...[
+        if (widget.addMedCubit.selectedRepeatType ==
+            S.of(context).EveryXHours) ...[
           Text(
             S.of(context).Hours,
             style: TextStylesManager.font15Bold,
@@ -52,7 +53,7 @@ class _RemindersFormFieldsState extends State<RemindersFormFields> {
             hintText: S.of(context).EG2Hours,
           ),
         ],
-        if (widget.addMedCubit.selectedRepeatType != 'One time') ...[
+        if (widget.addMedCubit.selectedRepeatType != S.of(context).OneTime) ...[
           Text(
             S.of(context).Days,
             style: TextStylesManager.font15Bold,

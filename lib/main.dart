@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medicare/core/di/dependency_injection.dart';
 import 'package:medicare/core/helpers/constants.dart';
 import 'package:medicare/core/helpers/extenstions.dart';
+import 'package:medicare/core/helpers/notification_service.dart';
 import 'package:medicare/core/helpers/shared_pref_helper.dart';
 import 'package:medicare/core/networking/firestore_service.dart';
 import 'package:medicare/core/networking/network_service.dart';
@@ -20,6 +21,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await NotificationService().initializeNotification();
   NetworkService.listenToConnectionChanges(() {
     final addMedRepo = AddMedRepo(FirestoreService(FirebaseFirestore.instance));
     addMedRepo.syncOfflineMedications();
