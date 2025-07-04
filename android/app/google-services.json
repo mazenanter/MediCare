@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1065731678351",
+    "project_id": "medicare-d259b",
+    "storage_bucket": "medicare-d259b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065731678351:android:9ea400e70d0d92b71650fa",
+        "android_client_info": {
+          "package_name": "com.example.medicare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065731678351-vvt4br39gg8t0r87tklng9o7qp3t8eeq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medicare",
+            "certificate_hash": "1447a2a8ad92881e3e0faf92758ef5554f63bfa5"
+          }
+        },
+        {
+          "client_id": "1065731678351-9uhhcojetplld24iqsnqbq5u7g2qputi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv7BeEUrS1fx-UoEbHk5XlVU94CNrIbtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065731678351-9uhhcojetplld24iqsnqbq5u7g2qputi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1065731678351-7r7lc7i1e297ho30v6jkju0jpe7tbd1t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.medicare"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

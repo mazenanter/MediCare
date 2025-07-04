@@ -1,0 +1,15 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'register_state.freezed.dart';
+
+@freezed
+class RegisterState with _$RegisterState {
+  const factory RegisterState.initial() = _Initial;
+
+  const factory RegisterState.registerLoading() = RegisterLoading;
+
+  const factory RegisterState.registerSuccess({required bool isGoogleSignin}) =
+      RegisterSuccess;
+
+  const factory RegisterState.registerError(String message) = RegisterError;
+}
