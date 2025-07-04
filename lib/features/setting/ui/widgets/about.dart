@@ -54,6 +54,7 @@ class About extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return SingleChildScrollView(
+          
           child: Container(
             padding: EdgeInsets.all(16),
             child: Column(
